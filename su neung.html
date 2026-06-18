@@ -1,0 +1,4333 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>수능특강 영어 — 내신 완벽 이해 노트</title>
+<style>
+  :root{
+    --ink:#13233b; --ink-soft:#3a4a63; --paper:#f7f4ec; --paper-2:#fffdf8;
+    --line:#d8d0bf; --accent:#b5462f; --accent-2:#1f5d5b; --gold:#9a7b2e;
+    --chip:#ece4d4; --shadow:0 1px 0 rgba(0,0,0,.04), 0 8px 28px rgba(20,35,59,.08);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+    line-height:1.7;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:860px;margin:0 auto;padding:0 18px 120px;}
+  .bar{position:sticky;top:0;z-index:20;background:rgba(247,244,236,.92);
+    backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:12px 0;margin-bottom:8px;}
+  .bar .inner{max-width:860px;margin:0 auto;padding:0 18px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+  .crumb{font-size:.86rem;color:var(--ink-soft);display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+  .crumb a{color:var(--accent);text-decoration:none;cursor:pointer;font-weight:600;}
+  .crumb a:hover{text-decoration:underline;}
+  .crumb .sep{color:var(--line);}
+  .crumb .cur{color:var(--ink);font-weight:700;}
+  .backbtn{font-size:.84rem;border:1px solid var(--line);background:var(--paper-2);color:var(--ink);border-radius:8px;padding:6px 12px;cursor:pointer;font-weight:600;}
+  .backbtn:hover{background:var(--chip);}
+  header.top{padding:40px 0 26px;border-bottom:2px solid var(--ink);margin-bottom:8px;}
+  .eyebrow{font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;color:var(--accent);font-weight:700;margin:0 0 12px;}
+  header.top h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.9rem,5vw,2.9rem);line-height:1.12;margin:0 0 6px;font-weight:700;letter-spacing:-.01em;}
+  header.top .sub{font-size:1.02rem;color:var(--ink-soft);margin:10px 0 0;}
+  .grid{display:grid;gap:12px;margin:30px 0 0;}
+  .card{display:flex;align-items:center;gap:16px;text-align:left;width:100%;background:var(--paper-2);border:1px solid var(--line);border-radius:14px;padding:18px 20px;cursor:pointer;box-shadow:var(--shadow);font-family:inherit;color:inherit;transition:transform .12s,border-color .12s;}
+  .card:hover{transform:translateY(-2px);border-color:var(--accent);}
+  .card .badge{font-family:Georgia,serif;font-weight:700;color:#fff;background:var(--accent);border-radius:10px;min-width:54px;height:54px;display:flex;align-items:center;justify-content:center;font-size:1.25rem;flex-shrink:0;}
+  .card .badge.sm{font-size:.95rem;min-width:46px;height:46px;}
+  .card .c-body{flex:1;min-width:0;}
+  .card .c-title{font-size:1.08rem;font-weight:700;line-height:1.3;}
+  .card .c-sub{font-size:.85rem;color:var(--ink-soft);margin-top:3px;}
+  .card .c-tag{font-size:.72rem;color:var(--ink-soft);white-space:nowrap;border:1px solid var(--line);border-radius:20px;padding:3px 10px;}
+  .card .arrow{color:var(--accent);font-size:1.2rem;flex-shrink:0;}
+  .sec-label{font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);margin:0;font-weight:700;}
+  .p-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin:28px 0 0;}
+  .p-num{font-family:Georgia,serif;font-size:1.05rem;font-weight:700;color:#fff;background:var(--accent);border-radius:7px;padding:3px 11px;}
+  .p-type{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700;}
+  .p-diff{margin-left:auto;font-size:.8rem;color:var(--ink-soft);}
+  .p-diff b{color:var(--ink);}
+  .p-title{font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.3rem,3.4vw,1.7rem);line-height:1.22;margin:8px 0 0;font-weight:700;}
+  .p-src{font-size:.82rem;color:var(--ink-soft);margin:8px 0 0;font-style:italic;}
+  .flow{background:linear-gradient(180deg,var(--paper-2),#fbf8f1);border:1px solid var(--line);border-left:4px solid var(--accent-2);border-radius:12px;padding:18px 20px;margin:22px 0 8px;box-shadow:var(--shadow);}
+  .flow .flow-lead{font-weight:700;color:var(--accent-2);font-size:1.05rem;margin:0 0 10px;}
+  .flow ul{margin:0;padding-left:2px;list-style:none;display:grid;gap:9px;}
+  .flow li{padding-left:20px;position:relative;font-size:.96rem;color:var(--ink-soft);}
+  .flow li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;border-radius:50%;background:var(--accent-2);}
+  .flow li b{color:var(--ink);}
+  h3.sec{font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);margin:34px 0 4px;padding-bottom:8px;border-bottom:1px dashed var(--line);font-weight:700;}
+  .s{padding:20px 0;border-bottom:1px solid var(--line);}
+  .s:last-child{border-bottom:none;}
+  .s-en{font-family:Georgia,"Times New Roman",serif;font-size:1.06rem;line-height:1.55;color:var(--ink);margin:0 0 14px;font-weight:600;}
+  .s-en .bul{display:inline-flex;align-items:center;justify-content:center;width:1.5em;height:1.5em;border-radius:50%;background:var(--ink);color:#fff;font-size:.72rem;font-weight:700;margin-right:8px;vertical-align:1px;font-family:system-ui;}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:6px 14px;margin:0 0 9px;align-items:start;}
+  .row .lab{font-size:.74rem;font-weight:700;padding-top:2px;}
+  .row .val{font-size:.97rem;color:var(--ink-soft);line-height:1.62;}
+  .row.literal .lab{color:var(--accent-2);}
+  .row.easy .lab{color:var(--ink);}
+  .row.role .lab{color:#6a5aa6;}
+  .row .val b{color:var(--ink);font-weight:700;}
+  .point{margin:12px 0 2px;background:#fbf4e8;border:1px solid #e7d4a8;border-radius:10px;padding:12px 14px;font-size:.93rem;color:#5d4a1e;}
+  .point .ptag{display:inline-block;font-weight:700;color:var(--gold);margin-right:6px;}
+  .point.answer{background:#fbe9e3;border-color:#e8b6a6;color:#7a2e1a;}
+  .point.answer .ptag{color:var(--accent);}
+  details.vocab{margin:18px 0 0;border:1px solid var(--line);border-radius:12px;background:var(--paper-2);overflow:hidden;}
+  details.vocab summary{cursor:pointer;padding:13px 18px;font-weight:700;font-size:.92rem;color:var(--ink);list-style:none;display:flex;align-items:center;gap:8px;}
+  details.vocab summary::-webkit-details-marker{display:none;}
+  details.vocab summary::before{content:"▸";color:var(--accent);transition:transform .2s;}
+  details.vocab[open] summary::before{transform:rotate(90deg);}
+  .vlist{padding:4px 18px 18px;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:6px 22px;}
+  .vlist div{font-size:.9rem;display:flex;gap:10px;border-bottom:1px dotted var(--line);padding:5px 0;}
+  .vlist .w{font-family:Georgia,serif;color:var(--ink);font-weight:600;min-width:96px;}
+  .vlist .m{color:var(--ink-soft);}
+  .pn{display:flex;gap:10px;margin-top:30px;}
+  .pn button{flex:1;background:var(--paper-2);border:1px solid var(--line);border-radius:12px;padding:14px 16px;cursor:pointer;font-family:inherit;color:inherit;text-align:left;}
+  .pn button:hover{border-color:var(--accent);}
+  .pn button:disabled{opacity:.35;cursor:default;}
+  .pn .dir{font-size:.72rem;color:var(--accent);font-weight:700;letter-spacing:.1em;}
+  .pn .pt{font-size:.9rem;font-weight:600;margin-top:3px;line-height:1.3;}
+  .pn .nx{text-align:right;}
+  footer.foot{margin-top:56px;padding-top:24px;border-top:2px solid var(--ink);font-size:.82rem;color:var(--ink-soft);}
+  @media (max-width:560px){.row{grid-template-columns:54px 1fr;} .p-diff{margin-left:0;width:100%;}}
+</style>
+</head>
+<body>
+  <div class="bar" id="bar" style="display:none;"><div class="inner">
+    <button class="backbtn" id="backBtn">← 뒤로</button>
+    <div class="crumb" id="crumb"></div>
+  </div></div>
+  <div class="wrap" id="app"></div>
+<script>
+const DATA = [
+ {
+  "id": "14",
+  "title": "14강 — 빈칸 내용 추론 (2)",
+  "sub": "빈칸 추론 5지문 · 내용 완벽 이해",
+  "passages": [
+   {
+    "num": "수능",
+    "type": "2026 수능 33번 · 빈칸 추론",
+    "diff": "1.7",
+    "title": "설계는 고객이 아니라 ‘건물을 쓸 사람들’과 함께 짓는 것",
+    "src": "출처 — Architectural Design Portable Handbook (2001), Andy Pressman, p.441",
+    "flowLead": "지문 전체 흐름 요약: “도면을 보여 줄 상대는 돈을 낸 고객이 아니라, 그 공간에서 살아갈 모든 사람이다”",
+    "flow": [
+     "<b>핵심 주장 (1~2):</b> 진행 중인 설계에 고객이 반응할 기회를 주는 것이 성공의 핵심이며, 고객뿐 아니라 ‘예상 사용자’까지 참여시키면 장기적으로 훨씬 더 가치 있다.",
+     "<b>병원 사례 (3~5):</b> 고객이 병원 행정 부서라 해도, 의사·간호사 등 ‘매일 쓰는 사람’과 응급 상황으로 ‘가끔 찾는 환자·방문객’의 관점은 행정 부서와 완전히 다르다.",
+     "<b>결론 및 빈칸 (6~8):</b> 각 사용자 유형의 경험과 반응을 이해하면 필연적으로 더 나은 건물이 나오며, 설계 과정에서 의견을 들려준 사람일수록 만족도가 높아 생산성·이직률·비용까지 개선된다."
+    ],
+    "sents": [
+     {
+      "en": "⟦1⟧ Giving clients sufficient opportunity to react to your designs while in progress is a key to professional success.",
+      "lit": "진행 중인 여러분의 설계에 고객이 반응할 충분한 기회를 주는 것은 전문적 성공의 핵심이다.",
+      "easy": "설계를 다 끝낸 다음 “짜잔!” 하고 보여 주지 말고, <b>만드는 도중에 고객이 계속 피드백을 줄 수 있게</b> 해야 일을 잘하는 사람이 된다는 뜻이다.",
+      "role": "글 전체의 대전제 — ‘사용자(고객)의 참여’가 좋은 설계의 열쇠라는 주제를 던진다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦2⟧ Similarly, involving prospective building users as well as clients is even more valuable in the long run.",
+      "lit": "마찬가지로, 고객뿐 아니라 예상되는 건물 사용자들을 참여시키는 것은 장기적으로 훨씬 더 가치가 있다.",
+      "easy": "한 걸음 더 나아가서, 돈을 낸 고객만이 아니라 <b>앞으로 그 건물을 실제로 쓸 사람들</b>까지 끌어들이면 길게 봤을 때 이득이 훨씬 크다.",
+      "role": "‘고객 → 예상 사용자’로 참여 범위를 확장하며, 이 글의 진짜 초점(사용자)을 예고한다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦3⟧ Say your client is a large corporation, such as a health care provider.",
+      "lit": "이를테면, 여러분의 고객이 의료 서비스 제공 기관과 같은 대규모 기업이라고 하자.",
+      "easy": "예를 들어 보자. 여러분에게 설계를 맡긴 고객이 ‘병원 같은 큰 조직’이라고 가정해 보는 것이다.",
+      "role": "추상적 주장을 ‘병원’이라는 구체적 사례로 끌어내려 독자의 이해를 돕는다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦4⟧ While the hospital administration may serve as your client, no doubt the perspectives of administration personnel will differ significantly from those of doctors, interns, residents, nurses, and other medical staff who use the building regularly.",
+      "lit": "병원 행정 부서가 여러분의 고객 역할을 할 수는 있더라도, 행정 부서 직원들의 관점은 그 건물을 정기적으로 사용하는 의사, 인턴, 레지던트, 간호사, 그리고 다른 의료 직원들의 관점과 분명 크게 다를 것이다.",
+      "easy": "계약서에 도장 찍는 사람은 ‘행정실’이지만, 정작 건물에서 <b>매일 일하는 의사·간호사들이 원하는 것</b>은 행정실 생각과 완전히 다를 수밖에 없다.",
+      "role": "‘고객 ≠ 실사용자’라는 핵심 간극을 드러내며, 사용자 참여가 왜 필요한지 근거를 댄다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦5⟧ In addition, the experiences of patients and visitors who use the building irregularly, often as a result of life-threatening emergencies, are altogether different as well.",
+      "lit": "게다가 그 건물을 비정기적으로 사용하는 환자와 방문객들의 경험은, 종종 생명을 위협하는 응급 상황의 결과로 찾아오게 되는 만큼, 또한 완전히 다르다.",
+      "easy": "거기에 더해, 응급실에 실려 오듯 <b>가끔, 그것도 절박한 상황에 오는 환자·방문객</b>의 경험은 또 완전히 딴판이다.",
+      "role": "사용자 유형을 ‘행정/의료진/환자·방문객’ 세 층으로 늘려, 관점의 다양성을 극대화한다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦6⟧ Understanding how each type of user experiences the current medical environment as well as how each reacts to your prospective designs inevitably produces a better building.",
+      "lit": "각 사용자 유형이 여러분의 예상되는 설계안에 어떻게 반응하는지는 물론 현재의 의료 환경을 어떻게 경험하는지를 이해하는 것은 필연적으로 더 나은 건물을 만들어 낸다.",
+      "easy": "이 세 부류가 지금 공간을 어떻게 느끼는지, 또 새 설계안에 어떻게 반응하는지를 다 파악하면 <b>당연히(필연적으로) 더 좋은 건물</b>이 나온다.",
+      "role": "앞선 사례를 일반 원리로 끌어올려 글의 주제(사용자 이해 → 더 나은 건물)를 명시한다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦7⟧ People are likely to be more satisfied with a new building or addition if they have been consulted in the design process.",
+      "lit": "새로운 건물이나 증축에 대해 사람들은 자신들이 설계 과정에서 의견을 들려줄 경우 더 만족할 가능성이 높다.",
+      "easy": "사람은 자기가 <b>설계 과정에 의견을 보탰던 건물</b>일수록 그 결과물에 더 만족하게 마련이다.",
+      "role": "빈칸 추론의 핵심 단서 — 만족도는 ‘설계 과정 참여(being consulted)’에서 나온다는 인과를 못 박는다.",
+      "point": "<span class=\"ptag\">빈칸 포인트</span> 이 글의 빈칸은 “더 나은 건물을 만들려면 ___가 필요하다” 형태로, 정답은 <b>‘예상 사용자들을 설계 과정에 참여시키는 것(consulting/involving the people who will use the building)’</b> 계열의 선택지다. 7번 문장의 <i>if they have been consulted in the design process</i>가 결정적 근거.",
+      "ptcls": "answer"
+     },
+     {
+      "en": "⟦8⟧ For a large institution, this can translate into increased productivity on the job, reduced absenteeism, less turnover, and lower costs.",
+      "lit": "대규모 기관의 경우, 이것은 업무 생산성 향상, 장기 결근 감소, 이직률 감소, 비용 절감으로 이어질 수 있다.",
+      "easy": "큰 기관이라면 이 만족이 곧 <b>생산성↑·결근↓·이직↓·비용↓</b>이라는 실질적 이득으로 돌아온다.",
+      "role": "사용자 참여의 효용을 ‘조직의 숫자(생산성·비용)’로 환산하며 글을 설득력 있게 맺는다.",
+      "point": "",
+      "ptcls": ""
+     }
+    ],
+    "vocab": [
+     [
+      "sufficient",
+      "충분한"
+     ],
+     [
+      "in progress",
+      "진행 중인"
+     ],
+     [
+      "prospective",
+      "예상되는, 장래의"
+     ],
+     [
+      "corporation",
+      "기업"
+     ],
+     [
+      "administration",
+      "행정 부서"
+     ],
+     [
+      "perspective",
+      "관점, 시각"
+     ],
+     [
+      "personnel",
+      "직원들, (총)인원"
+     ],
+     [
+      "life-threatening",
+      "생명을 위협하는"
+     ],
+     [
+      "inevitably",
+      "필연적으로"
+     ],
+     [
+      "absenteeism",
+      "장기 결근"
+     ],
+     [
+      "turnover",
+      "이직률"
+     ]
+    ]
+   },
+   {
+    "num": "01",
+    "type": "빈칸 추론",
+    "diff": "2.0",
+    "title": "같은 욕조 안에서도: 경험은 함께해도 ‘의미’는 함께하지 못한다",
+    "src": "출처 — Young Minds in Social Worlds (2010), Katherine Nelson, p.16",
+    "flowLead": "지문 전체 흐름 요약: “어른에겐 즐거운 목욕이 아기에겐 공포다 — 같은 사건, 다른 의미”",
+    "flow": [
+     "<b>대전제 (1):</b> 의미와 경험의 공유는 자동으로 되는 게 아니다. 둘 이상이 같은 사건을 겪어도 서로 다른 관점·이력·배경지식으로 경험한다.",
+     "<b>가장 큰 간극 (2):</b> 이 차이는 ‘아기 vs 성인’일 때 가장 두드러지는데, 정작 아기를 챙기는 어른은 그 차이를 잘 의식하지 못한다.",
+     "<b>목욕 예시 (3~4):</b> 물놀이가 즐거웠고 자신감·신체조절 능력까지 갖춘 부모는 아기도 물장난을 즐길 거라 기대하지만, 아기는 겁에 질려 울며 정반대 관점을 드러낸다.",
+     "<b>결론·빈칸 (5):</b> 그 둘은 <b>경험은 공유하지만 의미는 공유하지 않는다.</b>"
+    ],
+    "sents": [
+     {
+      "en": "⟦1⟧ Sharing meanings and experiences is not a simple, automatic process: whenever two or more people observe or participate in the same ongoing event they experience it from different perspectives, with different histories, with different background knowledge.",
+      "lit": "의미와 경험을 공유하는 것은 간단한, 자동적인 과정이 아닌데, 두 사람 이상이 진행 중인 같은 사건을 관찰하거나 참여할 때마다, 그들은 서로 다른 관점, 서로 다른 이력, 서로 다른 배경지식을 지닌 채 그것을 경험한다.",
+      "easy": "같은 일을 겪는다고 해서 서로 똑같이 받아들이는 게 아니다. 사람마다 <b>관점·살아온 내력·아는 것이 달라서</b> 같은 장면도 제각기 다르게 경험한다.",
+      "role": "글 전체의 대전제 — ‘경험 공유 ≠ 의미 공유’라는 핵심 명제를 세운다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦2⟧ These differences are most glaring when the individuals involved include an infant or very young child and an adult, although an adult arranging an event for an infant may find it difficult to keep these differences in mind.",
+      "lit": "관련된 사람에 아기 또는 아주 어린 아이와 성인이 포함될 때 이러한 차이가 가장 두드러지지만, 아기를 위해 어떤 일을 준비하는 성인은 이러한 차이를 마음에 담아두고 있는 것이 어려울 수도 있다.",
+      "easy": "이 차이는 <b>아기와 어른 사이에서 가장 극심</b>한데, 정작 아기를 위해 뭔가를 준비하는 어른은 그 차이를 깜빡 잊기 쉽다.",
+      "role": "차이가 가장 극단적으로 나타나는 조건(아기 vs 성인)을 제시하며 곧 나올 예시를 준비한다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦3⟧ When giving a bath, for example, a parent whose experience with water play has been fun, whose knowledge about the source of the water and its disposition provides confidence, and whose body control ensures that the baby is safely held and not in danger, expects the infant to enjoy splashing water.",
+      "lit": "예를 들어, 목욕을 시킬 때, 물놀이 경험이 즐거웠고, 물의 원천과 성질에 대한 지식이 자신감을 제공하며, 자신의 신체 조절 능력으로 아기가 안전하게 안겨 있어 위험하지 않도록 하는 부모는 아기가 물을 튀기는 것을 즐길 것이라고 기대한다.",
+      "easy": "부모는 ①물놀이가 즐거웠던 기억, ②물에 대한 지식에서 오는 자신감, ③아기를 안전하게 받칠 수 있는 신체 능력을 갖췄기에 <b>“아기도 당연히 물장난을 좋아하겠지”</b>라고 기대한다.",
+      "role": "‘성인 쪽 관점’을 세 가지 근거로 구체화해, 곧 뒤집힐 기대를 정교하게 깔아 둔다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦4⟧ Yet the baby may make it clear (perhaps by terrified crying) that her perspective is quite different from that of the adult.",
+      "lit": "그러나 아기는 (아마도 겁에 질린 울음을 통해) 자신의 관점이 성인의 관점과 상당히 상이하다는 것을 분명히 드러낼 수도 있다.",
+      "easy": "그런데 정작 아기는 <b>자지러지게 울면서</b> “난 어른 너랑 생각이 전혀 달라!”라고 온몸으로 표현해 버린다.",
+      "role": "‘Yet’으로 성인의 기대를 뒤집어, 같은 사건 속 두 관점의 충돌을 극적으로 보여 준다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦5⟧ The two share an experience, but not a meaning.",
+      "lit": "그 둘은 경험은 공유하지만, 의미는 공유하지 않는다.",
+      "easy": "결국 부모와 아기는 ‘목욕’이라는 <b>똑같은 경험은 함께했지만, 그것이 무슨 의미인지는 전혀 공유하지 못한</b> 것이다.",
+      "role": "빈칸 출제 문장. 1번의 대전제를 한 문장으로 압축해 글을 강렬하게 닫는다.",
+      "point": "<span class=\"ptag\">빈칸 포인트</span> 빈칸이 마지막 문장에 있다면 정답은 <b>“share an experience, but not a meaning(경험은 공유하나 의미는 공유하지 않는다)”</b> 계열. 전체 글이 ‘같은 사건, 다른 의미’ 한 줄로 수렴하므로 “경험은 같아도 의미는 다르다”는 대비 구조를 고른다.",
+      "ptcls": "answer"
+     }
+    ],
+    "vocab": [
+     [
+      "perspective",
+      "관점"
+     ],
+     [
+      "glaring",
+      "두드러진"
+     ],
+     [
+      "infant",
+      "아기"
+     ],
+     [
+      "arrange",
+      "준비하다, 마련하다"
+     ],
+     [
+      "disposition",
+      "성질"
+     ],
+     [
+      "confidence",
+      "자신감"
+     ]
+    ]
+   },
+   {
+    "num": "02",
+    "type": "빈칸 추론",
+    "diff": "2.4",
+    "title": "실험실의 민낯: 과학적 ‘사실’은 무질서 속에서 빚어진다",
+    "src": "출처 — The Great Paradox of Science (2020), Mano Singham, p.26",
+    "flowLead": "지문 전체 흐름 요약: “깔끔해 보이는 과학, 실상은 어수선한 관찰 더미 — 공로도 시점도 흐릿하다”",
+    "flow": [
+     "<b>주제 제시 (1):</b> Salk 연구소의 일상을 관찰한 인류학적 연구는, 과학에서 ‘누구의 공로인지·언제인지’를 정하는 일이 얼마나 어려운지를 보여 준다.",
+     "<b>라투르의 관찰 (2~3):</b> 외부인은 과학 활동을 잘 조직되고 논리적인 것으로 보지만, 실제로는 과학자들이 질서를 만들어 내려 고군분투하는 ‘무질서한 관찰 더미’다.",
+     "<b>시점의 모호함 (4):</b> TRF가 ‘사실’로 합의된 시점조차 1968~1970년 ‘어느 사이’로만 말할 수 있다.",
+     "<b>공로 다툼 (5):</b> 노벨상을 나눠 받은 두 경쟁 그룹은 서로 ‘우리만이 단독 수상감’이라 여겼다 — 공로 배분의 어려움을 실증."
+    ],
+    "sents": [
+     {
+      "en": "⟦1⟧ A detailed anthropological study of daily scientific practice in the Salk Institute laboratory in La Jolla, California shows how difficult it is to assign credit and dates.",
+      "lit": "캘리포니아 La Jolla에 있는 Salk Institute 실험실에서의 일상적인 과학 활동에 대한 상세한 인류학적 연구는, 공로를 인정하고 시점을 특정하는 것이 얼마나 어려운지를 보여 준다.",
+      "easy": "한 연구소의 ‘과학자들이 매일 뭘 하나’를 인류학자처럼 들여다봤더니, <b>“이 발견은 누구 공이고, 정확히 언제 된 거냐”를 정하는 게 엄청 어렵다</b>는 사실이 드러났다.",
+      "role": "글의 주제 제시 — 과학적 공로(credit)와 시점(date)을 특정하기 어렵다는 화두를 던진다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦2⟧ Bruno Latour describes how scientists arrived at the elucidation of TRF (thyrotropin-releasing factor), a hormone that is secreted by the brain.",
+      "lit": "Bruno Latour는 과학자들이 TRF(갑상선 자극 호르몬 방출 인자)라는, 뇌에서 분비되는 호르몬을 어떻게 규명했는지를 설명한다.",
+      "easy": "학자 Latour는 과학자들이 ‘TRF’라는 뇌 호르몬의 정체를 <b>어떻게 밝혀냈는지 그 실제 과정</b>을 따라간다.",
+      "role": "주제를 입증할 구체적 사례(TRF 연구)와 관찰자(Latour)를 도입한다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦3⟧ He says that his observations led him to “the conviction that a body of practices widely regarded by outsiders as well organized, logical, and coherent, in fact consists of a disordered array of observations with which scientists struggle to produce order.”",
+      "lit": "그는 자신의 관찰이, ‘외부인에 의해 잘 조직되고, 논리적이며, 일관된 것으로 널리 간주되는 일군의 행위가 실제로는 과학자가 질서를 만들어 내기 위해 고군분투하는 무질서하게 배열된 관찰 결과로 구성되어 있다는 확신’으로 자신을 이끌었다고 말한다.",
+      "easy": "바깥에서 보면 과학은 깔끔하고 논리적이지만, 실제 속을 보니 <b>과학자들이 어수선한 관찰 더미를 붙잡고 억지로 질서를 만들어 내는 작업</b>이더라는 확신이 들었다는 것.",
+      "role": "‘겉(질서) vs 속(무질서)’의 대비로 글의 핵심 통찰을 제시한다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦4⟧ The final consensus formulation of TRF (i.e., when it became a scientific “fact”) emerged some time between January 1968 and January 1970.",
+      "lit": "TRF의 최종적인 합의 공식화(즉, 그것이 과학적 ‘사실’이 되었을 때)는 1968년 1월과 1970년 1월 사이의 어느 시점에 나타났다.",
+      "easy": "TRF가 ‘과학적 사실’로 굳어진 시점조차 콕 집을 수 없고, <b>“1968~1970년 어디쯤”</b>이라고밖에 말 못 한다.",
+      "role": "1번의 ‘시점 특정의 어려움(dates)’을 구체적 사례로 입증한다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦5⟧ Half of the Nobel Prize in Medicine for 1977 for this discovery was shared between the Salk group and another competing group in New Orleans (the other half went to Rosalind Yalow for the techniques she developed that were used in these studies), but each of these two competing groups strongly felt that they deserved sole credit and that the other did not deserve even a share of the award.",
+      "lit": "이 발견에 대해 1977년 노벨 의학상의 절반은 Salk 그룹과 뉴올리언스에 있는 또 다른 경쟁 집단 간에 분배되었지만(나머지 절반은 이 연구들에서 사용된 기술을 개발한 Rosalind Yalow에게 수여됨), 이 두 경쟁 집단은 각자 자신만이 단독으로 공로를 인정받을 자격이 있고, 상대방은 그 상의 일부조차 받을 자격이 없다고 강하게 느꼈다.",
+      "easy": "노벨상 절반을 두 경쟁팀이 나눠 가졌는데, <b>두 팀 모두 “이 상은 원래 우리 단독 것이고 저쪽은 한 조각도 받을 자격 없다”</b>고 우겼다.",
+      "role": "‘공로 배분(credit)의 어려움’을 노벨상 분쟁이라는 강력한 실례로 입증하며 글을 맺는다.",
+      "point": "<span class=\"ptag\">빈칸 포인트</span> 이 지문의 빈칸은 보통 1번(주제문) 자리에 와서 “과학에서는 ___가 어렵다” 형태로 출제된다. 정답은 <b>“to assign credit and dates(공로를 인정하고 시점을 특정하는 것)”</b> 계열 — 본문 전체가 ‘누구 공인지’와 ‘언제인지’ 두 축의 모호함을 증명한다.",
+      "ptcls": "answer"
+     }
+    ],
+    "vocab": [
+     [
+      "anthropological",
+      "인류학적인"
+     ],
+     [
+      "elucidation",
+      "규명, 설명"
+     ],
+     [
+      "secrete",
+      "분비하다"
+     ],
+     [
+      "conviction",
+      "확신"
+     ],
+     [
+      "coherent",
+      "일관된"
+     ],
+     [
+      "disordered",
+      "무질서한"
+     ],
+     [
+      "array",
+      "배열"
+     ],
+     [
+      "consensus",
+      "합의, 일치"
+     ],
+     [
+      "formulation",
+      "공식화"
+     ],
+     [
+      "emerge",
+      "나타나다"
+     ],
+     [
+      "credit",
+      "공로, 공적"
+     ]
+    ]
+   },
+   {
+    "num": "03",
+    "type": "빈칸 추론",
+    "diff": "2.1",
+    "title": "보이지 않는 지휘자: 관객의 시선이 무대로 향하는 이유",
+    "src": "출처 — Music Direction for the Stage (2015), Joseph Church, p.16",
+    "flowLead": "지문 전체 흐름 요약: “지휘는 음악만큼 오래됐지만, 좋은 공연일수록 지휘자는 보이지 않는다”",
+    "flow": [
+     "<b>역사 (1~2):</b> 음악 지휘의 개념은 음악의 기원만큼 오래됐다. 고대 인도네시아 가믈란에도 박자·전환을 알려 주는 리더가 있었다.",
+     "<b>미학적 이유 (3~5):</b> 그러나 관객은 음악적 리더십을 거의 인식하지 못하며, 거기엔 충분한 미학적 이유가 있다 — 굳이 눈에 띄는 리더는 오히려 경험을 ‘손상’시킨다. 관객은 기법에 관여하기보다 작품 전체를 받아들이는 편이 낫다.",
+     "<b>대조·빈칸 (6~7):</b> 오케스트라 단독 연주 땐 시선이 지휘자에게 가지만, 무대 위 무언가를 ‘반주’할 땐 <b>모든 시선과 귀가(지휘자 본인까지 포함해) 무대로 향한다.</b>"
+    ],
+    "sents": [
+     {
+      "en": "⟦1⟧ The idea of music direction, in the sense of someone shaping and leading a musical performance, goes back to the beginnings of music.",
+      "lit": "누군가가 음악 공연을 형성하고 이끈다는 의미에서의 음악 지휘의 개념은 음악의 기원까지 거슬러 올라간다.",
+      "easy": "‘누군가가 공연을 빚고 이끈다’는 지휘의 개념은 <b>음악이 처음 생겼을 때부터 있었던</b> 아주 오래된 것이다.",
+      "role": "지휘의 유구한 역사를 제시하며 글을 연다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦2⟧ Even the gamelans of ancient Indonesia had leaders who would signal to the group changes of meter and tempo, beginnings and endings, and transitions from piece to piece.",
+      "lit": "심지어 고대 인도네시아의 가믈란에도 박자와 템포의 변화, 시작과 끝, 곡에서 곡으로의 전환을 연주단에 알려 주던 리더가 있었다.",
+      "easy": "고대 인도네시아 악단(가믈란)에도 <b>박자·시작과 끝·곡 전환을 신호로 알려 주는 리더</b>가 분명히 있었다.",
+      "role": "‘지휘는 보편적’이라는 1번을 구체적 사례로 뒷받침한다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦3⟧ Yet listening audiences are rarely aware of any musical leadership, and for good aesthetic reason.",
+      "lit": "그러나 듣는 관객은 어떠한 음악적 리더십도 거의 인식하지 못하며, 그것에는 충분한 미학적 이유가 있다.",
+      "easy": "그런데 정작 관객은 그런 지휘(리더십)를 거의 못 알아채는데, <b>거기엔 그럴 만한 ‘미학적’ 이유</b>가 있다.",
+      "role": "‘Yet’으로 전환 — 지휘는 있지만 관객은 인식하지 못한다는 역설을 제기한다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦4⟧ They need not be aware to fulfill their experience; indeed, the unnecessarily conspicuous presence of a musical leader will detract from it.",
+      "lit": "그들이 자신의 경험을 충족시키기 위해 자각할 필요는 없으며, 실제로 불필요하게 눈에 띄는 음악 리더의 존재는 그것을 손상할 것이다.",
+      "easy": "관객이 지휘자를 의식해야 공연을 제대로 즐기는 건 아니다. 오히려 <b>지휘자가 너무 눈에 띄면 감상을 망친다.</b>",
+      "role": "‘미학적 이유’를 구체화 — 보이지 않는 지휘가 더 낫다는 핵심 논리.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦5⟧ An audience is better off, for the most part, taking in the whole of a stage work rather than being party to the techniques that go into realizing it.",
+      "lit": "관객은 대부분의 경우 무대 작품을 실현하는 데 들어가는 기법에 관여하기보다는 무대 작품 전체를 받아들이는 쪽이 더 낫다.",
+      "easy": "관객은 ‘무대 뒤의 기술’을 따지기보다 <b>완성된 작품 전체를 통째로 즐기는 편</b>이 더 좋다.",
+      "role": "‘기법(부분) vs 작품 전체’ 대비로 앞 논리를 정리한다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦6⟧ This is not to say that when an orchestra plays alone the audience members’ eyes are not fixed on the conductor for the majority of the time; they probably are.",
+      "lit": "이것은 오케스트라가 단독으로 연주할 때 관객 구성원들의 눈이 (연주가 진행되는) 대부분의 시간 동안 지휘자에게 고정되어 있지 않다는 뜻은 아니며, 아마도 그들의 눈은 그러할 것이다.",
+      "easy": "물론 <b>오케스트라만 연주할 땐</b> 관객 눈이 거의 내내 지휘자에게 쏠린다 — 그 점은 인정한다.",
+      "role": "예외 상황(단독 연주)을 인정해, 곧 나올 대조(무대 반주 시)를 부각한다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦7⟧ When music is accompanying something happening on stage, however, all eyes turn to the stage, and so do everyone’s ears, too (including the music director’s).",
+      "lit": "그러나 음악이 무대 위에서 일어나고 있는 무언가의 반주를 할 때, 모든 시선이 무대로 향하며, (음악 지휘자의 귀를 포함하여) 모든 이의 귀도 마찬가지로 무대로 향한다.",
+      "easy": "하지만 음악이 <b>무대 위 사건의 ‘반주’ 역할</b>을 할 땐, 모든 눈이 무대로 향하고, 심지어 지휘자의 귀조차 무대로 쏠린다.",
+      "role": "빈칸 출제 문장. ‘지휘자조차 무대로 향한다’는 반전으로, 지휘가 보이지 않아야 한다는 주제를 완성한다.",
+      "point": "<span class=\"ptag\">빈칸 포인트</span> 빈칸은 7번의 <i>all eyes turn to the stage</i> 자리에 자주 출제된다. 정답은 <b>“모든 시선(과 귀)이 무대로 향한다(turn to the stage)”</b> 계열 — 4·5번이 ‘리더가 눈에 띄면 안 되고 관객은 작품 전체를 본다’고 했으므로, 반주 상황에선 주목이 지휘자가 아닌 무대로 이동한다.",
+      "ptcls": "answer"
+     }
+    ],
+    "vocab": [
+     [
+      "direction",
+      "지휘, 통솔"
+     ],
+     [
+      "gamelan",
+      "가믈란(인니 전통 연주단)"
+     ],
+     [
+      "meter",
+      "박자"
+     ],
+     [
+      "transition",
+      "전환"
+     ],
+     [
+      "aesthetic",
+      "미학적인"
+     ],
+     [
+      "conspicuous",
+      "눈에 띄는"
+     ],
+     [
+      "detract from",
+      "~을 손상하다"
+     ],
+     [
+      "be better off",
+      "~하는 편이 더 낫다"
+     ],
+     [
+      "be party to",
+      "~에 관여하다"
+     ],
+     [
+      "conductor",
+      "지휘자"
+     ],
+     [
+      "accompany",
+      "(~의) 반주를 하다"
+     ]
+    ]
+   },
+   {
+    "num": "04",
+    "type": "빈칸 추론",
+    "diff": "1.9",
+    "title": "야구를 아는 부진아 vs 야구를 모르는 우등생: 승자는?",
+    "src": "출처 — Readicide (2023), Kelly Gallagher",
+    "flowLead": "지문 전체 흐름 요약: “읽기 실력보다 ‘배경지식’이 독해를 가른다 — 야구 실험이 증명한 x-요인”",
+    "flow": [
+     "<b>도입 (1~2):</b> Hirsch가 소개한 연구는 ‘독자가 페이지에 가져오는 것(배경지식)’의 중요성을 강조한다. 야구 지문을 읽는 두 집단으로 실험했다.",
+     "<b>두 집단 (3~4):</b> ①야구를 모르는 ‘독해 우등생’ vs ②야구를 잘 아는 ‘독해 부진아’.",
+     "<b>반전 결과 (5~7):</b> 이해도 시험에서 더 높은 점수를 받은 쪽은? <b>독해 부진아(야구를 아는 쪽)</b>였다.",
+     "<b>결론·빈칸 (8~10):</b> 주제에 대한 지식이 없으면 뛰어난 읽기 능력만으로는 부족했다. 결국 <b>배경지식(의 유무)이 성패를 가른 x-요인</b>이었다."
+    ],
+    "sents": [
+     {
+      "en": "⟦1⟧ The importance of what a reader brings to the page is highlighted in a study discussed by Hirsch in The Knowledge Deficit.",
+      "lit": "독자가 페이지에 가져오는 것(독자의 배경지식)의 중요성은 Hirsch가 ‘The Knowledge Deficit’에서 논한 연구에서 강조된다.",
+      "easy": "독자가 글을 읽기 전에 <b>이미 머릿속에 갖고 오는 것(=배경지식)</b>이 얼마나 중요한지를 보여 주는 연구가 있다.",
+      "role": "글의 핵심 개념(배경지식의 중요성)을 제시하고 연구를 소개한다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦2⟧ This study consisted of two groups of students who were asked to read a passage about baseball.",
+      "lit": "이 연구는 야구에 관한 글을 읽도록 요구받은 두 집단의 학생으로 구성되었다.",
+      "easy": "실험은 <b>‘야구 지문’을 읽는 두 그룹</b>의 학생으로 이뤄졌다.",
+      "role": "실험 설계를 제시하며 곧 나올 대비(두 집단)를 예고한다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦3⟧ The first group was made up of strong readers who knew little about baseball.",
+      "lit": "첫 번째 집단은 야구에 대해 거의 알지 못하는 독해력이 뛰어난 학생들로 구성되었다.",
+      "easy": "1조 = <b>야구는 잘 모르지만 글은 잘 읽는</b> 우등생들.",
+      "role": "‘읽기 능력↑ / 배경지식↓’ 조건의 집단을 제시한다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦4⟧ The second group was composed of struggling readers who were knowledgeable about baseball.",
+      "lit": "두 번째 집단은 야구에 대해 잘 알고 있는 독해에 어려움을 겪는 학생들로 구성되었다.",
+      "easy": "2조 = <b>글 읽기는 서툴지만 야구는 빠삭한</b> 학생들.",
+      "role": "‘읽기 능력↓ / 배경지식↑’ 조건의 집단으로 1조와 정반대 대비를 만든다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦5⟧ After reading the passage, students in each group had their comprehension tested.",
+      "lit": "글을 읽은 후 각 집단의 학생들은 자신들의 이해력 시험을 치렀다.",
+      "easy": "지문을 다 읽은 뒤 두 그룹 모두 <b>이해도 테스트</b>를 봤다.",
+      "role": "결과를 도출할 측정 단계를 제시한다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦6⟧ Guess which group scored higher? ⟦7⟧ The struggling readers.",
+      "lit": "어느 집단의 점수가 더 높았을까? 독해에 어려움을 겪는 독자들이었다.",
+      "easy": "누가 더 높았을까? 놀랍게도 <b>‘야구를 아는’ 독해 부진아 그룹</b>이었다.",
+      "role": "질문-답 형식으로 반전을 극적으로 제시 — 직관에 어긋나는 결과를 강조한다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦8⟧ Having strong reading skills was not enough for the students who came to the page with a knowledge deficit about the topic.",
+      "lit": "주제에 대한 지식이 부족한 상태로 그 페이지에 도달한 학생들에게는 뛰어난 읽기 능력만으로는 충분하지 않았다.",
+      "easy": "아무리 읽기 실력이 좋아도, <b>그 주제(야구)를 모르고 덤비면</b> 그것만으로는 어림없었다.",
+      "role": "결과의 의미를 해석 — ‘읽기 능력’의 한계를 지적한다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦9⟧ Though the second group of readers were not strong readers, their prior knowledge enabled them to outscore readers with far better abilities.",
+      "lit": "두 번째 집단의 독자들은 독해력이 뛰어나지는 않았지만, 그들의 배경지식으로 인해 훨씬 더 뛰어난 능력을 가진 독자들보다 더 높은 점수를 받는 것을 가능하게 했다.",
+      "easy": "2조는 읽기 실력은 별로였어도 <b>‘야구 배경지식’ 덕분에</b> 실력 좋은 1조를 점수로 눌렀다.",
+      "role": "배경지식이 읽기 능력의 격차를 뒤집었음을 명확히 한다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦10⟧ Prior knowledge, or, in the case of the good readers, the lack of prior knowledge, was the x-factor.",
+      "lit": "배경지식, 혹은 우수 독자의 경우 배경지식의 부족이, (성공을 좌우하는) 미지의 요인이었다.",
+      "easy": "결국 승패를 가른 결정적 변수(x-요인)는 <b>‘배경지식이 있느냐 없느냐’</b>였다.",
+      "role": "빈칸 출제 문장. 실험의 결론을 ‘x-factor = 배경지식’으로 압축해 글을 닫는다.",
+      "point": "<span class=\"ptag\">빈칸 포인트</span> 빈칸은 10번의 <i>Prior knowledge … was the x-factor</i> 자리. 정답은 <b>“prior knowledge(배경지식)”</b> 계열 — 8·9번이 ‘읽기 실력만으론 부족, 배경지식이 격차를 뒤집었다’고 했으므로, 성패를 가른 미지의 요인은 ‘읽기 능력’이 아니라 ‘배경지식의 유무’다.",
+      "ptcls": "answer"
+     }
+    ],
+    "vocab": [
+     [
+      "highlight",
+      "강조하다"
+     ],
+     [
+      "deficit",
+      "부족, 결손"
+     ],
+     [
+      "consist of",
+      "~으로 구성되다"
+     ],
+     [
+      "be made up of",
+      "~으로 구성되다"
+     ],
+     [
+      "be composed of",
+      "~으로 구성되다"
+     ],
+     [
+      "comprehension",
+      "이해력"
+     ],
+     [
+      "prior knowledge",
+      "배경지식"
+     ],
+     [
+      "enable ~ to do",
+      "~이 …하게 하다"
+     ],
+     [
+      "outscore",
+      "~보다 높은 점수를 받다"
+     ],
+     [
+      "x-factor",
+      "(성공을 좌우하는) 미지의 요인"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "16",
+  "title": "16강 — 문단 내 글의 순서 파악",
+  "sub": "순서 파악 7지문 · 내용 완벽 이해",
+  "passages": [
+   {
+    "num": "수능",
+    "type": "2026 수능 36번 · 순서",
+    "diff": "",
+    "title": "시계란 물건이 아니라 ‘반복되는 과정’이다",
+    "src": "출처 — Chaos and Life (2003), Richard J. Bird, p.11",
+    "flowLead": "지문 한눈에 보기: “알람시계든 양초든 방사성탄소든 — 시계의 정체는 결국 ‘똑같은 일의 반복’이다”",
+    "flow": [
+     "<b>정의 뒤집기 (1~3):</b> 우리는 시계를 ‘물건’으로 여기지만, 시계의 본질은 무기한 반복되는 ‘과정’이다.",
+     "<b>예시 (4~5):</b> 물시계의 물방울, 석영의 진동처럼 시계는 모두 반복 주기에 의존한다.",
+     "<b>반례처럼 보이는 것 (6~7):</b> 시간 단위로 표시된 양초는 예외 같지만, ‘밀랍 분자의 연소’라는 반복이 숨어 있다.",
+     "<b>또 다른 사례 (8~9):</b> 방사성탄소 연대측정도 매끄러워 보이나, 실제론 탄소-14 원자 붕괴의 반복일 뿐이다."
+    ],
+    "sents": [
+     {
+      "en": "⟦1⟧ We usually think of a clock as a physical thing, like an alarm clock or a wristwatch.",
+      "lit": "우리는 보통 시계를 알람 시계나 손목시계 같은 물리적인 것으로 생각한다.",
+      "easy": "‘시계’ 하면 우리는 보통 알람시계나 손목시계처럼 <b>손에 잡히는 물건</b>을 떠올린다. 이 글은 바로 그 통념을 깨려고 출발한다.",
+      "role": "곧 반박할 일반적 통념(시계=물건)을 먼저 제시한다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦2⟧ But a clock is really a process embodied in a machine, and the nature of that process is repetitive.",
+      "lit": "그러나 시계는 실제로는 어떤 기계 속에 구현된 하나의 과정이며, 그 과정의 본질은 반복적이다.",
+      "easy": "하지만 사실 시계의 진짜 정체는 ‘물건’이 아니라 <b>기계 안에서 돌아가는 어떤 과정</b>이고, 그 과정의 핵심은 ‘똑같은 일을 반복하는 것’이다. 이 한 문장이 글 전체의 주제다.",
+      "role": "‘But’으로 통념을 뒤집고 글의 핵심 주장(시계=반복 과정)을 세운다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦3⟧ A clock can be almost any process that repeats itself over and over again for an indefinite period.",
+      "lit": "시계는 무기한으로 계속 자신을 반복하는 거의 모든 과정일 수 있다.",
+      "easy": "그러니까 <b>끝없이 같은 동작을 되풀이하는 것이라면 거의 무엇이든 시계가 될 수 있다.</b> 시계의 범위를 확 넓혀 주는 말이다.",
+      "role": "주장을 일반화해 다양한 예시를 받아들일 토대를 만든다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦4⟧ Water clocks drip at a steady pace; quartz crystals vibrate regularly.",
+      "lit": "물시계는 일정한 속도로 물방울이 떨어지고, 석영 결정은 규칙적으로 진동한다.",
+      "easy": "실제 예를 보자. 물시계는 <b>일정하게 똑똑 떨어지는 물방울</b>로, 석영 시계는 <b>규칙적인 진동</b>으로 시간을 잰다. 둘 다 ‘반복’이 핵심이다.",
+      "role": "‘시계=반복’을 구체적 사례 둘로 증명한다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦5⟧ Indeed, it is almost impossible to think of a clock that does not depend on a repetitive cycle of events.",
+      "lit": "실제로, 반복적인 사건의 주기에 의존하지 않는 시계를 생각하는 것은 거의 불가능하다.",
+      "easy": "사실 곰곰이 생각해 보면 <b>‘반복’에 기대지 않는 시계는 떠올리기조차 어렵다.</b> 반복이 시계의 필수 조건이라는 뜻이다.",
+      "role": "주장을 강하게 못 박으며, 곧 나올 ‘예외처럼 보이는 사례’를 받을 준비를 한다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦6⟧ The only example that comes to mind readily is a candle marked in hours.",
+      "lit": "선뜻 떠오르는 유일한 사례는 시간 단위로 표시된 양초이다.",
+      "easy": "그나마 ‘반복 없는 시계’로 떠오르는 게 하나 있는데, 바로 <b>눈금이 그어진 양초</b>다(타들어가는 길이로 시간을 재는 양초). 반복이 없어 보이는 예외처럼 보인다.",
+      "role": "주장에 대한 ‘반례 후보’를 제시해 긴장을 만든다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦7⟧ But here too there is iteration ― the repeated burning of molecules of wax ― so this too is an iterative process, although at first masked.",
+      "lit": "그러나 여기에서도 밀랍 분자들의 반복적인 연소처럼 반복이 있어서, 비록 처음에는 가려져 있었지만, 이것 또한 반복적 과정이다.",
+      "easy": "하지만 양초도 자세히 보면 <b>밀랍 분자가 하나씩 반복해서 타는 과정</b>이다. 즉 반복이 없는 게 아니라 <b>그냥 눈에 안 보였을 뿐</b>, 양초도 결국 반복 과정이다.",
+      "role": "반례를 무너뜨려 ‘모든 시계는 반복’이라는 주장을 더 단단하게 만든다.",
+      "point": "<span class=\"ptag\">짚고 가기</span> <i>here too</i>(여기에서도), <i>this too</i>(이것 또한)의 ‘too(~도 역시)’가 핵심. 앞의 물시계·석영처럼 ‘양초도 마찬가지로’ 반복이라는 뜻이라, 6번(양초 제시) 다음에 와야 자연스럽다.",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦8⟧ The use of radiocarbon dating is another, much longer scale clock that also appears to be like this.",
+      "lit": "방사성탄소 연대측정의 사용은 또 다른, 훨씬 더 장기적 규모의 시계로, 이것 또한 이와 같은 것처럼 보인다.",
+      "easy": "훨씬 더 긴 시간을 재는 또 다른 시계가 있는데 바로 <b>방사성탄소 연대측정</b>이다. 이것도 (양초처럼) 겉보기엔 반복이 아닌 듯 보인다.",
+      "role": "‘another(또 다른)’로 새 사례를 더해 주장을 확장한다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦9⟧ It seems to yield a smooth time scale but in fact does not: the decay of atoms of carbon-14 is repetitive, although on a large scale it gives the appearance of being continuous.",
+      "lit": "그것은 매끈한 시간 척도를 내는 것처럼 보이지만, 실제로는 그렇지 않다. 비록 큰 규모에서는 탄소-14 원자의 붕괴가 연속적인 것처럼 보이지만, 그것은 반복적이다.",
+      "easy": "언뜻 끊김 없이 매끄럽게 시간을 재는 것 같지만 사실은 아니다. <b>탄소-14 원자가 하나씩 붕괴하는 반복</b>일 뿐, 단지 규모가 워낙 커서 연속처럼 보일 뿐이다. 결국 이것도 반복 과정이라는 결론.",
+      "role": "마지막 사례까지 ‘반복’으로 귀결시키며 글의 주제를 완성한다.",
+      "point": "",
+      "ptcls": ""
+     }
+    ],
+    "vocab": [
+     [
+      "embody",
+      "구현하다"
+     ],
+     [
+      "repetitive",
+      "반복적인"
+     ],
+     [
+      "indefinite",
+      "무기한의"
+     ],
+     [
+      "quartz",
+      "석영"
+     ],
+     [
+      "vibrate",
+      "진동하다"
+     ],
+     [
+      "readily",
+      "선뜻, 손쉽게"
+     ],
+     [
+      "iteration",
+      "반복"
+     ],
+     [
+      "molecule",
+      "분자"
+     ],
+     [
+      "radiocarbon dating",
+      "방사성탄소 연대측정"
+     ],
+     [
+      "decay",
+      "붕괴"
+     ]
+    ]
+   },
+   {
+    "num": "01",
+    "type": "순서 추론",
+    "diff": "",
+    "title": "온라인 글쓰기: 결론을 맨 앞에 던져라",
+    "src": "출처 — The New Academic (2023), Simon Clews, p.16",
+    "flowLead": "지문 한눈에 보기: “학계식 ‘차근차근 마지막에 짜잔’은 온라인에서 통하지 않는다 — 결론부터 던지고 ‘훅’으로 붙잡아라”",
+    "flow": [
+     "<b>학계의 방식 (1):</b> 학계에선 가설→실험→검증→마지막에 결론, 이런 순서로 쓰도록 배운다.",
+     "<b>온라인의 현실 (2~3):</b> 온라인에선 그 마지막 결론까지 읽어 줄 사람이 거의 없다. 끝까지 기다릴 인내심이 없으니까.",
+     "<b>해법 (4~5):</b> 그러니 “나는 이걸 증명했다! 그 방법은…” 식으로 결론부터 던져라. 독자가 줄더라도 최소한 처음부터 핵심은 안다.",
+     "<b>훅의 힘 (6~7):</b> 첫 문장(‘훅’)이 흥미로우면 더 많이 남고, 초반에 관심을 잡으면 끝까지 읽게 만들 수 있다."
+    ],
+    "sents": [
+     {
+      "en": "⟦1⟧ In academia, you are taught to write up your results thus: “I came up with a hypothesis, then I did this experiment, and then I did another experiment, then I tested my ideas some more, and so on until [dramatic fanfare] ta-da! I proved this.”",
+      "lit": "학계에서 여러분은 결과를 다음과 같은 방식으로 작성하도록 배운다. “나는 가설을 생각해 냈고, 그다음 이 실험을 했으며, 그 후 또 다른 실험을 했고, 그런 다음 아이디어를 좀 더 검증했으며, 이렇게 계속해서 [극적인 팡파르] ‘짜잔!’ 나는 이것을 증명했습니다.”",
+      "easy": "학계(논문 세계)에서는 글을 이렇게 쓰라고 배운다 — <b>“가설을 세웠다 → 실험했다 → 또 실험했다 → 더 검증했다 → … → 그래서 마침내 증명했다!”</b> 즉 결론을 맨 마지막에 ‘짜잔’ 하고 공개하는 방식이다.",
+      "role": "곧 비판할 ‘전통적 글쓰기 방식(결론을 끝에)’을 제시한다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦2⟧ If you wrote this way online, very few of your readers would make it to your dramatic conclusion, no matter how exciting or groundbreaking it was.",
+      "lit": "만약 여러분이 온라인에서 이런 방식으로 글을 쓴다면, 극적인 결론이 아무리 흥미롭거나 혁신적이라 하더라도, 그 결론까지 읽을 독자는 극히 적을 것이다.",
+      "easy": "그런데 그 방식을 온라인에서 쓰면? <b>결론이 아무리 대단해도 거기까지 읽어 줄 사람이 거의 없다.</b> 다들 중간에 떠나 버리기 때문이다.",
+      "role": "‘If ~ online’으로 무대를 온라인으로 옮겨, 전통 방식의 문제점을 지적한다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦3⟧ Online, we don’t have the patience to wait for your big reveal at the end.",
+      "lit": "온라인에서 우리는 여러분이 마지막에 중대한 내용을 공개하는 순간을 기다릴 만큼의 인내심을 가지고 있지 않다.",
+      "easy": "온라인 독자들은 <b>맨 끝의 ‘대공개’를 기다려 줄 참을성이 없다.</b> 왜 2번처럼 사람들이 떠나는지, 그 이유를 콕 집어 설명한 문장이다.",
+      "role": "2번의 문제(독자 이탈)가 왜 생기는지 그 원인(인내심 부족)을 댄다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦4⟧ Instead, you need to tell us up front: “I proved this! And here’s how I know it...”",
+      "lit": "그 대신에, 여러분은 처음부터 우리에게 이렇게 말할 필요가 있다. “나는 이것을 증명했습니다! 그리고 내가 그것을 어떻게 알게 되었는지는 이렇습니다…”",
+      "easy": "그러니 거꾸로 하라. <b>맨 앞에서 곧장 결론부터 던지는 것</b>이다 — “이걸 증명했어요! 그 근거는 지금부터…” 이렇게.",
+      "role": "‘Instead’로 해법(결론을 앞에)을 제시한다. 글의 핵심 주장.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦5⟧ Your readership may still dwindle and trail off over the course of your writing, but at least the vast majority know what it is you’ve achieved from the very beginning.",
+      "lit": "그럼에도 불구하고 여러분의 독자층은 글이 진행되는 동안 줄어들고 점점 감소할 수도 있지만, 적어도 대다수가 바로 처음부터 여러분이 달성한 것이 진정 무엇인지 알고 있다.",
+      "easy": "물론 결론을 앞세워도 읽다가 떠나는 사람은 여전히 생긴다. <b>하지만 적어도 대다수가 ‘무슨 결론인지’는 처음에 이미 알고 간다</b>는 게 큰 차이다.",
+      "role": "해법의 한계를 인정하면서도 그 핵심 이점(처음부터 결론 인지)을 강조한다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦6⟧ A few more of them may stay along for the ride if the opening line — the “hook,” in journalistic terms — is particularly interesting.",
+      "lit": "첫 문장, 즉 언론 용어로 ‘훅’이 특히 흥미롭다면, 그들 중 좀 더 많은 이들이 계속해서 읽기에 참여할 수도 있다.",
+      "easy": "게다가 <b>첫 문장(언론에서 말하는 ‘훅’)이 특히 재밌으면</b>, 떠날 뻔한 사람들 중 몇 명은 더 남아서 끝까지 따라온다.",
+      "role": "‘첫 문장(훅)’이라는 새 요소를 더해 독자 유지 방법을 한 단계 발전시킨다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦7⟧ If you grab their attention early, you can more likely convince more readers to stay for the whole story.",
+      "lit": "여러분이 초반에 그들의 관심을 끌면, 더 많은 독자들이 전체 이야기를 읽도록 설득할 수 있을 가능성이 더 커진다.",
+      "easy": "결론은 이거다 — <b>초반에 관심을 확 붙잡으면, 더 많은 사람을 끝까지 읽게 만들 수 있다.</b>",
+      "role": "‘결론 먼저 + 강력한 훅’이라는 글의 메시지를 한 문장으로 마무리한다.",
+      "point": "",
+      "ptcls": ""
+     }
+    ],
+    "vocab": [
+     [
+      "academia",
+      "학계"
+     ],
+     [
+      "come up with",
+      "~을 생각해 내다"
+     ],
+     [
+      "hypothesis",
+      "가설"
+     ],
+     [
+      "groundbreaking",
+      "혁신적인"
+     ],
+     [
+      "dwindle",
+      "(점점) 줄어들다"
+     ],
+     [
+      "trail off",
+      "차츰 잦아들다"
+     ],
+     [
+      "majority",
+      "대다수"
+     ],
+     [
+      "journalistic",
+      "언론의"
+     ]
+    ]
+   },
+   {
+    "num": "02",
+    "type": "순서 추론",
+    "diff": "",
+    "title": "뇌의 ‘대리 기능’: 한 길이 막히면 다른 길로",
+    "src": "출처 — How to Stay Smart in a Smart World (2022), Gerd Gigerenzer",
+    "flowLead": "지문 한눈에 보기: “뇌는 단서 하나에 매이지 않는다 — 별이 안 보이면 지형지물로, 얼굴 일부가 가려지면 머리 모양으로”",
+    "flow": [
+     "<b>주제 (1~4):</b> 인간의 지각 체계는 변하는 환경 속에서 사물을 알아보도록 설계됐다. 한 경로가 막히면 다른 경로를 쓴다.",
+     "<b>개념 명명 (5~6):</b> 이렇게 가용한 단서에 따라 유연하게 갈아타는 능력을 ‘대리 기능’이라 하며, 대부분의 생물에서 발견된다.",
+     "<b>철새 예시 (7~8):</b> 철새는 별로 길을 찾다가, 흐린 날엔 지형지물·자기감각에 의존한다.",
+     "<b>얼굴 인식 예시 (9~12):</b> 뇌는 눈·코·입으로 얼굴을 알아보고, 몇 개의 선(캐리커처)만으로도, 또 일부가 가려지면 머리카락·머리 모양 같은 외부 특징으로 알아본다."
+    ],
+    "sents": [
+     {
+      "en": "⟦1⟧ The human perceptual system is designed to recognize objects under changing illuminations, situations, and contexts.",
+      "lit": "인간의 지각 체계는 변화하는 빛, 상황, 그리고 맥락 속에서 사물을 인식하도록 설계되어 있다.",
+      "easy": "인간의 ‘지각 시스템(보고 알아보는 능력)’은 <b>빛·상황·맥락이 계속 바뀌어도 사물을 척척 알아보게끔</b> 만들어져 있다.",
+      "role": "글의 주제(변화 속에서도 인식하는 뇌)를 제시한다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦2⟧ It is extraordinarily adapted to a constantly changing world.",
+      "lit": "그것은 끊임없이 변화하는 세상에 대단히 잘 적응되어 있다.",
+      "easy": "즉 우리 뇌는 <b>쉴 새 없이 변하는 세상에 엄청나게 잘 적응</b>되어 있다는 말이다.",
+      "role": "1번을 한 번 더 강조하며 ‘적응’이라는 키워드를 부각한다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦3⟧ To deal with this uncertainty, the brain uses not one, but multiple routes.",
+      "lit": "이러한 불확실성을 처리하기 위해 뇌는 하나의 경로가 아닌 여러 경로를 사용한다.",
+      "easy": "세상이 이렇게 변덕스러우니까, 뇌는 <b>길(방법)을 하나만 쓰지 않고 여러 개를 준비</b>해 둔다.",
+      "role": "‘여러 경로’라는, 이 글의 핵심 메커니즘을 처음 꺼낸다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦4⟧ If one is blocked, it takes another route.",
+      "lit": "하나의 경로가 막히면 그것은 다른 경로를 사용한다.",
+      "easy": "그래서 <b>한 길이 막히면 곧바로 다른 길로 갈아탄다.</b> 이게 이 글이 말하려는 핵심 작동 원리다.",
+      "role": "‘여러 경로’의 작동 방식을 한 문장으로 압축한다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦5⟧ This immense flexibility of the brain to rely on changing cues, according to whatever is available, is known as vicarious functioning.",
+      "lit": "이용 가능한 것이 무엇이든 그것에 따라 변화하는 단서들에 의존할 수 있는 뇌의 이러한 엄청난 유연성은 ‘대리 기능’으로 알려져 있다.",
+      "easy": "이렇게 <b>그때그때 쓸 수 있는 단서로 유연하게 갈아타는 뇌의 능력</b>에 이름이 붙어 있는데, 바로 ‘대리 기능(vicarious functioning)’이다.",
+      "role": "앞서 설명한 현상에 ‘대리 기능’이라는 공식 용어를 부여한다.",
+      "point": "<span class=\"ptag\">짚고 가기</span> <i>This immense flexibility</i>(이 엄청난 유연성)는 3~4번에서 말한 ‘막히면 다른 경로로 가는 능력’을 가리킨다. 즉 5번은 3·4번 뒤에 와야 자연스럽다.",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦6⟧ It can be found in most biological systems.",
+      "lit": "그것은 대부분의 생물 체계에서 찾아볼 수 있다.",
+      "easy": "이 ‘대리 기능’은 인간만이 아니라 <b>거의 모든 생물에게서 볼 수 있는</b> 능력이다. 그래서 곧 동물(철새) 예시가 나온다.",
+      "role": "개념을 생물 전반으로 넓혀, 이어질 예시(철새·얼굴)를 받을 발판을 만든다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦7⟧ For instance, migrating birds fly thousands of miles and may rely on the stars to navigate.",
+      "lit": "예를 들어, 철새는 수천 마일을 이동하면서 길을 찾기 위해 별들에 의존할 수 있다.",
+      "easy": "예를 들어 철새는 수천 마일을 날아가면서 <b>‘별’을 보고 길을 찾는다.</b>",
+      "role": "‘대리 기능’의 첫 사례(철새)를 도입한다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦8⟧ But if it’s a cloudy day, they may instead rely on landmarks or their magnetic sense.",
+      "lit": "그러나 흐린 날이라면, 대신 주요 지형지물이나 자신들의 자성 감각에 의존할 수도 있다.",
+      "easy": "그런데 <b>흐려서 별이 안 보이면, 대신 땅의 지형지물이나 몸속 자기감각(나침반 같은 감각)에 의존</b>한다. 별(한 경로)이 막히니 다른 경로로 갈아타는, 딱 ‘대리 기능’의 예다.",
+      "role": "‘막히면 다른 경로로’ 원리를 철새 사례로 생생히 증명한다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦9⟧ Similarly, the brain can recognize a face by the shape of the eyes, nose, and mouth.",
+      "lit": "마찬가지로, 뇌는 눈, 코, 그리고 입의 모양으로 얼굴을 인식할 수 있다.",
+      "easy": "마찬가지로 뇌는 <b>눈·코·입의 모양으로 얼굴을 알아본다.</b> 이제 ‘얼굴 인식’으로 예시가 넘어간다.",
+      "role": "‘Similarly’로 두 번째 사례(얼굴 인식)를 시작한다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦10⟧ In extreme cases, only a few lines are sufficient, as when we recognize the face of a celebrity in caricatures made with just a few pencil strokes.",
+      "lit": "극단적인 경우에는 단지 몇 개의 선만으로도 충분한데, 우리가 연필로 몇 획만 그린 캐리커처에서 유명인의 얼굴을 인식하는 경우가 그러하다.",
+      "easy": "극단적으로는 <b>선 몇 개만 있어도 얼굴을 알아본다.</b> 연필로 몇 번 쓱쓱 그린 캐리커처만 보고도 그게 누구인지 척 아는 것처럼.",
+      "role": "얼굴 인식이 얼마나 ‘적은 단서’로도 가능한지 극단 사례로 보여 준다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦11⟧ Face recognition also functions even when parts of a face are covered and internal features such as eyes are hardly visible.",
+      "lit": "얼굴의 일부가 가려져 눈과 같은 내부 특징들이 거의 보이지 않을 때에도 얼굴 인식은 또한 작동한다.",
+      "easy": "게다가 <b>얼굴 일부가 가려져 눈 같은 ‘안쪽 특징’이 안 보여도</b> 우리는 여전히 얼굴을 알아본다.",
+      "role": "‘내부 특징이 막힌’ 상황을 제시해, 곧 나올 ‘다른 경로(외부 특징)’를 준비한다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦12⟧ In this case, the brain relies on external features such as hair and head shape.",
+      "lit": "이 경우, 뇌는 머리카락과 머리 형태와 같은 외부 특징들에 의존한다.",
+      "easy": "그럴 땐 뇌가 <b>대신 머리카락·머리 모양 같은 ‘바깥 특징’에 의존</b>해서 알아본다. 눈(한 경로)이 막히니 외부 특징(다른 경로)으로 갈아타는 것 — 얼굴 인식에서도 ‘대리 기능’이 작동한다.",
+      "role": "얼굴 사례에서도 ‘막히면 다른 경로로’ 원리를 확인하며 글을 맺는다.",
+      "point": "<span class=\"ptag\">짚고 가기</span> <i>In this case</i>(이 경우)는 11번의 ‘얼굴 일부가 가려진 상황’을 받는다. 11→12 순서가 고정된다.",
+      "ptcls": ""
+     }
+    ],
+    "vocab": [
+     [
+      "perceptual",
+      "지각의"
+     ],
+     [
+      "illumination",
+      "(불)빛, 조명"
+     ],
+     [
+      "context",
+      "맥락, 전후 사정"
+     ],
+     [
+      "adapt",
+      "적응시키다"
+     ],
+     [
+      "uncertainty",
+      "불확실성"
+     ],
+     [
+      "multiple",
+      "여러, 다수의"
+     ],
+     [
+      "flexibility",
+      "유연성"
+     ],
+     [
+      "vicarious",
+      "대리의"
+     ],
+     [
+      "migrating bird",
+      "철새"
+     ],
+     [
+      "navigate",
+      "길을 찾다"
+     ],
+     [
+      "landmark",
+      "주요 지형지물"
+     ],
+     [
+      "magnetic",
+      "자성의, 자석의"
+     ],
+     [
+      "caricature",
+      "캐리커처"
+     ],
+     [
+      "recognition",
+      "인식, 인지"
+     ]
+    ]
+   },
+   {
+    "num": "03",
+    "type": "순서 추론",
+    "diff": "",
+    "title": "아무 나라도 갖지 않으려는 땅, Bir Tawil",
+    "src": "출처 — 인터넷에서 출처 확인 불가",
+    "flowLead": "지문 한눈에 보기: “두 개의 국경선이 엇갈리며 만든 기이한 사막 — 더 큰 땅을 차지하려다 보니, 아무도 이 땅을 원하지 않게 됐다”",
+    "flow": [
+     "<b>도입 (1):</b> Bir Tawil은 이상한 곳이다.",
+     "<b>1899년 국경 (2~3):</b> 영국이 이집트-수단 국경을 곧은 22도 위도선으로 그었다.",
+     "<b>1902년 새 선 (4):</b> 그 직선이 부족들을 갈라놓자, 1902년 부족 영토를 반영해 새 선을 다시 그었다.",
+     "<b>두 선의 결과 (5):</b> 두 선이 엇갈려 두 지역이 생김 — 탐나는 해안지대(Hala’ib)와 텅 빈 사막(Bir Tawil).",
+     "<b>역설적 결말 (6~8):</b> 이집트는 Hala’ib를 가지려 1899년 선을, 수단도 같은 이유로 1902년 선을 주장 → 결국 둘 다 Bir Tawil은 안 가지려 함 → 아무도 원하지 않는 땅이 됨."
+    ],
+    "sents": [
+     {
+      "en": "⟦1⟧ Bir Tawil is a strange place.",
+      "lit": "Bir Tawil은 이상한 장소이다.",
+      "easy": "‘Bir Tawil’이라는 곳은 아주 이상한 땅이다. 왜 이상한지는 지금부터 설명한다.",
+      "role": "글의 화두를 던지는 도입 문장.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦2⟧ In January 1899, administrators of the British Empire decided to finalize a border between the countries of Egypt and Sudan.",
+      "lit": "1899년 1월, 대영제국의 행정관들이 이집트와 수단 사이의 국경선을 확정 짓기로 결정했다.",
+      "easy": "1899년 1월, 영국 관료들이 <b>이집트와 수단 사이의 국경을 확정</b>하기로 했다. 이 땅 이야기의 시작이다.",
+      "role": "사건의 발단(1차 국경 확정)을 시간 순으로 제시한다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦3⟧ In colonial fashion, they decided to use the conveniently straight line of the twenty-second parallel of latitude.",
+      "lit": "식민지 시대의 방식으로, 그들은 편리하게 곧은 선인 22도 위도선을 사용하기로 결정했다.",
+      "easy": "식민지 시절 흔히 그랬듯, 그들은 <b>그냥 자로 그은 듯 곧은 ‘22도 위도선’을 국경으로 삼았다.</b> (이게 ‘1899년 직선 국경’이다.)",
+      "role": "1899년 국경의 구체적 형태(직선)를 설명 — 뒤의 갈등 원인이 된다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦4⟧ Unsurprisingly, this new international border arbitrarily tore through local tribes and communities, and in 1902, the British drew a new line to reflect tribal territories.",
+      "lit": "예상할 수 있듯이, 이 새로운 국경선은 지역 부족들과 공동체들을 임의적으로 떼어놓게 되었고, 1902년, 영국은 부족들의 영토를 반영하기 위해서 새로운 선을 다시 그었다.",
+      "easy": "당연히 그 직선은 <b>원래 한 부족이던 사람들을 멋대로 갈라놓았다.</b> 그래서 1902년, 영국은 <b>부족 영토에 맞춰 새 국경선을 또 하나 그었다.</b> (이게 ‘1902년 선’.)",
+      "role": "두 번째 국경선(1902년)이 생긴 경위를 설명 — 이제 선이 두 개가 됐다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦5⟧ The combination of these two intersecting lines brought about the creation of two new areas: the large, inhabitable coastal area called the Hala’ib Triangle and an empty, landlocked patch of desert, which is Bir Tawil.",
+      "lit": "이렇게 교차하는 두 선의 조합으로 두 개의 새로운 지역이 형성되었는데, Hala’ib 삼각지대라 불리는 넓고 사람이 거주 가능한 해안 지역과 텅 비고 육지에 둘러싸인 사막 지역이었고, 그 지역이 Bir Tawil이다.",
+      "easy": "이 <b>두 선이 서로 엇갈리면서 두 개의 땅</b>이 생겼다 — 하나는 넓고 살기 좋은 해안 ‘Hala’ib 삼각지대’, 다른 하나는 <b>텅 빈 내륙 사막 ‘Bir Tawil’</b>이다. 이제 문제의 두 땅이 등장한다.",
+      "role": "두 국경선이 만든 결과(두 땅)를 제시 — 갈등의 무대를 완성한다.",
+      "point": "<span class=\"ptag\">짚고 가기</span> <i>these two intersecting lines</i>(이 두 교차하는 선)는 1899년 직선(3번)과 1902년 선(4번)을 가리킨다. 두 선이 다 나온 뒤에야 5번이 올 수 있다.",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦6⟧ To keep the desirable Hala’ib, Egypt understandably claimed the original, straight border of 1899, whereas Sudan — with the same goal in mind — claimed the new 1902 line.",
+      "lit": "탐나는 Hala’ib 지역을 차지하기 위해, 이집트는 당연하게도 1899년의 원래의 직선 국경선을 주장했으며, 반면에 수단은 같은 목적을 염두에 두고 1902년의 새로운 선을 주장했다.",
+      "easy": "좋은 땅 Hala’ib를 갖고 싶어서, <b>이집트는 “1899년 직선이 진짜 국경!”이라 주장</b>하고, <b>수단은 똑같이 Hala’ib를 노리고 “1902년 선이 맞다!”고 주장</b>했다. (각자 자기에게 Hala’ib가 들어오는 선을 우긴 것.)",
+      "role": "두 나라가 ‘좋은 땅’을 두고 서로 다른 국경선을 주장하는 갈등을 보여 준다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦7⟧ The strange result of this long-standing conflict is that, to this day, both countries refuse to claim Bir Tawil, an area of land roughly the size of London, as it would mean giving up a greater prize.",
+      "lit": "이 장기간 지속된 분쟁의 기이한 결과로, 오늘날까지도 두 나라 모두 대략 런던과 비슷한 크기의 땅인 Bir Tawil을 자신들의 영토라고 주장하는 것을 거부하고 있는데, 그것은 더 큰 이익을 포기하는 것을 의미하게 될 것이기 때문이다.",
+      "easy": "이 오랜 다툼의 <b>기이한 결과</b>: 오늘날까지도 두 나라 모두 런던만 한 땅 Bir Tawil을 <b>“우리 땅”이라고 안 하려 한다.</b> 왜냐하면 Bir Tawil을 가지겠다고 하는 순간, 자기가 주장하던 국경선을 포기하는 꼴이 되어 <b>더 좋은 땅 Hala’ib를 잃기 때문</b>이다.",
+      "role": "갈등의 역설적 결과(아무도 안 가지려 함)를 밝히는 핵심 문장.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦8⟧ This makes Bir Tawil the largest — perhaps the only — piece of land that no country wants.",
+      "lit": "이로 인해 Bir Tawil은 어느 나라도 원하지 않는 가장 큰, 어쩌면 유일한 땅이 되어 있다.",
+      "easy": "그 결과 Bir Tawil은 <b>어느 나라도 원하지 않는, 가장 크고 어쩌면 유일한 땅</b>이 되어 버렸다. 1번에서 말한 “이상한 곳”의 정체가 이거다.",
+      "role": "1번의 ‘이상한 곳’과 수미상관을 이루며 글을 깔끔히 맺는다.",
+      "point": "",
+      "ptcls": ""
+     }
+    ],
+    "vocab": [
+     [
+      "administrator",
+      "행정관"
+     ],
+     [
+      "finalize",
+      "확정 짓다"
+     ],
+     [
+      "colonial",
+      "식민지 시대의"
+     ],
+     [
+      "parallel of latitude",
+      "위도선"
+     ],
+     [
+      "arbitrarily",
+      "임의적으로"
+     ],
+     [
+      "tear",
+      "떼어 놓다"
+     ],
+     [
+      "territory",
+      "영토"
+     ],
+     [
+      "intersect",
+      "교차하다"
+     ],
+     [
+      "inhabitable",
+      "사람이 거주 가능한"
+     ],
+     [
+      "landlocked",
+      "육지에 둘러싸인"
+     ],
+     [
+      "patch",
+      "지역, 부분"
+     ],
+     [
+      "understandably",
+      "당연히"
+     ]
+    ]
+   },
+   {
+    "num": "04",
+    "type": "순서 추론",
+    "diff": "",
+    "title": "준거 집단: 비교하면 작아지고, 함께 묶이면 빛난다",
+    "src": "출처 — Sociology: A Brief Introduction (1997), Alex Thio, p.101",
+    "flowLead": "지문 한눈에 보기: “내가 속한 집단은 나를 비추는 거울 — 그 거울은 ‘닮기’도 하고, ‘비교로 깎아내리기’도, ‘영광을 나눠 주기’도 한다”",
+    "flow": [
+     "<b>개념 (1):</b> 내집단은 자기 행동을 평가하는 기준틀, 즉 ‘준거 집단’이 될 수 있다.",
+     "<b>규범 효과 (2~5):</b> 자원봉사 단체원이 기여를 자랑스러워하듯, 준거 집단의 기준을 따라 자신을 평가한다. 부모가 자존감이 높으면 나도 그 규범을 따라 자존감이 높아진다 = 집단을 ‘모방’하는 규범 효과.",
+     "<b>비교 효과 (6~8):</b> 그러나 준거 집단은 ‘비교·연합 효과’도 낸다. 학급 친구들이 뛰어나면 나와 비교해 자신이 부족하다고 느껴 부정적 자기평가를 하게 된다.",
+     "<b>연합 효과 (9):</b> 반대로 그 뛰어난 집단에 ‘속해 있다’는 사실만으로 자랑스러워지는 ‘반사된 영광 누리기’도 일어난다."
+    ],
+    "sents": [
+     {
+      "en": "⟦1⟧ An in-group can become a reference group, a group that is used as the frame of reference for evaluating one’s own behavior.",
+      "lit": "내집단은 준거 집단, 즉 자기 자신의 행동을 평가하는 데 있어 준거틀로 사용되는 집단이 될 수 있다.",
+      "easy": "내가 속한 집단(내집단)은 <b>‘내 행동을 평가하는 기준자’ 역할</b>을 하는 ‘준거 집단’이 될 수 있다. 즉 나는 내 집단을 잣대 삼아 나를 판단한다는 뜻.",
+      "role": "핵심 개념 ‘준거 집단’을 정의하며 글을 연다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦2⟧ Members of a volunteer organization, for example, may evaluate themselves by the standards of the group and feel proud about their contribution to a community service project.",
+      "lit": "예를 들어, 자원봉사 단체의 구성원은 그 집단의 기준에 따라 자신을 평가하고, 지역 사회 봉사 프로젝트에 대한 자신의 기여를 자랑스럽게 느낄 수도 있다.",
+      "easy": "예를 들어 자원봉사 단체원은 <b>그 단체의 기준으로 자신을 평가</b>하고, 봉사에 기여한 걸 자랑스러워한다. 준거 집단이 어떻게 작동하는지 보여 주는 예다.",
+      "role": "‘준거 집단으로 자기 평가’의 첫 사례를 제시한다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦3⟧ This positive self-evaluation reflects the normative effect of a reference group whose members share the same view of themselves.",
+      "lit": "이러한 긍정적인 자기 평가는, 그 구성원들이 동일한 자기 인식을 공유하는 준거 집단의 ‘규범 효과’를 반영한다.",
+      "easy": "이렇게 <b>스스로를 긍정적으로 평가하게 되는 것</b>은, 같은 자기 인식을 공유하는 준거 집단의 <b>‘규범 효과’ 때문</b>이다. (여기서 ‘규범 효과’라는 첫 번째 효과가 등장한다.)",
+      "role": "2번 사례를 ‘규범 효과’라는 용어로 개념화한다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦4⟧ If other members of your reference group (say, your parents) have high self-esteem, you, too, are likely to share that norm and have high self-esteem.",
+      "lit": "만약 준거 집단의 다른 구성원들(예를 들어, 여러분의 부모)이 높은 자존감을 가지고 있다면, 여러분 또한 그 규범을 공유하게 되어 높은 자존감을 가질 가능성이 있다.",
+      "easy": "예를 들어 <b>부모(내 준거 집단)가 자존감이 높으면, 나도 그 분위기를 따라가 자존감이 높아지기 쉽다.</b> ‘규범 효과’의 구체적 예다.",
+      "role": "규범 효과를 ‘부모-자존감’ 사례로 알기 쉽게 보여 준다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦5⟧ The normative effect basically involves imitating the reference group.",
+      "lit": "규범 효과는 기본적으로 준거 집단을 모방하는 것을 포함한다.",
+      "easy": "정리하면, <b>규범 효과란 결국 준거 집단을 ‘따라 하는(모방하는)’ 것</b>이다. 첫 번째 효과를 한 문장으로 매듭짓는다.",
+      "role": "규범 효과의 핵심(=모방)을 요약해 마무리한다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦6⟧ However, reference groups can also have comparison effects and associative effects on self-appraisals.",
+      "lit": "그러나 준거 집단은 자기 평가에 있어 ‘비교 효과’와 ‘연합 효과’ 또한 가질 수 있다.",
+      "easy": "그런데 준거 집단은 모방(규범 효과)만 일으키는 게 아니다. <b>‘비교 효과’와 ‘연합 효과’라는 또 다른 두 가지 효과</b>도 낸다. (여기서 글이 새로운 두 효과로 전환된다.)",
+      "role": "‘However’로 전환해 나머지 두 효과(비교·연합)를 예고한다.",
+      "point": "<span class=\"ptag\">짚고 가기</span> <i>also</i>(또한)가 신호. 앞에서 ‘규범 효과’를 다 설명한 뒤라야 “이것 ‘또한’ 있다”는 6번이 자연스럽다. 즉 5번 다음에 6번.",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦7⟧ If most of your classmates shine in academic achievement, you are likely to compare yourself with them.",
+      "lit": "만약 대부분의 학급 친구들이 학업 성취 면에서 두드러진다면, 여러분은 자신을 그들과 비교하게 될 가능성이 있다.",
+      "easy": "예를 들어 <b>반 친구들 대부분이 공부를 잘하면, 나는 그들과 나를 비교하게 된다.</b> (‘비교 효과’의 예시 시작.)",
+      "role": "‘비교 효과’를 학급 사례로 도입한다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦8⟧ As a result, you may have a negative self-evaluation, feeling that your academic performance is not up to par.",
+      "lit": "그 결과, 여러분은 자신의 학업 성과가 표준에 미치지 못한다고 느끼며 부정적인 자기 평가를 하게 될 수도 있다.",
+      "easy": "그렇게 비교하다 보면 <b>“내 성적은 기준에 못 미치네”라며 자신을 부정적으로 평가</b>하게 된다. 비교 효과는 이렇게 나를 깎아내릴 수 있다.",
+      "role": "비교 효과의 결과(부정적 자기평가)를 보여 준다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦9⟧ Being associated with the brilliant group, though, makes you feel proud of yourself, “basking in reflected glory.”",
+      "lit": "그러나 그 뛰어난 집단과 연합되어 있다는 것을 통해 여러분은 자신을 자랑스럽게 느끼게 하여 ‘반사된 영광을 누리게’ 된다.",
+      "easy": "하지만 반대로, <b>그 뛰어난 집단에 ‘내가 속해 있다’는 사실만으로도 자랑스러워질 수 있다.</b> 친구들의 영광이 나에게도 비쳐 ‘반사된 영광을 누리는’ 것 — 이게 ‘연합 효과’다.",
+      "role": "마지막 효과(연합 효과)를 제시하며, 같은 집단이 ‘비교(깎임)’와 ‘연합(빛남)’ 양쪽으로 작용함을 대비시켜 글을 맺는다.",
+      "point": "<span class=\"ptag\">짚고 가기</span> <i>though</i>(그러나)가 8번의 ‘부정적 평가’와 대조를 이룬다. 비교 효과(깎임)→연합 효과(빛남)의 대비 흐름이라 8번 다음 9번.",
+      "ptcls": ""
+     }
+    ],
+    "vocab": [
+     [
+      "in-group",
+      "내집단"
+     ],
+     [
+      "reference group",
+      "준거 집단"
+     ],
+     [
+      "evaluate",
+      "평가하다"
+     ],
+     [
+      "contribution",
+      "기여"
+     ],
+     [
+      "self-esteem",
+      "자존감"
+     ],
+     [
+      "normative",
+      "규범의"
+     ],
+     [
+      "imitate",
+      "모방하다"
+     ],
+     [
+      "comparison",
+      "비교"
+     ],
+     [
+      "associative",
+      "연합의, 연상의"
+     ],
+     [
+      "self-appraisal",
+      "자기 평가"
+     ],
+     [
+      "par",
+      "표준, 기준"
+     ],
+     [
+      "bask in",
+      "~을 누리다"
+     ]
+    ]
+   },
+   {
+    "num": "05",
+    "type": "순서 추론",
+    "diff": "",
+    "title": "음악의 ‘근접성’: 오른손이 멜로디로 들리는 까닭",
+    "src": "출처 — Sensation and Perception (2014), E. Bruce Goldstein",
+    "flowLead": "지문 한눈에 보기: “가까운 것끼리 묶어 듣는다 — 피아노 오른손이 멜로디로, 바흐의 한 바이올린이 두 선율로 들리는 비밀”",
+    "flow": [
+     "<b>개념 (1~3):</b> 음악의 ‘근접성’이란 음의 높이·시간·공간에서 가까운 것들이다. 비슷한 높이의 음, 함께 연주되는 음, 같은 악기의 음은 한데 묶인다.",
+     "<b>피아노 예시 (4~7):</b> 오른손은 높은 음, 왼손은 낮은 음·반주를 친다. 모든 음이 가까운 공간에서 거의 동시에 나오지만, 오른손 음들은 ‘높이’로 묶여 멜로디로 들린다.",
+     "<b>바흐 예시 (8~9):</b> 바이올린 독주에서 높은 음과 낮은 음을 동시에 연주하면, 우리는 높은 음끼리·낮은 음끼리 묶어 두 개의 선율로 듣는다."
+    ],
+    "sents": [
+     {
+      "en": "⟦1⟧ In music, proximity may refer to elements’ being close together in pitch, time, or space.",
+      "lit": "음악에서 ‘근접성’은 요소들이 음의 높이, 시간, 또는 공간에서 서로 가깝게 위치해 있는 것을 의미할 수 있다.",
+      "easy": "음악에서 ‘근접성’이란 음들이 <b>음높이·시간·공간상 서로 가까이 있는 것</b>을 말한다. 이 ‘근접성’이 이 글의 핵심 개념이다.",
+      "role": "핵심 개념 ‘근접성’을 정의하며 글을 연다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦2⟧ For example, notes that are similar in pitch may be grouped together.",
+      "lit": "예를 들어, 높이가 비슷한 음들은 함께 묶이게 될 수 있다.",
+      "easy": "예를 들어 <b>음높이가 비슷한 음들끼리는 ‘한 덩어리’로 묶여서 들린다.</b>",
+      "role": "근접성의 첫 번째 종류(음높이)를 예로 든다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦3⟧ Notes are also grouped together if they are played together in time or if they come from the same instrument or section of a larger musical group.",
+      "lit": "음들은 시간상 함께 연주되거나 같은 악기 또는 더 큰 음악 집단의 같은 섹션에서 나올 경우에도 함께 묶인다.",
+      "easy": "또 <b>동시에 연주되는 음들, 또는 같은 악기에서 나오는 음들끼리도</b> 한 덩어리로 묶인다. (시간·공간상의 근접성.)",
+      "role": "근접성의 나머지 종류(시간·악기)를 추가 설명한다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦4⟧ To get a sense of the idea of proximity, imagine a person playing a piano.",
+      "lit": "근접성이라는 개념을 이해하기 위해, 피아노를 연주하는 사람을 상상해 보라.",
+      "easy": "이 ‘근접성’을 감 잡으려면, <b>피아노 치는 사람을 한번 떠올려 보라.</b> 본격적인 예시(피아노)가 시작된다.",
+      "role": "추상 개념을 구체적 예시(피아노)로 안내한다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦5⟧ Typically, the right hand plays notes that are higher in pitch than the left hand.",
+      "lit": "일반적으로 오른손은 왼손보다 음의 높이가 더 높은 음들을 연주한다.",
+      "easy": "보통 피아노는 <b>오른손이 높은 음, 왼손이 낮은 음</b>을 친다.",
+      "role": "피아노에서 양손의 음높이 차이를 제시한다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦6⟧ Also, most often, it is the right hand that plays the melody, whereas the left hand plays the bass line or accompaniment.",
+      "lit": "또한 대부분의 경우, 멜로디를 연주하는 것은 오른손인 반면, 왼손은 낮은 음역이나 반주를 연주한다.",
+      "easy": "또 대개 <b>오른손이 ‘멜로디(주선율)’를, 왼손이 ‘반주’를 맡는다.</b>",
+      "role": "오른손=멜로디라는, 곧 설명할 현상의 배경을 제시한다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦7⟧ Even though all of the notes are played in close spatial proximity and at approximately the same time, we hear the notes from the right hand emerging as melody because they are grouped together with respect to pitch.",
+      "lit": "모든 음이 공간적으로 가까운 근접성 안에서 거의 같은 시간에 연주됨에도 불구하고, 오른손의 음들이 높이를 기준으로 함께 묶이기 때문에 우리는 그 음들이 멜로디로 나타나는 것으로 듣는다.",
+      "easy": "사실 양손의 음은 <b>거의 같은 자리에서 거의 동시에</b> 울린다. 그런데도 <b>오른손 음들은 ‘비슷한 높이’끼리 묶이기 때문에</b> 우리 귀엔 그것이 ‘멜로디’로 도드라져 들린다. ‘근접성(음높이)’이 작동한 결과다.",
+      "role": "피아노 예시를 ‘음높이 근접성’ 개념으로 설명하며 핵심을 입증한다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦8⟧ Similarly, in some of Bach’s famous solo music for violin, the violinist essentially creates two streams of music by simultaneously playing both high and lower notes.",
+      "lit": "마찬가지로, 바흐의 유명한 바이올린 독주곡들 중 일부에서, 바이올리니스트가 높은 음과 더 낮은 음 모두를 동시에 연주함으로써 본질적으로 두 개의 음악 흐름을 만들어 낸다.",
+      "easy": "마찬가지로 바흐의 바이올린 독주곡에선, 연주자가 <b>높은 음과 낮은 음을 동시에 연주해 사실상 ‘두 줄기의 음악’을 만들어 낸다.</b> (악기는 하나인데도.)",
+      "role": "‘Similarly’로 두 번째 사례(바흐 바이올린)를 도입한다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦9⟧ Perceptually, we group the high notes together and group the low notes together, so we hear it as polyphonic or as two lines of music.",
+      "lit": "지각적으로, 우리는 높은 음들끼리 함께 묶고, 낮은 음들끼리 함께 묶기 때문에, 우리는 그것을 다성 음악으로, 다시 말해 두 개의 음악 선율로 듣는다.",
+      "easy": "우리 귀는 <b>높은 음은 높은 음끼리, 낮은 음은 낮은 음끼리 묶어서</b> 듣기 때문에, 한 대의 바이올린 소리를 <b>마치 두 개의 선율(다성 음악)처럼</b> 듣게 된다. 역시 ‘근접성’의 결과다.",
+      "role": "바흐 사례도 ‘음높이 근접성’으로 귀결시키며 글의 주제를 완성한다.",
+      "point": "",
+      "ptcls": ""
+     }
+    ],
+    "vocab": [
+     [
+      "proximity",
+      "근접성"
+     ],
+     [
+      "element",
+      "요소"
+     ],
+     [
+      "pitch",
+      "(음의) 높이"
+     ],
+     [
+      "instrument",
+      "악기"
+     ],
+     [
+      "accompaniment",
+      "반주"
+     ],
+     [
+      "spatial",
+      "공간적인"
+     ],
+     [
+      "approximately",
+      "거의"
+     ],
+     [
+      "essentially",
+      "본질적으로"
+     ],
+     [
+      "simultaneously",
+      "동시에"
+     ],
+     [
+      "polyphonic",
+      "다성 음악의"
+     ]
+    ]
+   },
+   {
+    "num": "06",
+    "type": "순서 추론",
+    "diff": "",
+    "title": "공공재는 왜 시장에서 저평가되는가",
+    "src": "출처 — The Water Paradox (2019), Edward Barbier, p.31",
+    "flowLead": "지문 한눈에 보기: “습지가 거저 주는 혜택엔 가격표가 없다 — 가격이 0이라고 가치가 0인 건 아니다”",
+    "flow": [
+     "<b>주제 (1):</b> 공공재는 시장에서 저평가된다. 시장은 사적 재화엔 있지만 공공재엔 거의 없으니까.",
+     "<b>습지 예시 (2~4):</b> 습지는 번식지·정화 등 다양한 ‘공공재’ 혜택을 무료로 제공한다. 그래서 시장도 가격도 없다.",
+     "<b>가치 ≠ 0 (5~7):</b> 하지만 그 가치가 0은 아니다. 많은 사람이 누리므로, 가치는 모든 수혜자가 얻는 편익의 ‘총합’이며 엄청날 수 있다.",
+     "<b>결론 (8):</b> 가격(0)과 실제 가치 사이의 이 격차가, 공공재가 시장에서 얼마나 저평가되는지를 보여 준다."
+    ],
+    "sents": [
+     {
+      "en": "⟦1⟧ Public goods are undervalued in markets, which exist for private goods but rarely for public goods.",
+      "lit": "시장에서 공공재는 저평가되어 있는데, 시장은 사적 재화를 위해서는 존재하지만, 공공재를 위해서는 거의 존재하지 않는다.",
+      "easy": "공공재(모두가 함께 쓰는 것)는 시장에서 <b>제값을 못 받는다.</b> 왜냐하면 시장이라는 게 <b>개인이 사고파는 물건엔 있지만, 공공재엔 거의 없기</b> 때문이다. 이게 글의 주제다.",
+      "role": "글의 주제(공공재는 시장에서 저평가됨)를 제시한다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦2⟧ For example, aquatic habitats such as wetlands provide diverse benefits that are often public goods, including breeding or refuge for unique species, recreation, hunting and tourism, or purification of water supplies.",
+      "lit": "예를 들면, 습지와 같은 수생 서식지는 고유종의 번식이나 피난처, 휴양, 사냥 및 관광, 또는 물 공급원 정화를 포함하여 흔히 공공재에 해당하는 다양한 편익을 제공한다.",
+      "easy": "예를 들어 ‘습지’는 <b>희귀종의 번식지·피난처, 휴양, 사냥·관광, 물 정화</b> 같은 다양한 혜택을 준다. 이런 혜택들이 바로 ‘공공재’다.",
+      "role": "공공재의 구체적 사례(습지)를 도입한다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦3⟧ These benefits are enjoyed simultaneously by many people and are provided to them for “free” by the natural functioning of the wetlands.",
+      "lit": "이러한 편익은 많은 사람들이 동시에 누리고 있으며 습지의 자연적 기능에 의해 그들에게 ‘무료로’ 제공되고 있다.",
+      "easy": "이 혜택들은 <b>여러 사람이 동시에 누리고, 습지가 알아서 ‘공짜로’ 제공</b>해 준다. 돈을 내지 않는다는 게 포인트.",
+      "role": "습지 혜택의 특징(동시에·무료)을 짚어, 곧 나올 ‘시장·가격 없음’의 근거를 댄다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦4⟧ As a result, there is no “market” and thus no “price” for these public good uses of wetlands.",
+      "lit": "그 결과, 습지의 이러한 공공재적 이용에 대해서는 ‘시장’이 존재하지 않고, 따라서 ‘가격’도 존재하지 않는다.",
+      "easy": "그러다 보니 습지의 이런 혜택엔 <b>‘시장’도 없고, 따라서 ‘가격’도 없다.</b> (공짜니까 사고팔 시장이 안 생기는 것.)",
+      "role": "‘무료 → 시장·가격 없음’이라는 인과를 제시한다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦5⟧ But the actual value of these services is not zero.",
+      "lit": "그러나 이러한 서비스의 실제 가치는 제로가 아니다.",
+      "easy": "하지만 <b>가격이 0이라고 해서, 실제 가치까지 0인 건 아니다.</b> 이 글에서 가장 중요한 반전 문장이다.",
+      "role": "‘But’으로 전환 — ‘가격 0 ≠ 가치 0’이라는 핵심 주장을 세운다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦6⟧ Because many people benefit from these services, their value is the total additional benefits of all individuals who enjoy provision of these services by wetlands.",
+      "lit": "많은 사람들이 이러한 서비스로부터 편익을 얻기 때문에, 그 가치는 습지가 제공하는 이러한 서비스를 누리는 모든 개인이 얻는 추가적 편익의 총합이다.",
+      "easy": "많은 사람이 이 혜택을 누리니까, 진짜 가치는 <b>‘그 혜택을 누리는 모든 사람의 이익을 다 더한 값’</b>이다. 한 사람이 아니라 전체를 합치는 게 핵심.",
+      "role": "‘가치 ≠ 0’의 근거를 ‘편익의 총합’이라는 논리로 설명한다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦7⟧ This value could be huge, even though there is no apparent “market price” for these wetland services.",
+      "lit": "이러한 습지 서비스에 대해 눈에 보이는 ‘시장 가격’이 없음에도 불구하고, 이 가치는 엄청날 수 있다.",
+      "easy": "그래서 <b>겉으로 보이는 ‘시장 가격’은 없어도, 실제 가치는 어마어마할 수 있다.</b>",
+      "role": "‘가격은 없지만 가치는 막대함’을 강조하며 결론으로 이끈다.",
+      "point": "",
+      "ptcls": ""
+     },
+     {
+      "en": "⟦8⟧ This gap between the (zero) price for wetland services and their actual value to all beneficiaries indicates how much these public goods are undervalued in markets.",
+      "lit": "습지 서비스에 대한 (제로) 가격과 모든 수혜자에게 제공되는 실제 가치 사이의 이 격차는 이러한 공공재가 시장에서 얼마나 저평가되어 있는지를 보여준다.",
+      "easy": "결국 <b>‘가격 0’과 ‘막대한 실제 가치’ 사이의 이 큰 격차</b>가, 공공재가 시장에서 얼마나 심하게 저평가되는지를 보여 준다. 1번의 주제로 되돌아오며 글을 맺는다.",
+      "role": "1번의 주제(공공재 저평가)를 ‘가격-가치 격차’로 입증하며 마무리한다.",
+      "point": "",
+      "ptcls": ""
+     }
+    ],
+    "vocab": [
+     [
+      "public goods",
+      "공공재"
+     ],
+     [
+      "undervalue",
+      "저평가하다"
+     ],
+     [
+      "aquatic",
+      "수생의"
+     ],
+     [
+      "diverse",
+      "다양한"
+     ],
+     [
+      "breeding",
+      "번식"
+     ],
+     [
+      "refuge",
+      "피난처"
+     ],
+     [
+      "purification",
+      "정화"
+     ],
+     [
+      "wetland",
+      "습지"
+     ],
+     [
+      "provision",
+      "제공"
+     ],
+     [
+      "apparent",
+      "눈에 보이는, 뚜렷한"
+     ],
+     [
+      "beneficiary",
+      "수혜자"
+     ],
+     [
+      "indicate",
+      "보여주다, 나타내다"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "25",
+  "title": "25강 — 교육, 학교, 진로",
+  "sub": "교육·진로 8지문 · 내용 완벽 이해",
+  "passages": [
+   {
+    "num": "모평",
+    "type": "2026 6월 모평 23번 · 주제",
+    "diff": "",
+    "title": "수업 토론에서 ‘필기’가 중요한 이유",
+    "src": "출처 — Writing in the Arts and Sciences (1981), Elaine P. Maimon, p.59",
+    "flowLead": "지문 한눈에 보기: “토론은 수동적 받아쓰기가 아니라 능동적 참여 — 그 참여를 돕는 도구가 바로 필기다”",
+    "flow": [
+     "<b>목적 (1~4):</b> 수업 토론의 목적은 능동적 참여자가 되는 것이고, 글쓰기(필기)는 그 과업을 돕는 유용한 도구다.",
+     "<b>현실의 문제 (5):</b> 그런데 토론이 시작되면 다들 펜을 내려놓는다.",
+     "<b>필기가 어려운 이유 (6~8):</b> 토론은 강의와 달리 정리가 안 돼 따라가기 어렵고, 무엇이 중요한지 모르며, 참여하면서 동시에 필기하기 힘들다.",
+     "<b>그래도 필기하라 (9~10):</b> 하지만 토론 필기는 충분히 할 만하고 중요하다 — 능동적·초롱초롱하게 유지해 주고, 토론에 체계를 부여하며, 발언 준비를 시켜 준다."
+    ],
+    "sents": [
+     {
+      "en": "⟦1⟧ The purpose of class discussions is to encourage you to be an active participant, not a passive recorder.",
+      "lit": "수업 토론의 목적은 여러분이 수동적인 기록자가 아닌 능동적인 참여자가 되도록 장려하는 것이다.",
+      "easy": "수업에서 토론을 하는 진짜 목적은, 그냥 받아 적기만 하는 <b>수동적 기록자가 아니라 직접 생각하고 말하는 ‘능동적 참여자’</b>가 되게 하려는 것이다.",
+      "role": "글의 주제(토론=능동적 참여)를 제시한다."
+     },
+     {
+      "en": "⟦2⟧ Much of the emphasis in a discussion is on getting students involved in thinking, reacting, and responding.",
+      "lit": "토론에서는 학생들이 생각하고, 반응하고, 응답하도록 하는 데 많은 강조점이 주어진다.",
+      "easy": "토론에서 가장 중요하게 여기는 건 <b>학생들이 직접 생각하고·반응하고·대답하게 만드는 것</b>이다.",
+      "role": "토론이 강조하는 활동(사고·반응)을 구체화한다."
+     },
+     {
+      "en": "⟦3⟧ These are important intellectual activities in the learning process, for through them you are supposed to discover and express your opinions.",
+      "lit": "이러한 활동은 학습 과정에서 중요한 지적 활동인데, 이는 그것을 통해 자신의 의견을 발견하고 표현해야 하기 때문이다.",
+      "easy": "이런 활동이 학습에서 중요한 이유는, <b>그 과정을 통해 자기 생각을 발견하고 표현하게 되기 때문</b>이다.",
+      "role": "왜 그 활동이 중요한지(의견 발견·표현) 근거를 댄다."
+     },
+     {
+      "en": "⟦4⟧ Writing is an invaluable tool for accomplishing these tasks.",
+      "lit": "글쓰기는 이러한 과업을 완수하는 데 매우 유용한 도구이다.",
+      "easy": "그리고 <b>글쓰기(필기)는 그 일을 해내는 데 아주 귀중한 도구</b>다. 이 글의 핵심 주장이 여기서 나온다.",
+      "role": "글의 핵심 주장(글쓰기=토론의 도구)을 제시한다."
+     },
+     {
+      "en": "⟦5⟧ Unfortunately, too many times, when class discussion begins, pens and pencils go down.",
+      "lit": "안타깝게도 수업 토론이 시작되면 펜과 연필을 내려놓는 경우가 너무 많다.",
+      "easy": "그런데 안타깝게도 <b>토론만 시작되면 다들 펜을 탁 내려놓는다.</b> (필기를 안 한다는 문제 제기.)",
+      "role": "이상(필기의 중요성)과 어긋나는 현실의 문제를 지적한다."
+     },
+     {
+      "en": "⟦6⟧ Admittedly, it is considerably more difficult to take notes from discussions than from lectures, for, unlike lectures, discussions tend to be disorganized and difficult to follow.",
+      "lit": "강의와 달리 토론은 정리가 안 되어 있고 따라가기 어려운 경향이 있기 때문에, 강의에서보다 토론에서 메모를 하는 것이 훨씬 더 어렵다는 것은 인정한다.",
+      "easy": "인정할 건 인정하자 — <b>토론 필기는 강의 필기보다 훨씬 어렵다.</b> 강의와 달리 토론은 정리가 안 돼 있고 따라가기 힘들기 때문이다.",
+      "role": "필기를 안 하게 되는 이유 ①(토론은 어수선함)을 인정한다."
+     },
+     {
+      "en": "⟦7⟧ Also, students usually don’t know how much of what other students are saying is important.",
+      "lit": "또한 학생들은 보통 다른 학생이 하는 말 중 얼마나 많은 부분이 중요한지 모른다.",
+      "easy": "게다가 <b>다른 친구의 말 중 어디가 중요한지 가늠하기 어렵다</b>는 것도 문제다.",
+      "role": "필기가 어려운 이유 ②(중요도 판단의 어려움)를 추가한다."
+     },
+     {
+      "en": "⟦8⟧ And if you are an active participant, it is not easy to take notes and formulate what you want to say.",
+      "lit": "그리고 여러분이 적극적인 참여자라면 메모를 하면서 자신이 하고 싶은 말을 표현하는 것이 쉽지 않다.",
+      "easy": "그리고 토론에 적극 참여하다 보면 <b>필기하면서 동시에 할 말을 다듬기가 쉽지 않다.</b>",
+      "role": "필기가 어려운 이유 ③(참여와 필기의 동시 부담)을 댄다."
+     },
+     {
+      "en": "⟦9⟧ But note taking in discussions is not only manageable, it is also important.",
+      "lit": "하지만 토론에서 메모를 하는 것은 관리하기 쉬울 뿐만 아니라 중요하다.",
+      "easy": "하지만 <b>토론 필기는 충분히 해낼 만하고, 게다가 중요하다.</b> (‘But’으로 다시 주장으로 돌아온다.)",
+      "role": "‘But’으로 전환해 다시 핵심 주장(필기는 가능하고 중요)으로 복귀한다."
+     },
+     {
+      "en": "⟦10⟧ Note taking helps to keep you active and alert; it allows you to impose some organization on the discussion; and it can prepare you to speak.",
+      "lit": "메모를 하는 것은 여러분이 능동적이고 정신이 초롱초롱하게 유지하는 데 도움이 되며, 토론에 일정한 체계를 부여할 수 있게 해주고, 말할 준비를 하게 해 줄 수 있다.",
+      "easy": "필기의 효과는 셋이다 — <b>① 능동적이고 집중하게 해 주고, ② 어수선한 토론에 나만의 체계를 잡아 주며, ③ 발언할 준비를 시켜 준다.</b> 그래서 필기가 중요하다는 결론.",
+      "role": "필기의 세 가지 효용을 제시하며 주제를 완성한다."
+     }
+    ],
+    "vocab": [
+     [
+      "passive",
+      "수동적인"
+     ],
+     [
+      "emphasis",
+      "강조점, 강조"
+     ],
+     [
+      "invaluable",
+      "매우 귀중한"
+     ],
+     [
+      "admittedly",
+      "인정하건대"
+     ],
+     [
+      "take notes",
+      "필기하다"
+     ],
+     [
+      "formulate",
+      "(의견을) 표현하다"
+     ],
+     [
+      "alert",
+      "정신이 초롱초롱한"
+     ],
+     [
+      "impose",
+      "부과하다"
+     ]
+    ]
+   },
+   {
+    "num": "01",
+    "type": "빈칸 추론",
+    "diff": "",
+    "title": "좋은 교육은 ‘질서’를 요구한다",
+    "src": "출처 — The Elements of Teaching 2nd Ed. (2017), James M. Banner & Harold C. Cannon, p.51",
+    "flowLead": "지문 한눈에 보기: “무질서를 질서로 — 좋은 교육은 외부 질서를 부과해 내면의 질서를 키우고, 교사와 학생 모두를 통제 아래 둔다”",
+    "flow": [
+     "<b>대전제 (1):</b> 교육은 사회의 요구를 반영하며, 무질서가 그 반대(질서)로 대체되기를 요구한다.",
+     "<b>핵심 원리 (2):</b> 학생이 스스로 질서를 못 갖추면, 외부 질서를 부과받아야 내면의 질서가 발달한다.",
+     "<b>구체적 모습 (3~4):</b> 목표를 분명히 설정·설명하고, 자료를 적절히 제시하며, 학생은 정숙·예의 같은 학습 조건을 지킬 의무를 받아들여야 한다.",
+     "<b>결론 (5~6):</b> 무엇보다 목표 지향적이고 인내로 추구하는 ‘체계적 근면’을 의미하며, 결국 교사와 학생 모두 내·외적 통제 아래 두는 것이 좋은 교육이다."
+    ],
+    "sents": [
+     {
+      "en": "⟦1⟧ Teaching reflects what society itself demands; it necessitates that disorder — of students and teachers alike, of mind, behavior, and environment — yield to its opposite.",
+      "lit": "교육은 사회 자체가 요구하는 바를 반영하는데, 그것은 학생과 교사 모두의 무질서, 정신, 행동, 환경의 무질서가 그 반대(질서)로 대체되는 것을 불가피하게 만든다.",
+      "easy": "교육은 사회가 원하는 걸 반영한다. 그래서 교육은 <b>학생·교사·정신·행동·환경의 ‘무질서’가 그 반대인 ‘질서’로 바뀌기를 반드시 요구</b>한다.",
+      "role": "글의 대전제(교육은 무질서→질서를 요구)를 세운다."
+     },
+     {
+      "en": "⟦2⟧ Effective teaching requires that, failing their own self-imposed order, students experience the imposition of some outer order so that inner order may develop.",
+      "lit": "효과적인 교육을 위해서는 학생들 자신이 스스로 부과한 질서를 갖추지 못할 경우, 내면의 질서가 발달할 수 있도록 일정한 외부의 질서가 부과되는 것을 경험해야 한다.",
+      "easy": "효과적인 교육이 되려면, <b>학생이 스스로 질서를 못 만들 때 ‘외부에서 주어지는 질서’를 겪어 봐야 한다.</b> 그래야 ‘내면의 질서’가 자라기 때문이다. (외부 질서 → 내면 질서.)",
+      "role": "글의 핵심 원리(외부 질서 부과 → 내면 질서 발달)를 제시한다."
+     },
+     {
+      "en": "⟦3⟧ This means in practice, for instance, that the goals of classes and courses be clearly set, that they be explained and justified, that the manner of achieving them be clear, that the presentation of materials conducive to reaching them be appropriate, and that all activities be directed somehow to their attainment.",
+      "lit": "예를 들면, 이는 실제로 수업과 강의의 목표가 분명하게 설정되고, 그 목표가 설명되고 정당화되며, 목표를 달성하는 방식이 명확하고, 목표에 이르는 데 도움이 되는 자료의 제시가 적절하며, 모든 활동이 어떤 방식으로든 목표 달성을 향해야 함을 의미한다.",
+      "easy": "이걸 실제로 풀면 이렇다 — <b>수업 목표를 분명히 정하고·설명·정당화하고, 달성 방법을 명확히 하고, 알맞은 자료를 주고, 모든 활동을 목표 달성으로 향하게</b> 하라는 것이다. (‘외부 질서’의 구체적 모습.)",
+      "role": "‘외부 질서’가 수업에서 구체적으로 어떤 모습인지 나열한다."
+     },
+     {
+      "en": "⟦4⟧ It means, too, that students take up their own obligation to maintain the conditions under which learning occurs: quiet in their classrooms, respect for and courtesy toward others, civility of language and behavior, and the like.",
+      "lit": "그것은 또한 학습이 이루어지는 조건, 즉 교실에서의 정숙, 타인에 대한 존중과 예의, 언어와 행동의 정중함 등을 유지하기 위해 학생들이 자신의 의무를 받아들여야 한다는 뜻이다.",
+      "easy": "또한 <b>학생도 학습 조건을 지킬 ‘자기 의무’를 받아들여야 한다</b> — 교실에서 조용히 하고, 남을 존중·배려하고, 말과 행동을 정중하게 하는 것 등이다.",
+      "role": "질서 유지의 책임이 학생에게도 있음을 강조한다."
+     },
+     {
+      "en": "⟦5⟧ Above all, it implies structured industry — study and activity that are oriented toward a goal and pursued with perseverance and method.",
+      "lit": "무엇보다도 그것은 체계적인 근면함을 의미하는데, 바로 목표를 지향하고 인내와 체계를 가지고 추구하는 학습과 활동이다.",
+      "easy": "무엇보다 이것은 <b>‘체계적인 근면’</b>을 뜻한다 — 즉 목표를 향하고, 끈기와 체계를 가지고 밀고 나가는 공부와 활동이다.",
+      "role": "앞 내용을 ‘체계적 근면’이라는 핵심어로 압축한다."
+     },
+     {
+      "en": "⟦6⟧ That is, good teaching requires that teachers and students subject themselves to external and internal control so that learning can take place.",
+      "lit": "다시 말해, 좋은 교육은 학습이 이루어질 수 있도록 교사와 학생이 자신들을 외적 및 내적 통제하에 둘 것을 요구한다.",
+      "easy": "정리하면, <b>좋은 교육이란 학습이 일어나도록 교사와 학생 모두 스스로를 ‘외적·내적 통제’ 아래 두는 것</b>이다. 글 전체를 한 문장으로 요약한 결론.",
+      "role": "‘교사·학생 모두 통제 아래’라는 결론으로 글을 맺는다.",
+      "point": "빈칸은 보통 5~6번의 핵심어(structured industry / external and internal control) 자리에 출제된다. 정답은 ‘질서·통제·체계적 근면’ 계열 — 글 전체가 ‘무질서를 질서로 바꾸는 것이 교육’이라는 한 방향으로 흐른다.",
+      "ptcls": "answer"
+     }
+    ],
+    "vocab": [
+     [
+      "necessitate",
+      "불가피하게 만들다"
+     ],
+     [
+      "yield to",
+      "~으로 대체되다"
+     ],
+     [
+      "self-imposed",
+      "스스로 부과한"
+     ],
+     [
+      "imposition",
+      "부과"
+     ],
+     [
+      "conducive",
+      "도움이 되는"
+     ],
+     [
+      "attainment",
+      "달성"
+     ],
+     [
+      "obligation",
+      "의무"
+     ],
+     [
+      "courtesy",
+      "예의"
+     ],
+     [
+      "civility",
+      "정중함"
+     ],
+     [
+      "imply",
+      "의미하다, 암시하다"
+     ],
+     [
+      "perseverance",
+      "인내"
+     ]
+    ]
+   },
+   {
+    "num": "02",
+    "type": "제목 추론",
+    "diff": "",
+    "title": "아이에겐 ‘나쁜 말’이 ‘좋은 말’보다 강하다",
+    "src": "출처 — What Do You Say? (2021), William Stixrud & Ned Johnson, p.71",
+    "flowLead": "지문 한눈에 보기: “꾸짖음·‘안 돼’는 아이 뇌의 편도체를 자극하고, ‘안 돼’ 한 단어가 스트레스 호르몬을 쏟아낸다 — 나쁜 것이 좋은 것보다 세다”",
+    "flow": [
+     "<b>부정적 말의 효과 (1~2):</b> 꾸짖거나 비꼬거나 죄책감을 주면 아이의 편도체가 활성화돼 방어적·경직 상태가 되고, ‘안 돼’는 공포·분노 관련 스트레스 화학물질을 방출한다.",
+     "<b>실험 근거 (3):</b> MRI에서 ‘안 돼’ 단어를 1초만 봐도 수십 가지 스트레스 호르몬이 분비된다.",
+     "<b>대조 (4):</b> 반대로 ‘그래·사랑·평화’ 같은 긍정어는 감정 조절 영역(전전두엽)을 활성화한다.",
+     "<b>결론 (5~6):</b> 문제는 부정어가 긍정어보다 아이에게 더 강력하다는 것 — 그래서 ‘나쁜 것이 좋은 것보다 강하다.’"
+    ],
+    "sents": [
+     {
+      "en": "⟦1⟧ When we lecture, scold, yell, or criticize, when we say something positive but in a sarcastic tone, or when we try to make our kids feel guilty, it activates their amygdala, triggering their stress response and putting them into a defensive, rigid, reactive state.",
+      "lit": "우리가 훈계하거나 꾸짖고 소리를 지르거나 비판할 때, 긍정적인 말을 하면서도 비꼬는 어조로 표현할 때, 또는 자녀에게 죄책감을 느끼게 하려고 할 때, 그러한 행동은 아이들의 편도체를 활성화시켜 그들의 스트레스 반응을 촉발하고 그들을 방어적이고 경직된 반응 상태에 빠지게 한다.",
+      "easy": "부모가 훈계·꾸중·고함·비판을 하거나, 좋은 말도 비꼬듯 하거나, 죄책감을 주려 하면, <b>아이의 ‘편도체(공포·스트레스 담당 뇌 부위)’가 켜져서 방어적이고 경직된 상태</b>가 된다.",
+      "role": "부정적 말이 아이 뇌에 미치는 영향을 제시한다."
+     },
+     {
+      "en": "⟦2⟧ Even more basic, when we say no or don’t, it releases stress chemicals in our kids’ brains (and in ours) that are associated with fear and anger.",
+      "lit": "한층 더 근본적으로, 우리가 ‘안 돼’라고 하거나 ‘하지 마’라고 말하면, 그것이 자녀의 뇌(그리고 우리의 뇌)에서 공포 및 분노와 연관된 스트레스 화학 물질을 방출한다.",
+      "easy": "더 근본적으로, <b>‘안 돼’·‘하지 마’ 같은 말 한마디가 아이(그리고 부모) 뇌에서 공포·분노와 연결된 스트레스 물질을 뿜어낸다.</b>",
+      "role": "부정어(‘안 돼’)의 생화학적 영향으로 논의를 좁힌다."
+     },
+     {
+      "en": "⟦3⟧ Functional brain imaging research has shown that even seeing the word no on a screen for less than a second while you’re lying in an MRI scanner will cause your brain to suddenly release dozens of stress-producing hormones and neurotransmitters.",
+      "lit": "기능적 뇌 영상 연구에 따르면 MRI 스캐너에 누워 1초도 되지 않는 시간 동안 화면에서 ‘안 돼’라는 단어를 보는 것만으로도 뇌에서 갑자기 수십 가지의 스트레스 유발 호르몬과 신경전달물질을 방출하게 할 것이다.",
+      "easy": "뇌 영상 연구를 보면, MRI 안에서 <b>‘안 돼’라는 글자를 1초도 안 되게 보기만 해도 수십 종의 스트레스 호르몬이 확 쏟아진다.</b> (앞 주장을 실험으로 증명.)",
+      "role": "부정어의 강력함을 실험 근거로 입증한다."
+     },
+     {
+      "en": "⟦4⟧ Conversely, positive words like yes, love, and peace activate systems in the prefrontal cortex that are related to emotional regulation.",
+      "lit": "반대로 ‘그래’, ‘사랑’, ‘평화’와 같은 긍정적인 단어는 감정 조절과 관련된 전전두엽 피질의 시스템을 활성화한다.",
+      "easy": "반대로 <b>‘그래·사랑·평화’ 같은 긍정어는 감정 조절을 맡는 ‘전전두엽’을 활성화</b>한다. (부정어와 정반대 효과.)",
+      "role": "긍정어의 반대 효과를 제시해 대비를 만든다."
+     },
+     {
+      "en": "⟦5⟧ The problem is that negative words like no and don’t have a more powerful effect on kids than positive words.",
+      "lit": "문제는 ‘안 돼’나 ‘하지 마’와 같은 부정적인 단어가 긍정적인 단어들보다 아이들에게 더 강력한 영향을 미친다는 점이다.",
+      "easy": "핵심 문제는 이거다 — <b>부정어가 긍정어보다 아이에게 훨씬 더 강하게 작용한다.</b>",
+      "role": "글의 핵심 주장(부정어 > 긍정어)을 명시한다."
+     },
+     {
+      "en": "⟦6⟧ For this reason, the researchers Suniya Luthar and John Gottman say that “bad is stronger than good” when it comes to communicating with children and teens.",
+      "lit": "이러한 이유로 연구자 Suniya Luthar와 John Gottman은 어린이 및 10대와의 의사소통에 관해서 ‘나쁜 것이 좋은 것보다 더 강하다’고 말한다.",
+      "easy": "그래서 연구자들은 아이·청소년과의 대화에서는 <b>‘나쁜 것이 좋은 것보다 강하다’</b>고 말한다. 글 전체를 요약하는 결론이자 제목감.",
+      "role": "‘bad is stronger than good’이라는 한 줄로 주제를 압축한다.",
+      "point": "제목 추론이라면 정답은 ‘부정적인 말이 더 큰 힘을 가진다 / Bad Is Stronger Than Good’ 계열. 5·6번이 글의 결론이며, 1~4번은 모두 이를 뒷받침하는 근거다.",
+      "ptcls": "answer"
+     }
+    ],
+    "vocab": [
+     [
+      "criticize",
+      "비판하다"
+     ],
+     [
+      "sarcastic",
+      "비꼬는"
+     ],
+     [
+      "guilty",
+      "죄책감이 드는"
+     ],
+     [
+      "activate",
+      "활성화하다"
+     ],
+     [
+      "amygdala",
+      "(해부) 편도체"
+     ],
+     [
+      "trigger",
+      "촉발하다"
+     ],
+     [
+      "defensive",
+      "방어적인"
+     ],
+     [
+      "rigid",
+      "경직된"
+     ],
+     [
+      "release",
+      "방출하다"
+     ],
+     [
+      "neurotransmitter",
+      "신경전달물질"
+     ],
+     [
+      "conversely",
+      "반대로"
+     ],
+     [
+      "prefrontal cortex",
+      "전전두엽 피질"
+     ],
+     [
+      "regulation",
+      "조절"
+     ]
+    ]
+   },
+   {
+    "num": "03",
+    "type": "문장 삽입",
+    "diff": "",
+    "title": "운전·운동의 역설: 너무 의식하면 오히려 망친다",
+    "src": "출처 — The Infant's World (2009), Philippe Rochat, p.124",
+    "flowLead": "지문 한눈에 보기: “배우면 ‘제2의 천성’이 되어 저절로 되지만, 다시 의식하기 시작하면 그 자동성이 깨진다 — 자의식은 최대의 적”",
+    "flow": [
+     "<b>도입 (1):</b> 자전거·운전 배우기는 ‘무엇’과 ‘어떻게’ 시스템이 발달 중 어떻게 상호작용하는지 잘 보여 준다.",
+     "<b>1단계: 의식적 (2):</b> 처음엔 거울 확인·깜빡이·클러치 등 모든 동작을 명시적으로 생각하고 점검한다.",
+     "<b>2단계: 자동화 (3~4):</b> 연습 후엔 그 동작들이 ‘제2의 천성’이 되어, 생각 없이 수행되고 정보가 직접 지각되듯 처리된다.",
+     "<b>역설 (5~7):</b> 그런데 이 자동성은 ‘다시 의식’하면 깨진다. 운전을 너무 생각하면 사고 위험이 커지고, 운동선수도 동작을 지나치게 의식하면 ‘감각’을 잃는다."
+    ],
+    "sents": [
+     {
+      "en": "⟦1⟧ The experiences of learning to ride a bicycle or drive a car illustrate well how the “what” and “how” systems — those involved in object identification and practical action — might interact during development.",
+      "lit": "자전거를 타거나 자동차를 운전하는 법을 배우는 경험은 대상 식별과 실제 행동에 관여하는 ‘무엇’과 ‘어떻게’ 시스템이 발달 과정에서 어떤 방식으로 상호 작용할 수 있는지를 잘 설명해 준다.",
+      "easy": "자전거·운전을 배우는 경험은, <b>‘무엇(대상 식별)’ 시스템과 ‘어떻게(실제 행동)’ 시스템이 발달하면서 어떻게 맞물리는지</b>를 잘 보여 주는 좋은 예다.",
+      "role": "글의 소재(기술 학습)와 두 시스템을 도입한다."
+     },
+     {
+      "en": "⟦2⟧ When we learn to drive a car, we go through a first stage where each required action and sequence of actions — such as looking in the mirror, signaling with the blinker, pressing the clutch prior to shifting into gear, and so forth — are explicitly thought of and double-checked while monitoring our situation in the environment.",
+      "lit": "자동차 운전을 배울 때 우리는 그 환경에서 처한 우리의 상황을 점검하면서 거울을 확인하고, 깜빡이로 신호를 보내고, 기어를 바꾸기 전에 클러치판을 밟는 등 각각의 필수 행동과 행동 순서를 명시적으로 생각하고 다시 확인하는 첫 번째 단계를 거친다.",
+      "easy": "운전을 처음 배울 땐 <b>거울 보기·깜빡이·클러치 밟기 같은 동작 하나하나를 일일이 ‘의식적으로’ 생각하고 거듭 확인</b>하는 단계를 거친다. (1단계 = 의식적.)",
+      "role": "학습의 1단계(모든 동작을 의식적으로 처리)를 설명한다."
+     },
+     {
+      "en": "⟦3⟧ Once learned and after a few hours of practice, the required actions for driving become second nature, transferable to almost any vehicle and performed without explicit thinking.",
+      "lit": "일단 학습하고 몇 시간의 연습을 거치면 운전에 필요한 행동은 거의 모든 차량에 적용 가능하며 명시적으로 생각하지 않아도 수행되는 제2의 천성이 된다.",
+      "easy": "하지만 몇 시간 연습하고 나면, 그 동작들이 <b>‘제2의 천성’이 되어 어떤 차든 생각 없이 저절로</b> 하게 된다. (2단계 = 자동화.)",
+      "role": "학습의 2단계(자동화, 제2의 천성)를 제시한다."
+     },
+     {
+      "en": "⟦4⟧ Information appears to be perceived directly; the affordances of the road, the car, and the traffic implicitly detected.",
+      "lit": "정보는 직접적으로 지각되는 것처럼 나타나는데, 도로, 자동차, 교통 상황의 행동 유도성이 은연중에 감지된다.",
+      "easy": "이 단계에선 정보가 <b>곧바로 지각되는 듯하고, 도로·차·교통 상황을 ‘은연중에(나도 모르게)’ 감지</b>한다.",
+      "role": "자동화 상태의 특징(무의식적 지각)을 부연한다."
+     },
+     {
+      "en": "⟦5⟧ Actually, this sort of automatization of conscious learning can be jeopardized by the return of explicit awareness.",
+      "lit": "사실, 이러한 유형의 의식적 학습의 자동화는 명시적 인식의 복귀로 위험에 처할 수 있다.",
+      "easy": "그런데 사실, <b>이렇게 자동화된 것이 ‘다시 의식하기 시작하면’ 깨질 수 있다.</b> 이 글의 핵심 반전이다.",
+      "role": "역설을 도입 — 자동성이 ‘재의식’으로 무너질 수 있음을 제시한다."
+     },
+     {
+      "en": "⟦6⟧ If you start to think too much about your driving, you actually increase your chances of having an accident.",
+      "lit": "운전에 대해 과도하게 생각을 하기 시작하면 실제로 사고를 당할 가능성이 높아진다.",
+      "easy": "예를 들어 <b>운전을 너무 의식해서 골똘히 생각하면, 오히려 사고 날 확률이 높아진다.</b>",
+      "role": "역설을 운전 사례로 구체화한다."
+     },
+     {
+      "en": "⟦7⟧ People in sport competitions confirm that self-consciousness is one’s worst enemy: tennis, golf, or billiard players commonly report that they lose their “touch” by thinking too much about their moves.",
+      "lit": "스포츠 경기에 참여하고 있는 사람은 자기의식이 가장 큰 적이라는 점을 확인해 주는데, 테니스, 골프, 당구 선수들이 자신의 동작에 대해 지나치게 생각하면 ‘감각’을 잃는다고 공통으로 말한다.",
+      "easy": "운동선수들도 같은 말을 한다 — <b>‘자의식(지나친 의식)’이 최대의 적</b>이며, 테니스·골프·당구 선수가 동작을 너무 생각하면 ‘감(touch)’을 잃는다고. 운동에서도 같은 역설이 확인된다.",
+      "role": "역설을 스포츠 사례로 확장하며 주제(과도한 의식은 해롭다)를 완성한다.",
+      "point": "문장 삽입형이라면, 흐름의 분기점인 5번(Actually ~ jeopardized by the return of explicit awareness)이 ‘자동화 설명(3·4) → 역설(6·7)’을 잇는 전환 문장이라 삽입 위치 판단의 핵심이 된다.",
+      "ptcls": ""
+     }
+    ],
+    "vocab": [
+     [
+      "illustrate",
+      "설명하다"
+     ],
+     [
+      "identification",
+      "식별"
+     ],
+     [
+      "sequence",
+      "순서"
+     ],
+     [
+      "blinker",
+      "깜빡이"
+     ],
+     [
+      "clutch",
+      "(자동차의) 클러치판"
+     ],
+     [
+      "transferable",
+      "적용 가능한"
+     ],
+     [
+      "affordance",
+      "행동 유도성"
+     ],
+     [
+      "implicitly",
+      "은연중에"
+     ],
+     [
+      "conscious",
+      "의식적인"
+     ],
+     [
+      "jeopardize",
+      "위험에 처하게 하다"
+     ],
+     [
+      "explicit",
+      "명시적인"
+     ],
+     [
+      "awareness",
+      "인식"
+     ],
+     [
+      "billiard",
+      "당구의"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "26",
+  "title": "26강 — 언어, 문학, 예술",
+  "sub": "언어·문학·예술 8지문 · 내용 완벽 이해",
+  "passages": [
+   {
+    "num": "모평",
+    "type": "2026 9월 모평 40번 · 요약문",
+    "diff": "",
+    "title": "단일 작가의 인물 vs 여러 손을 거친 인물",
+    "src": "출처 — The Cambridge Companion to the Graphic Novel (2017), Stephen E. Tabachnick, p.98",
+    "flowLead": "지문 한눈에 보기: “소설 속 인물은 보통 한 작품에 갇히지만, 만화의 슈퍼맨은 수십 년을 산다 — 단일 작가면 거의 안 변하고, 여러 손을 거치면 크게 변한다”",
+    "flow": [
+     "<b>일반론 (1~2):</b> 대부분 소설에서 인물의 삶은 한 작품에 국한되며, 독자마다 인물 해석이 다를 수 있다.",
+     "<b>장르·만화의 차이 (3~5):</b> 문학 소설보다 장르 소설·만화에서 같은 인물이 재등장하는 연재물이 흔하다. 1930년대의 슈퍼맨·배트맨이 수십 년 뒤에도 새 모험을 한다.",
+     "<b>변화의 두 갈래 (6~8):</b> 오랜 역사 속 인물은 변하는데, 셜록 홈스처럼 ‘단일 작가’가 만들면 핵심은 거의 안 변하고, 여러 작가의 손을 거치면 상당히 변한다."
+    ],
+    "sents": [
+     {
+      "en": "⟦1⟧ In most fiction, characters’ lives are limited to the individual work.",
+      "lit": "대부분의 소설에서 등장인물의 삶은 개별 작품에 국한된다.",
+      "easy": "대부분의 소설에서 <b>등장인물의 삶은 그 한 작품 안에서 끝난다.</b>",
+      "role": "일반적 통념(인물=한 작품에 국한)을 제시한다."
+     },
+     {
+      "en": "⟦2⟧ Readers may disagree on the characteristics and traits of fictional figures, and in drama there is room for different interpretations of characters.",
+      "lit": "독자들은 허구적 인물의 특징과 특성에 관해 의견이 다를 수 있고, 연극에서는 등장인물에 관한 다양한 해석의 여지가 있다.",
+      "easy": "독자마다 <b>그 인물의 성격·특징을 다르게 볼 수 있고</b>, 연극에선 인물 해석의 여지가 더 넓다.",
+      "role": "인물 해석의 다양성을 언급한다."
+     },
+     {
+      "en": "⟦3⟧ However, it is less common for characters in literary fiction to reappear in subsequent works than in genre fiction, where series featuring the same central characters are common.",
+      "lit": "그러나, 문학 소설의 등장인물이 후속 작품에 재등장하는 경우는 장르 소설보다 덜 흔한데, 장르 소설에서는 동일한 중심인물이 등장하는 연재물이 흔하다.",
+      "easy": "그런데 <b>문학 소설 인물이 다음 작품에 또 나오는 일은 드물고, 장르 소설에선 같은 주인공의 ‘시리즈’가 흔하다.</b> (문학 소설 ↔ 장르 소설 대비.)",
+      "role": "‘However’로 전환해 문학 소설과 장르 소설의 차이를 제시한다."
+     },
+     {
+      "en": "⟦4⟧ This is even more pronounced in comics, which are typically serialized in newspaper strips or comic books.",
+      "lit": "이는 보통 신문 만화나 만화책으로 연재되는 만화에서 훨씬 더 확연하다.",
+      "easy": "이런 경향은 <b>신문·만화책으로 연재되는 ‘만화’에서 특히 뚜렷</b>하다.",
+      "role": "인물 재등장의 극단 사례(만화)로 좁힌다."
+     },
+     {
+      "en": "⟦5⟧ Thus characters introduced in the 1930s, like Superman and Batman, may still enjoy new adventures decades later.",
+      "lit": "따라서 1930년대에 소개된 Superman이나 Batman과 같은 등장인물은 수십 년 후에도 여전히 새로운 모험을 즐길 수도 있다.",
+      "easy": "그래서 <b>1930년대에 나온 슈퍼맨·배트맨이 수십 년이 지난 지금도 새 모험을 펼친다.</b>",
+      "role": "만화 인물의 장수(長壽)를 구체적 예로 보여 준다."
+     },
+     {
+      "en": "⟦6⟧ During these characters’ long histories, they change in various ways for a variety of reasons.",
+      "lit": "이러한 등장인물의 오래된 역사 동안 그들은 다양한 이유로 여러 가지 방식으로 변화한다.",
+      "easy": "이렇게 오래 사는 동안, <b>그 인물들은 여러 이유로 다양하게 변한다.</b>",
+      "role": "‘인물의 변화’라는 핵심 화제를 꺼낸다."
+     },
+     {
+      "en": "⟦7⟧ If a character is created by a single author, like Sherlock Holmes, the character’s core traits may change little from story to story, but readers learn more about him with each successive story.",
+      "lit": "Sherlock Holmes처럼 등장인물이 단일 작가에 의해 창작되면, 그 등장인물의 핵심 특성은 이야기마다 거의 변하지 않을 수도 있지만, 독자들은 연속되는 각각의 이야기와 함께 그에 관해 더 많이 알게 된다.",
+      "easy": "셜록 홈스처럼 <b>‘한 작가’가 만든 인물이면, 핵심 성격은 거의 안 변하고</b> 다만 독자가 그를 점점 더 알게 될 뿐이다. (변화의 첫 번째 갈래.)",
+      "role": "인물 변화의 첫 경우(단일 작가 → 거의 불변)를 제시한다."
+     },
+     {
+      "en": "⟦8⟧ On the other hand, if characters are the work of several hands over decades, they may change considerably.",
+      "lit": "반면에 등장인물이 수십 년 동안 여러 (작가의) 손을 거친 작품이라면 그들은 상당히 바뀔 수도 있다.",
+      "easy": "반면 <b>수십 년간 ‘여러 작가의 손’을 거친 인물이면 상당히 많이 변한다.</b> (변화의 두 번째 갈래.) 결국 ‘누가 만드느냐’가 변화의 폭을 가른다.",
+      "role": "인물 변화의 둘째 경우(여러 작가 → 큰 변화)로 대비하며 글을 맺는다.",
+      "point": "요약문 추론이라면 빈칸 두 개는 보통 ‘단일 작가 → 거의 변하지 않는다(unchanged/consistent)’와 ‘여러 작가 → 크게 변한다(considerably/vary)’로 채워진다. 7·8번의 대비가 핵심 근거.",
+      "ptcls": "answer"
+     }
+    ],
+    "vocab": [
+     [
+      "fiction",
+      "소설"
+     ],
+     [
+      "characteristic",
+      "특징, 성격"
+     ],
+     [
+      "trait",
+      "특성"
+     ],
+     [
+      "subsequent",
+      "후속의, 그다음의"
+     ],
+     [
+      "pronounced",
+      "확연한"
+     ],
+     [
+      "serialize",
+      "연재하다"
+     ],
+     [
+      "successive",
+      "연속되는, 잇따른"
+     ],
+     [
+      "considerably",
+      "상당히"
+     ]
+    ]
+   },
+   {
+    "num": "01",
+    "type": "주제 추론",
+    "diff": "",
+    "title": "화실 속 단서들이 작품에 ‘세상’을 입힌다",
+    "src": "출처 — The Philosophy of Curatorial Practice (2020), Sue Spaid, p.34",
+    "flowLead": "지문 한눈에 보기: “화실에 흩어진 흔적들은 작품에 세상을 연결해 주지만, 전시장의 작품은 그 세상에서 잘려 나와 ‘홀로’ 떠 있다”",
+    "flow": [
+     "<b>화실 방문 (1~3):</b> 화실에선 오려 붙인 기사·왁스 가열판·수지 자국 등 실제 단서들이 보이고, 방문객은 그것으로 예술가의 작업 세계를 짐작한다.",
+     "<b>집의 경우 (4~5):</b> 집에서도 가구·가족사진·쌓인 책 같은 요소들이 어우러져 작품 경험에 영향을 준다.",
+     "<b>흔적의 역할 (6):</b> 화실·수집가의 집에선 활동의 잔여물이 작품을 세상과 연결해 준다.",
+     "<b>전시장의 대조 (7~8):</b> 반면 전시장 작품은 세상에서 잘려 나와 고립된 느낌이라, 미학자들이 작품을 ‘단독 개체’로 다루는 경향을 설명해 준다."
+    ],
+    "sents": [
+     {
+      "en": "⟦1⟧ In the context of a studio visit, the viewer might notice several clipped newspaper articles pinned to the wall, a wax-coated hotplate, walls with paint marks, resin-drizzled floors and several sculptures barely visible through their plastic wrap.",
+      "lit": "화실 방문 상황에서 관람자는 벽에 오려 붙인 몇몇 신문 기사, 왁스로 코팅된 가열판, 페인트 자국이 남아 있는 벽, 수지가 흘러내린 바닥, 비닐 랩 사이로 간신히 보이는 조각품 몇 개를 발견할 수 있다.",
+      "easy": "예술가의 화실을 찾아가면, <b>벽에 붙인 신문 기사, 왁스 묻은 가열판, 페인트 자국, 수지가 흘러내린 바닥, 비닐 랩에 싸인 조각품</b> 같은 것들이 눈에 들어온다.",
+      "role": "‘화실의 실제 단서들’이라는 소재를 구체적으로 도입한다."
+     },
+     {
+      "en": "⟦2⟧ Such real-world clues offer the visitor a foothold onto the artist’s oeuvre.",
+      "lit": "이러한 실제 세계의 단서들은 방문객에게 예술가의 예술 작품에 접근할 수 있는 발판을 제공한다.",
+      "easy": "이런 <b>현실의 단서들은 방문객이 그 예술가의 작품 세계로 들어가는 ‘발판’</b>이 되어 준다.",
+      "role": "단서들의 기능(작품 이해의 발판)을 제시한다."
+     },
+     {
+      "en": "⟦3⟧ The studio visitor imagines that the artist is currently a painter, who applies wax and resin and finds inspiration in particular articles.",
+      "lit": "화실 방문객은 예술가가 현재 화가로, 왁스와 수지를 바르고 특정 기사에서 영감을 얻는다고 상상한다.",
+      "easy": "그 단서들 덕에 방문객은 <b>‘이 사람은 왁스·수지를 쓰고 특정 기사에서 영감을 받는 화가구나’ 하고 그려 본다.</b>",
+      "role": "단서가 어떻게 예술가 상(像)을 떠올리게 하는지 보여 준다."
+     },
+     {
+      "en": "⟦4⟧ Similarly, guests experiencing artworks in some homes notice art positioned next to furnishings, family photographs displayed on the piano and coffee-table books stacked to demonstrate preferences.",
+      "lit": "마찬가지로, 어떤 집에서 예술 작품을 체험하는 손님은 가구 옆에 배치된 예술 작품, 피아노 위에 진열된 가족사진, 커피 테이블 위에 쌓여 취향을 보여 주는 책을 보게 된다.",
+      "easy": "마찬가지로 집에서 작품을 볼 때도, 손님은 <b>가구 옆 작품, 피아노 위 가족사진, 취향을 드러내는 쌓인 책</b> 같은 것들을 함께 보게 된다.",
+      "role": "‘Similarly’로 두 번째 맥락(집)을 추가한다."
+     },
+     {
+      "en": "⟦5⟧ Together, these components affect particular experiences.",
+      "lit": "이러한 요소들이 어우러져 특정 경험에 영향을 미친다.",
+      "easy": "이런 <b>주변 요소들이 한데 어우러져 작품을 보는 경험에 영향</b>을 준다.",
+      "role": "주변 요소들이 감상 경험을 좌우함을 정리한다."
+     },
+     {
+      "en": "⟦6⟧ Within the artist’s studio or collector’s home, residue from studio activities or the collector’s personal belongings help to connect the artworks to the world.",
+      "lit": "예술가의 화실이나 수집가의 집 내부에는 화실 활동의 잔여물이나 수집가의 개인 소지품이 예술 작품을 세상과 연결하는 데 도움을 준다.",
+      "easy": "화실이나 수집가의 집에선 <b>작업의 흔적·개인 물건들이 작품을 ‘세상과 연결’해 준다.</b> 이 글의 핵심.",
+      "role": "핵심 주장(흔적이 작품을 세상과 연결)을 제시한다."
+     },
+     {
+      "en": "⟦7⟧ By contrast, artworks displayed in exhibitions feel comparatively isolated, practically clipped from the world where they originated.",
+      "lit": "반면, 전시장에 전시된 예술 작품은 상대적으로 고립된 느낌을 주며, 사실상 작품이 생겨난 세상에서 잘려 나온 것처럼 느껴진다.",
+      "easy": "반면 <b>전시장에 놓인 작품은 상대적으로 고립돼 보이고, 마치 ‘원래 태어난 세상에서 싹둑 잘려 나온’ 느낌</b>이다. (화실 ↔ 전시장 대비.)",
+      "role": "‘By contrast’로 전시장의 고립을 대비시킨다."
+     },
+     {
+      "en": "⟦8⟧ This could explain why aestheticians tend to treat artworks as singletons, rather than as members of some set.",
+      "lit": "이것은 미학자들이 예술 작품을 어떤 집합의 일부로 취급하기보다는 단독 개체로 취급하는 경향이 있는 이유를 설명해 줄 수 있다.",
+      "easy": "이 점이, <b>미학자들이 작품을 ‘어떤 묶음의 일부’가 아니라 ‘홀로 선 단독 개체’로 다루는 이유</b>를 설명해 준다. 전시장에서 세상과 끊겨 보이기 때문.",
+      "role": "전시장의 고립이 미학자들의 태도를 설명한다며 글을 맺는다.",
+      "point": "주제 추론이라면 정답은 ‘작품을 둘러싼 맥락(화실의 흔적 등)이 작품 경험·해석에 영향을 준다’ 계열. 6번이 주제문이고, 7·8번은 그 대조(맥락이 사라진 전시장)로 주제를 강화한다.",
+      "ptcls": "answer"
+     }
+    ],
+    "vocab": [
+     [
+      "hotplate",
+      "가열판"
+     ],
+     [
+      "resin-drizzled",
+      "수지가 흘러내린"
+     ],
+     [
+      "sculpture",
+      "조각(품)"
+     ],
+     [
+      "barely",
+      "간신히, 겨우"
+     ],
+     [
+      "foothold",
+      "발판"
+     ],
+     [
+      "oeuvre",
+      "예술 작품"
+     ],
+     [
+      "inspiration",
+      "영감"
+     ],
+     [
+      "furnishing",
+      "가구"
+     ],
+     [
+      "stack",
+      "쌓다"
+     ],
+     [
+      "component",
+      "요소"
+     ],
+     [
+      "residue",
+      "잔여물"
+     ],
+     [
+      "originate",
+      "생겨나다, 기원하다"
+     ],
+     [
+      "aesthetician",
+      "미학자"
+     ],
+     [
+      "singleton",
+      "단독 개체"
+     ]
+    ]
+   },
+   {
+    "num": "02",
+    "type": "무관한 문장 찾기",
+    "diff": "",
+    "title": "같은 행동도 누군가엔 ‘의사소통’, 누군가엔 ‘정보’",
+    "src": "출처 — Intercultural Interaction (2009), H. Spencer-Oatey & Peter Franklin, p.4",
+    "flowLead": "지문 한눈에 보기: “윙크는 의도, 깜빡임은 무의도 — 그런데 문화가 다르면, 의도 없는 행동도 의도된 것으로 ‘오해’받는다”",
+    "flow": [
+     "<b>구분 (1~2):</b> 언어학자들은 정보가 의도적이냐 아니냐에 따라 ‘의사소통 신호 vs 정보성 신호’를 구분한다. 의도적 윙크는 무의식적 깜빡임과 다르다.",
+     "<b>문화 간 차이 (3~4):</b> 문화 간 상황에선 의도 없는 행동이 의도된 것으로 해석될 수 있다. 신발 밑창 보이기는 어떤 문화에선 모욕으로 간주되지만, 그 관습이 없는 문화권 사람에겐 무의도적 행동이다.",
+     "<b>결론 (5):</b> 즉 같은 행동이 누군가에겐 의사소통, 누군가에겐 단지 정보일 수 있다."
+    ],
+    "sents": [
+     {
+      "en": "⟦1⟧ Linguists typically distinguish between signals that are communicative and those that are informative, depending on whether the information is conveyed intentionally or not.",
+      "lit": "언어학자들은 일반적으로 정보가 의도적으로 전달되는지 아닌지에 따라, 의사소통용 신호와 정보성 신호를 구별한다.",
+      "easy": "언어학자들은 <b>정보가 ‘의도적으로’ 전해졌는지에 따라, ‘의사소통 신호’와 ‘정보성 신호’를 나눈다.</b> (의도 있음 vs 없음.)",
+      "role": "핵심 구분(의사소통 신호 ↔ 정보성 신호)을 제시한다."
+     },
+     {
+      "en": "⟦2⟧ For example, a deliberate wink is distinguished from an involuntary blink by the communicative intention that lies behind it.",
+      "lit": "예를 들어, 의도적인 윙크는 그 뒤에 숨겨진 의사소통 의도에 따라 무의식적인 눈 깜빡임과 구별된다.",
+      "easy": "예를 들어 <b>일부러 하는 ‘윙크’는 ‘의도’가 있고, 무심코 하는 ‘눈 깜빡임’은 의도가 없다</b>는 점에서 구별된다.",
+      "role": "구분을 윙크/깜빡임 예로 알기 쉽게 보여 준다."
+     },
+     {
+      "en": "⟦3⟧ Yet in intercultural interaction, information conveyed unintentionally may actually be interpreted as intentional; for instance, in some cultures, showing the soles of one’s shoes can communicate an insult and when somebody does that, it is typically assumed to have communicative intent.",
+      "lit": "하지만 문화 간 상호 작용에서는 의도하지 않게 전달된 정보가 실제로는 의도적인 것으로 해석될 수 있는데, 예를 들어 일부 문화권에서는 신발 밑창을 보여주는 것이 모욕감을 전달할 수 있고 누군가 그렇게 할 때 그것은 일반적으로 의사소통 의도가 있는 것으로 간주된다.",
+      "easy": "하지만 문화가 다르면 <b>‘의도 없이 한 행동’이 ‘의도된 것’으로 해석될 수 있다.</b> 예를 들어 어떤 문화에선 신발 밑창을 보이는 게 모욕이라, 그러면 ‘일부러 모욕했다’고 여긴다.",
+      "role": "‘Yet’으로 전환해 문화 간 오해 가능성을 제시한다."
+     },
+     {
+      "en": "⟦4⟧ However, for someone from a cultural group where that convention does not exist, such behaviour would be unintentional and hence would not be communicative.",
+      "lit": "그러나 그러한 관습이 존재하지 않는 문화권의 사람에게는 이런 행동이 의도하지 않은 것이며 따라서 의사소통적이지 않을 것이다.",
+      "easy": "그러나 <b>그런 관습이 없는 문화권 사람에겐, 같은 행동도 ‘의도 없는 것’이라 의사소통이 아니다.</b> (같은 행동, 다른 해석.)",
+      "role": "같은 행동이 문화에 따라 ‘무의도’가 될 수 있음을 제시한다."
+     },
+     {
+      "en": "⟦5⟧ In other words, a given piece of behaviour may be communicative to some of the participants and only informative to others.",
+      "lit": "즉, 특정한 하나의 행동이 일부 참여자에게는 의사소통적일 수 있고 다른 참여자에게는 정보만 제공하는 것일 수도 있다.",
+      "easy": "정리하면, <b>똑같은 하나의 행동이 어떤 사람에겐 ‘의사소통’이고 어떤 사람에겐 그냥 ‘정보’일 수 있다.</b> 글 전체를 압축한 결론.",
+      "role": "1번의 구분을 문화 맥락으로 확장하며 주제를 완성한다.",
+      "point": "무관한 문장 찾기형에서는, ‘의도 vs 무의도, 문화 간 해석 차이’라는 흐름과 무관하게 ‘의식(ritual)·전통 보존’ 같은 엉뚱한 소재를 끼워 넣은 문장이 정답(무관한 문장)이 된다. 단어장의 preserve·ritual·continuity 등은 그런 함정 문장에 쓰일 어휘.",
+      "ptcls": ""
+     }
+    ],
+    "vocab": [
+     [
+      "linguist",
+      "언어학자"
+     ],
+     [
+      "distinguish",
+      "구별하다"
+     ],
+     [
+      "convey",
+      "전달하다"
+     ],
+     [
+      "intentionally",
+      "의도적으로"
+     ],
+     [
+      "deliberate",
+      "의도적인"
+     ],
+     [
+      "involuntary",
+      "무의식적인"
+     ],
+     [
+      "blink",
+      "(눈) 깜빡임"
+     ],
+     [
+      "interpret",
+      "해석하다"
+     ],
+     [
+      "sole",
+      "(신발) 밑창"
+     ],
+     [
+      "insult",
+      "모욕, 무례"
+     ],
+     [
+      "assume",
+      "간주하다, 추정하다"
+     ],
+     [
+      "convention",
+      "관습, 관례"
+     ],
+     [
+      "hence",
+      "따라서, 그러므로"
+     ]
+    ]
+   },
+   {
+    "num": "03",
+    "type": "빈칸 추론",
+    "diff": "",
+    "title": "소설을 읽으면 ‘감정’을 읽게 된다",
+    "src": "출처 — Transcendence (2020), Gaia Vince",
+    "flowLead": "지문 한눈에 보기: “이야기는 언어를 초월해 뇌에서 같은 반응을 일으키고 공감을 키운다 — 소설에 몰입할수록 현실에서 더 공감적으로 행동한다”",
+    "flow": [
+     "<b>주제 (1~3):</b> 이야기를 통해 우리는 인간을 탐구하고 신념을 확인·도전받는다. 언어와 무관하게, 이야기를 처리할 때 뇌에는 보편적 무언가가 있어 자기 인식·공감을 촉발한다.",
+     "<b>뇌·공감 연구 (4~6):</b> 영어·페르시아어·중국어 이야기에서 같은 뇌 활성화 패턴이 나타났고, 소설 읽기는 타인(다른 인종·종교)에 대한 공감을 키우며, 몰입할수록 더 공감적으로 행동한다.",
+     "<b>실험과 결론 (7~9):</b> ‘우연히’ 펜을 떨어뜨렸을 때 몰입한 사람이 약 2배 더 도왔다. 문학 소설은 인물의 주관적 경험에 접근하게 하므로, 소설을 읽으면 협력 사회에 중요한 ‘감정 읽기’를 할 수 있다."
+    ],
+    "sents": [
+     {
+      "en": "⟦1⟧ Through stories we can explore the human condition and see how other people think.",
+      "lit": "이야기를 통해 우리는 인간의 조건을 탐구하고 다른 사람들이 어떻게 생각하는지 알 수 있다.",
+      "easy": "이야기를 통해 우리는 <b>인간이란 무엇인지 탐구하고, 남들이 어떻게 생각하는지</b> 들여다볼 수 있다.",
+      "role": "이야기의 기능(인간·타인 이해)으로 글을 연다."
+     },
+     {
+      "en": "⟦2⟧ This can affirm our own beliefs and perceptions, but it also challenges them.",
+      "lit": "이는 우리 자신의 신념과 인식을 확인해 줄 수도 있지만, 동시에 그것들에 도전하기도 한다.",
+      "easy": "이건 <b>내 생각을 확인시켜 주기도 하고, 반대로 그 생각에 도전하기도</b> 한다.",
+      "role": "이야기의 양면적 효과(확인+도전)를 제시한다."
+     },
+     {
+      "en": "⟦3⟧ Regardless of the language, there is something universal about what occurs in the brain at the point when we are processing narratives, triggering better self-awareness and empathy for others.",
+      "lit": "언어와 관계없이, 우리가 이야기를 처리하고 있는 시점에서 뇌에서 일어나는 것에는 보편적인 무엇인가가 있는데, 이는 더 나은 자아 인식과 타인에 대한 공감을 촉발한다.",
+      "easy": "어떤 언어든 상관없이, <b>이야기를 받아들일 때 뇌에서 일어나는 일에는 ‘보편적인 무언가’가 있고, 그것이 자기 인식과 타인 공감을 키운다.</b> 이 글의 핵심(이야기 → 공감).",
+      "role": "글의 핵심 주장(이야기는 보편적으로 공감을 촉발)을 제시한다."
+     },
+     {
+      "en": "⟦4⟧ Psychologists scanned people listening to narratives in English, Farsi, and Mandarin, and found the same patterns of brain activation when people found meaning in the stories.",
+      "lit": "심리학자들은 영어, 페르시아어, 표준 중국어로 된 이야기를 듣고 있는 사람들을 스캔하여 사람들이 이야기에서 의미를 발견할 때 동일한 패턴의 뇌 활성화가 일어난다는 사실을 발견했다.",
+      "easy": "심리학자들이 <b>영어·페르시아어·중국어 이야기를 듣는 사람들의 뇌를 찍어 보니, 의미를 찾을 때 ‘똑같은 뇌 활성화 패턴’이 나타났다.</b> (언어 초월의 증거.)",
+      "role": "‘언어와 무관한 보편성’을 실험으로 입증한다."
+     },
+     {
+      "en": "⟦5⟧ Other studies find that reading fiction significantly increases empathy toward others, including people of a different race or religion.",
+      "lit": "다른 연구에 따르면, 소설 읽기는 다른 인종이나 종교를 가진 사람들을 포함한 타인에 대한 공감을 상당히 증가시킨다.",
+      "easy": "다른 연구를 보면 <b>소설을 읽으면 다른 인종·종교를 가진 사람을 포함해 타인에 대한 공감이 크게 늘어난다.</b>",
+      "role": "‘소설 읽기 → 공감 증가’를 추가 근거로 댄다."
+     },
+     {
+      "en": "⟦6⟧ And the more absorbed in a story a reader is, the more empathetically they behave in real life.",
+      "lit": "그리고 독자가 이야기에 더 몰입할수록 실제 생활에서 더 공감적으로 행동한다.",
+      "easy": "게다가 <b>이야기에 더 깊이 몰입할수록, 실제 삶에서도 더 공감적으로 행동한다.</b> (몰입 ↔ 공감의 비례.)",
+      "role": "몰입과 공감 행동의 비례 관계를 제시한다."
+     },
+     {
+      "en": "⟦7⟧ For instance, if the researcher “accidentally” dropped his pens, those participants who had previously reported being “highly absorbed” in the story were about twice as likely to help pick up the pens.",
+      "lit": "예를 들어, 연구자가 ‘우연히’ 펜을 떨어뜨렸을 때, 이전에 이야기에 ‘매우 몰입’했다고 보고한 참가자는 펜을 줍는 데 도움을 줄 가능성이 약 2배 더 높았다.",
+      "easy": "예를 들어 연구자가 일부러 펜을 ‘우연히’ 떨어뜨렸더니, <b>이야기에 ‘푹 몰입했던’ 사람이 펜 줍는 걸 도울 확률이 약 2배 높았다.</b> (6번을 실험으로 증명.)",
+      "role": "몰입→공감 행동을 구체적 실험으로 입증한다."
+     },
+     {
+      "en": "⟦8⟧ Another study concluded that literary fiction “uniquely engages the psychological processes needed to gain access to characters’ subjective experiences.”",
+      "lit": "또 다른 연구는 문학 소설이 ‘등장인물의 주관적인 경험에 접근하는 데 필요한 심리적 과정을 고유한 방식으로 작동하게 한다’라고 결론 지었다.",
+      "easy": "또 다른 연구는 <b>문학 소설이 ‘인물의 속마음(주관적 경험)에 다가가는 심리 과정’을 특별하게 작동시킨다</b>고 결론지었다.",
+      "role": "문학 소설이 ‘타인의 내면 접근’을 돕는다는 점을 강조한다."
+     },
+     {
+      "en": "⟦9⟧ That is to say, if you read novels, you can probably read emotions, vital skills for forming cooperative societies.",
+      "lit": "다시 말해서, 여러분이 소설을 읽으면, 아마도 협력적인 사회를 형성하는 데 매우 중요한 기술인 감정을 읽을 수 있을 것이다.",
+      "easy": "정리하면, <b>소설을 읽으면 ‘감정을 읽는 능력’이 생기고, 이는 협력 사회를 만드는 데 꼭 필요한 기술</b>이다. 글 전체를 압축한 결론.",
+      "role": "‘소설 읽기 → 감정 읽기 → 협력 사회’로 주제를 완성한다.",
+      "point": "빈칸은 9번의 ‘read emotions(감정을 읽는다)’ 자리에 자주 출제된다. 정답은 ‘타인의 감정을 읽는 능력 / 공감’ 계열 — 3·5·6·8번이 모두 ‘이야기·소설 → 공감·타인 내면 이해’로 일관되게 흐른다.",
+      "ptcls": "answer"
+     }
+    ],
+    "vocab": [
+     [
+      "affirm",
+      "확인하다"
+     ],
+     [
+      "perception",
+      "인식"
+     ],
+     [
+      "regardless of",
+      "~과 관계없이"
+     ],
+     [
+      "universal",
+      "보편적인"
+     ],
+     [
+      "trigger",
+      "촉발하다"
+     ],
+     [
+      "empathy",
+      "공감"
+     ],
+     [
+      "Farsi",
+      "페르시아어"
+     ],
+     [
+      "Mandarin",
+      "표준 중국어"
+     ],
+     [
+      "absorbed",
+      "몰입한"
+     ],
+     [
+      "literary",
+      "문학의"
+     ],
+     [
+      "subjective",
+      "주관적인"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "27",
+  "title": "27강 — 컴퓨터, 인터넷, 정보, 미디어, 교통",
+  "sub": "미디어·정보 7지문 · 내용 완벽 이해",
+  "passages": [
+   {
+    "num": "모평",
+    "type": "2026 6월 모평 22번 · 요지",
+    "diff": "",
+    "title": "정보와 의미는 다르다 — 해석이 모든 것의 중심",
+    "src": "출처 — Understanding Media Semiotics (2018), Marcel Danesi, p.28",
+    "flowLead": "지문 한눈에 보기: “정보는 해석되지 않은 ‘날것의 데이터’, 의미는 그것에 대한 ‘해석’ — 동전 던지기 승자조차 행운인지 속임수인지 우리가 해석한다”",
+    "flow": [
+     "<b>핵심 구분 (1~2):</b> 정보와 의미는 다르다. 정보=해석되지 않은 데이터·감각 상태, 의미=그 데이터에 대한 해석(뉘앙스·가치 포함).",
+     "<b>적용 범위 (3):</b> 이 구분은 경보 신호부터 정교한 진술까지 모든 정보에 적용된다.",
+     "<b>동전 던지기 예시 (4~5):</b> 한 사람이 계속 원하는 결과를 내면, 우리는 그것을 ‘행운’ 또는 ‘교묘한 속임수’로 해석한다.",
+     "<b>결론 (6):</b> 해석은 우리가 행하고·생각하고·느끼는 모든 것의 중심에 있다."
+    ],
+    "sents": [
+     {
+      "en": "⟦1⟧ Information and meaning are, clearly, not the same thing.",
+      "lit": "정보와 의미는 분명히 동일한 것이 아니다.",
+      "easy": "먼저 못 박는다 — <b>‘정보’와 ‘의미’는 같은 게 아니다.</b> 이 둘을 구분하는 게 글의 출발점이다.",
+      "role": "글의 핵심 화두(정보 ≠ 의미)를 제시한다."
+     },
+     {
+      "en": "⟦2⟧ The former refers to uninterpreted data or sensory states whose probability in a certain situation can be easily measured; the latter refers to the interpretation of the data or sensory states, including the special kinds of nuances and values that the information entails, or is intended to have, in the given situation.",
+      "lit": "전자는 특정 상황에서 그 확률이 쉽게 측정될 수 있는, 해석되지 않은 데이터나 감각 상태를 가리키고, 후자는 그 데이터나 감각 상태에 대한 해석을 가리키며, 여기에는 특정 상황에서 그 정보가 수반하거나 갖도록 의도된 특별한 종류의 뉘앙스와 가치가 포함된다.",
+      "easy": "풀어 보면 — <b>‘정보’는 아직 해석 안 된 ‘날것의 데이터’</b>(확률로 측정 가능한 것), <b>‘의미’는 그 데이터를 ‘해석’한 것</b>(뉘앙스·가치가 담긴 것)이다.",
+      "role": "정보와 의미 각각을 정의하며 둘의 차이를 명확히 한다."
+     },
+     {
+      "en": "⟦3⟧ This applies to any type of information, from alarm signals to sophisticated statements.",
+      "lit": "이는 경보 신호에서 정교한 진술문에 이르기까지 어떤 종류의 정보에도 적용된다.",
+      "easy": "이 구분은 <b>단순한 경보음부터 복잡한 문장까지, 모든 종류의 정보에 똑같이 적용</b>된다.",
+      "role": "구분의 적용 범위가 모든 정보임을 밝힌다."
+     },
+     {
+      "en": "⟦4⟧ Take, for instance, a coin-tossing game in which it is decided that throwing three heads in a row constitutes a win.",
+      "lit": "예를 들어, 연속으로 앞면을 세 번 던지는 것이 이기게 되는 것으로 결정된 동전 던지기 게임을 생각해 보자.",
+      "easy": "예를 들어 <b>‘앞면 세 번 연속이면 승리’인 동전 던지기 게임</b>을 떠올려 보자.",
+      "role": "구분을 설명할 구체적 사례(동전 게임)를 도입한다."
+     },
+     {
+      "en": "⟦5⟧ If a certain player ends up consistently with the desired outcome, defeating all who challenge that player, then we tend to interpret the outcome either as the work of Fortune, or else as clever and undetectable cheating on the part of the winning player.",
+      "lit": "어떤 게임 참가자가 결국 지속적으로 원하는 결과를 얻어 그 참가자에게 도전하는 모든 이들을 이긴다면, 우리는 그 결과를 ‘행운’의 작용으로 해석하거나, 아니면 그 이긴 게임 참가자에 의한 교묘하고 감지할 수 없는 부정행위로 해석하는 경향이 있다.",
+      "easy": "만약 한 사람이 <b>계속 앞면 세 번을 내서 모두를 이긴다면</b>, 우리는 그 결과(같은 데이터)를 <b>‘운이 좋다’고 보거나 ‘교묘한 속임수’라고 해석</b>한다. 같은 결과인데 해석이 갈리는 것 — 정보와 의미의 차이를 보여 준다.",
+      "role": "같은 데이터(승리)도 ‘해석’에 따라 의미가 달라짐을 보여 준다."
+     },
+     {
+      "en": "⟦6⟧ Interpretation is at the core of everything we do, think about, and feel.",
+      "lit": "해석은 우리가 행하고, 생각하며, 느끼는 모든 것의 중심에 있다.",
+      "easy": "결론은 이거다 — <b>‘해석’이야말로 우리가 행하고·생각하고·느끼는 모든 것의 중심</b>에 있다.",
+      "role": "‘해석의 중심성’이라는 요지로 글을 맺는다.",
+      "point": "요지 추론이라면 정답은 ‘정보 자체보다 그것을 해석하는 것이 핵심이다 / 의미는 해석에서 나온다’ 계열. 1·6번이 요지이고, 동전 게임(4·5)이 그 근거다.",
+      "ptcls": "answer"
+     }
+    ],
+    "vocab": [
+     [
+      "refer to",
+      "~을 가리키다"
+     ],
+     [
+      "sensory",
+      "감각의"
+     ],
+     [
+      "probability",
+      "확률"
+     ],
+     [
+      "entail",
+      "수반하다"
+     ],
+     [
+      "sophisticated",
+      "정교한"
+     ],
+     [
+      "statement",
+      "진술(문)"
+     ],
+     [
+      "in a row",
+      "연속으로"
+     ],
+     [
+      "constitute",
+      "~이 되다, ~을 구성하다"
+     ],
+     [
+      "consistently",
+      "지속적으로"
+     ],
+     [
+      "interpret",
+      "해석하다"
+     ],
+     [
+      "outcome",
+      "결과"
+     ],
+     [
+      "undetectable",
+      "알아챌 수 없는"
+     ],
+     [
+      "cheating",
+      "부정행위"
+     ]
+    ]
+   },
+   {
+    "num": "01",
+    "type": "제목 추론",
+    "diff": "",
+    "title": "디지털 시대의 항의 운동, 그 힘과 한계",
+    "src": "출처 — Sociology: The Basics (2021), Ken Plummer",
+    "flowLead": "지문 한눈에 보기: “스마트폰이 만든 유동적·지도자 없는 행동주의 — 세계의 이목을 끌었지만, 대부분 국가에 진압되며 한계를 드러냈다”",
+    "flow": [
+     "<b>변화 (1~2):</b> 디지털 정치의 도래로 항의 운동이 변해 ‘분노와 희망의 네트워크’를 통해 두드러졌고, 온라인 행동주의의 세계가 열렸다.",
+     "<b>새로운 행동주의 (3~4):</b> 스마트폰·SNS가 더 유동적이고 지도자 없는 참여적 행동주의를 제공했다. 아랍의 봄, 우산 운동 등이 세계의 이목을 끌었다.",
+     "<b>평가의 대립 (5):</b> 어떤 이는 민주주의를 강화한다고, 어떤 이는 지배 권력에 실질적 도전은 못 한다고 본다.",
+     "<b>결론 (6~7):</b> 되돌아보면 대부분 국가에 진압돼 실패했다 — 새로운 사회 운동의 힘엔 한계가 있어 보인다."
+    ],
+    "sents": [
+     {
+      "en": "⟦1⟧ Over the past twenty years, with the arrival of digital politics, social and political protest movements have changed and become ever more prominent through what the sociologist Manuel Castells has called Networks of Outrage and Hope.",
+      "lit": "지난 20년에 걸쳐 디지털 정치의 도래와 함께, 사회적, 정치적 항의 운동은 변화해 왔으며, 사회학자 Manuel Castells가 ‘분노와 희망의 네트워크’라고 명명한 것을 통해 점점 더 두드러지게 되었다.",
+      "easy": "지난 20년간 ‘디지털 정치’가 등장하면서 <b>항의 운동이 변했고, 학자가 ‘분노와 희망의 네트워크’라 부른 형태로 점점 더 눈에 띄게</b> 됐다.",
+      "role": "글의 배경(디지털 정치 → 항의 운동의 변화)을 제시한다."
+     },
+     {
+      "en": "⟦2⟧ We now have a swirling world of ‘online activism’, digital rebellion, information politics and People’s Platforms.",
+      "lit": "우리는 이제 ‘온라인 행동주의’, 디지털 반란, 정보 정치, 그리고 ‘대중의 플랫폼’이라는 소용돌이치는 세계 속에 있다.",
+      "easy": "이제 우리는 <b>‘온라인 행동주의·디지털 반란·정보 정치·대중 플랫폼’이 소용돌이치는 세상</b>에 살고 있다.",
+      "role": "변화한 시대상(온라인 행동주의의 세계)을 묘사한다."
+     },
+     {
+      "en": "⟦3⟧ Smartphones and social networking now provide a more fluid, leaderless, participatory activism that arises more spontaneously.",
+      "lit": "스마트폰과 소셜 네트워킹은 이제 더 자발적으로 일어나는, 더 유동적이고 지도자가 없는 참여적인 행동주의를 제공한다.",
+      "easy": "스마트폰·SNS 덕에 <b>더 유동적이고, 지도자가 따로 없고, 자발적으로 일어나는 참여형 행동주의</b>가 가능해졌다.",
+      "role": "새 행동주의의 특징(유동적·무지도자·자발적)을 제시한다."
+     },
+     {
+      "en": "⟦4⟧ The early examples like the Occupy Movement (2011), the Arab Spring in Egypt (2010), the Umbrella Movement in Hong Kong (2014, 2019), the Gezi Park Movement in Turkey (2013), and the Pussy Riots in Russia (2011) galvanized large numbers of people and attracted world attention.",
+      "lit": "초기 사례들인 ‘점거 운동’(2011), 이집트의 ‘아랍의 봄’(2010), 홍콩의 ‘우산 운동’(2014, 2019), 튀르키예의 ‘Gezi 공원 운동’(2013), 러시아의 ‘Pussy Riot 시위’(2011)는 많은 사람들을 행동에 나서게 했고 전 세계의 시선을 끌었다.",
+      "easy": "점거 운동·아랍의 봄·홍콩 우산 운동 같은 <b>초기 사례들은 수많은 사람을 움직였고 전 세계의 이목을 끌었다.</b>",
+      "role": "새 행동주의의 구체적 성공 사례들을 나열한다."
+     },
+     {
+      "en": "⟦5⟧ While some suggest that these new politics are enhancing democracy, others maintain that they do not really challenge the dominant power groups.",
+      "lit": "어떤 이들은 이러한 새로운 정치가 민주주의를 강화한다고 주장하는 반면, 또 어떤 이들은 그것이 지배적인 권력 집단에 실질적으로 도전하지는 못한다고 주장한다.",
+      "easy": "평가가 갈린다 — <b>‘민주주의를 키운다’는 쪽과 ‘사실 지배 권력엔 별 위협이 못 된다’는 쪽</b>으로.",
+      "role": "새 운동에 대한 상반된 평가를 제시한다."
+     },
+     {
+      "en": "⟦6⟧ Looking back, most of them have proved unsuccessful, clamped down upon by the state.",
+      "lit": "되돌아보면, 그것들 대부분은 국가에 의해 진압되어, 성공하지 못한 것으로 판명되었다.",
+      "easy": "하지만 돌이켜 보면, <b>그 운동들 대부분은 국가에 진압당해 결국 실패</b>로 끝났다. 글이 ‘한계’ 쪽으로 기운다.",
+      "role": "운동의 실패라는 부정적 결과를 제시한다."
+     },
+     {
+      "en": "⟦7⟧ There seems a limit to the power of new social movements.",
+      "lit": "새로운 사회 운동의 힘에는 어떤 한계가 존재하는 듯하다.",
+      "easy": "결론적으로 <b>새로운 사회 운동의 힘에는 ‘한계’가 있어 보인다.</b> 제목을 가르는 핵심 문장.",
+      "role": "‘새 사회 운동의 한계’라는 결론으로 글을 맺는다.",
+      "point": "제목 추론이라면 정답은 ‘디지털/새로운 사회 운동: 그 가능성과 한계’ 계열. 4번(성공 사례)과 6·7번(한계)이 함께 들어가야 하므로, ‘힘과 한계’를 모두 담은 제목이 정답이고 한쪽만 강조한 선택지는 오답이다.",
+      "ptcls": "answer"
+     }
+    ],
+    "vocab": [
+     [
+      "prominent",
+      "두드러진"
+     ],
+     [
+      "swirling",
+      "소용돌이치는"
+     ],
+     [
+      "rebellion",
+      "반란"
+     ],
+     [
+      "fluid",
+      "유동적인"
+     ],
+     [
+      "spontaneously",
+      "자발적으로"
+     ],
+     [
+      "galvanize",
+      "행동에 나서게 하다"
+     ],
+     [
+      "enhance",
+      "강화하다"
+     ],
+     [
+      "maintain",
+      "주장하다"
+     ],
+     [
+      "dominant",
+      "지배적인"
+     ],
+     [
+      "clamp down upon",
+      "~을 진압하다"
+     ]
+    ]
+   },
+   {
+    "num": "02",
+    "type": "어휘 추론",
+    "diff": "",
+    "title": "자동차가 만든 도시: 교외의 탄생",
+    "src": "출처 — Journey Through Time: The Evolution and Impact of Automobiles (2025), Virversity Online Courses",
+    "flowLead": "지문 한눈에 보기: “자동차가 사람을 도심에서 멀리 떨어져 살게 만들며 ‘교외’를 탄생시켰다 — 주거와 직장을 분리한 생활 모델”",
+    "flow": [
+     "<b>주제 (1~3):</b> 자동차는 교외 성장을 가능케 해 도시 경관을 바꿨다. 사람들이 도심에서 멀리 살게 되어, 주거지가 상업·산업 지역과 분리된 현대 교외가 생겼다.",
+     "<b>변화의 연쇄 (4~6):</b> 자동차의 유연성으로 매일 통근이 가능해졌고, 도시계획은 도로·고속도로 중심으로 진화했으며, 가정은 조용한 교외를 찾으면서도 도시 일자리 접근성을 유지했다.",
+     "<b>결론 (7~8):</b> 무질서한 확장은 기반시설 수요와 경제 기회를 낳았고, 자동차는 주거지를 직장·여가에서 분리해 이 생활 모델을 형성했다."
+    ],
+    "sents": [
+     {
+      "en": "⟦1⟧ The advent of automobiles drastically altered urban landscapes by enabling the growth of suburbs.",
+      "lit": "자동차의 출현은 교외의 성장을 가능하게 함으로써 도시경관을 급격히 변화시켰다.",
+      "easy": "자동차의 등장은 <b>‘교외’가 자라나게 만들면서 도시 풍경을 확 바꿔 놓았다.</b> 이 글의 핵심 주제다.",
+      "role": "글의 주제(자동차 → 교외 성장 → 도시 변화)를 제시한다."
+     },
+     {
+      "en": "⟦2⟧ Cars provided individuals the ability to live farther from city centers, where land was cheaper and more abundant.",
+      "lit": "자동차는 사람들에게 도심으로부터 더 먼 곳에서 거주할 수 있는 능력을 제공했는데, 그곳은 토지가 더 저렴하고 더 많았다.",
+      "easy": "차 덕분에 사람들은 <b>땅이 싸고 넓은, 도심에서 먼 곳에 살 수 있게</b> 됐다.",
+      "role": "자동차가 ‘도심에서 멀리 사는 것’을 가능케 했음을 설명한다."
+     },
+     {
+      "en": "⟦3⟧ This expansion created the modern suburb, characterized by residential zones separate from commercial and industrial areas, promoting a shift from high-density urban living to the spacious suburbs.",
+      "lit": "이러한 확장은 상업 지역과 산업 지역에서 분리된 주거 지역을 특징으로 하는 현대 교외 지역을 만들어냈고, 고밀도 도시 생활에서 넓은 교외 지역으로의 이동을 촉진했다.",
+      "easy": "이렇게 퍼져 나가면서 <b>‘상업·산업 지역과 분리된 주거지’를 특징으로 하는 현대 교외</b>가 생겼고, 빽빽한 도시 → 넓은 교외로의 이동이 일어났다.",
+      "role": "‘현대 교외’의 정의(주거-상업 분리)를 제시한다."
+     },
+     {
+      "en": "⟦4⟧ The flexibility cars offered meant people could commute daily, uniting work, leisure, and homelife in new ways.",
+      "lit": "자동차가 제공한 유연성은 사람들이 매일 출퇴근할 수 있게 되어서, 일과 여가와 가정생활을 새로운 방식으로 결합하게 됨을 의미했다.",
+      "easy": "차의 유연성 덕에 <b>매일 통근이 가능해졌고, 일·여가·가정생활을 새로운 방식으로 묶을 수</b> 있게 됐다.",
+      "role": "자동차가 가져온 생활 변화(통근의 일상화)를 설명한다."
+     },
+     {
+      "en": "⟦5⟧ In response, urban planning evolved, placing emphasis on roads and highways to accommodate increased travel.",
+      "lit": "이에 따라, 도시 계획은 증가한 이동을 수용하기 위해 도로와 고속도로에 중점을 두는 방식으로 진화했다.",
+      "easy": "이에 발맞춰 <b>도시계획도 늘어난 이동량을 감당하려고 ‘도로·고속도로 중심’으로 바뀌었다.</b>",
+      "role": "자동차에 맞춰 도시계획이 변했음을 제시한다."
+     },
+     {
+      "en": "⟦6⟧ This decentralization led to altered living patterns, encouraging families to seek homes in quieter, suburban environments while maintaining access to urban job markets.",
+      "lit": "이러한 분산은 생활 패턴의 변화를 초래하여, 가정들이 도시의 취업 시장에 대한 접근성을 유지하면서 더 조용한, 교외 환경에 위치한 주택을 찾게 했다.",
+      "easy": "이런 ‘분산’으로 생활 방식이 바뀌어, <b>가정들은 도시 일자리에 접근은 유지하면서도 조용한 교외에 집을 구하게</b> 됐다.",
+      "role": "분산이 낳은 새 거주 패턴(교외 거주 + 도시 통근)을 제시한다."
+     },
+     {
+      "en": "⟦7⟧ The sprawling growth fueled demands for expanded infrastructure and services in these areas, bringing in new economic opportunities.",
+      "lit": "무질서하게 퍼져 나가는 확장은 이러한 지역의 사회 기반 시설과 서비스 확장에 대한 수요를 촉진하여, 새로운 경제적 기회를 창출했다.",
+      "easy": "이렇게 뻗어 나가는 확장은 <b>교외의 기반시설·서비스 수요를 키웠고, 새로운 경제 기회도 만들어</b> 냈다.",
+      "role": "교외 확장의 경제적 파급효과를 제시한다."
+     },
+     {
+      "en": "⟦8⟧ Cars were instrumental in shaping this living model by significantly detaching home locations from places of employment and recreation.",
+      "lit": "자동차는 주거지를 직장과 여가 공간으로부터 현저하게 분리함으로써 이러한 생활 모델을 형성하는 데 중요한 역할을 했다.",
+      "easy": "결국 자동차는 <b>‘사는 곳’을 ‘일하는 곳·노는 곳’에서 떼어 놓음으로써</b> 이 새로운 생활 모델을 만든 핵심이었다.",
+      "role": "자동차가 ‘주거-직장 분리’의 핵심 동력이었음을 정리하며 글을 맺는다.",
+      "point": "어휘 추론형에서는 글의 일관된 방향(자동차 → 교외로 ‘분리·분산·확장’)과 어긋나는 단어가 함정이다. 예컨대 8번의 detaching(분리)을 반대 뜻인 uniting(결합)으로 바꾸면 글 흐름과 모순되므로 오답 어휘가 된다.",
+      "ptcls": ""
+     }
+    ],
+    "vocab": [
+     [
+      "advent",
+      "출현"
+     ],
+     [
+      "drastically",
+      "급격하게"
+     ],
+     [
+      "alter",
+      "변화시키다"
+     ],
+     [
+      "abundant",
+      "많은, 풍부한"
+     ],
+     [
+      "residential",
+      "주거의"
+     ],
+     [
+      "commercial",
+      "상업의"
+     ],
+     [
+      "high-density",
+      "고밀도의"
+     ],
+     [
+      "spacious",
+      "넓은"
+     ],
+     [
+      "commute",
+      "출퇴근하다"
+     ],
+     [
+      "accommodate",
+      "수용하다"
+     ],
+     [
+      "sprawling",
+      "무질서하게 퍼져 나가는"
+     ],
+     [
+      "infrastructure",
+      "사회 기반 시설"
+     ],
+     [
+      "instrumental",
+      "중요한"
+     ],
+     [
+      "detach",
+      "분리하다"
+     ]
+    ]
+   },
+   {
+    "num": "03",
+    "type": "도표 불일치",
+    "diff": "",
+    "title": "AI 활용 인식: 일반인 vs 기술 기업 임원",
+    "src": "출처 — Artificial Intelligence: Do People Know Where AI Is Used? (2019), Statista",
+    "flowLead": "지문 한눈에 보기: “2018년 설문 — 기술 임원이 대체로 AI 활용 인지도가 높았지만, ‘드론’만은 예외였다”",
+    "flow": [
+     "<b>도표 소개 (1):</b> 2018년 미국 설문으로, 일반인과 기술 기업 임원의 AI 활용 인식을 비교한다.",
+     "<b>전반 경향 (2~3):</b> 임원이 대체로 인지도가 높았으나 ‘드론’은 예외. 임원 인지도 상위 3개는 음성 비서·자연어 처리·텍스트 인식.",
+     "<b>세부 비교 (4~6):</b> 차량 호출 앱은 양쪽 모두 최저. 자연어 처리는 임원이 일반인의 2배 이상. 컴퓨터 비전과 드론은 임원에선 같았지만, 일반인은 드론이 컴퓨터 비전보다 10%p 높았다."
+    ],
+    "sents": [
+     {
+      "en": "⟦1⟧ The graph above shows results from a 2018 U.S. survey on awareness of AI uses among the general population and tech executives.",
+      "lit": "위 도표는 일반인과 기술 기업 임원의 AI 활용 인식에 관한 2018년 미국 설문조사의 결과를 보여준다.",
+      "easy": "이 도표는 <b>2018년 미국 설문</b>으로, ‘AI가 어디에 쓰이는지’에 대한 <b>일반인과 기술 기업 임원의 인지도</b>를 비교한 것이다.",
+      "role": "도표의 주제와 비교 대상(일반인 vs 임원)을 소개한다."
+     },
+     {
+      "en": "⟦2⟧ Tech executives had a higher awareness of AI uses across the various domains compared to the general population, with the exception of Drones.",
+      "lit": "기술 기업 임원은 일반인과 비교해 보면, ‘드론’을 제외하고는 다양한 영역에서의 AI 활용에 대해 더 높은 인지도를 가지고 있었다.",
+      "easy": "임원들은 대체로 일반인보다 AI 활용 인지도가 높았는데, <b>딱 ‘드론’만은 예외</b>였다. (드론은 일반인이 더 높음.)",
+      "role": "전반적 경향과 예외(드론)를 제시한다."
+     },
+     {
+      "en": "⟦3⟧ The top three AI domains with the highest awareness among tech executives were Voice Assistants, Natural Language Processing, and Text Recognition.",
+      "lit": "기술 기업 임원이 인지도가 가장 높았던 상위 세 가지 AI 분야는 ‘음성 비서’, ‘자연어 처리’, 그리고 ‘텍스트 인식’이었다.",
+      "easy": "임원들이 가장 잘 안 AI 분야 <b>상위 3개는 음성 비서·자연어 처리·텍스트 인식</b>이었다.",
+      "role": "임원의 인지도 상위 항목을 제시한다."
+     },
+     {
+      "en": "⟦4⟧ Ride-Hailing Apps had the lowest awareness levels in both the general population group and the tech executives group.",
+      "lit": "‘차량 호출 앱’은 일반인 집단과 기술 기업 임원 집단 모두에서 가장 낮은 인식 수준을 보였다.",
+      "easy": "<b>‘차량 호출 앱’은 일반인·임원 양쪽 모두에서 인지도가 가장 낮았다.</b>",
+      "role": "양쪽 모두 최저인 항목을 짚는다."
+     },
+     {
+      "en": "⟦5⟧ Tech executives’ awareness of AI use in Natural Language Processing was more than double that of the general public.",
+      "lit": "‘자연어 처리’에서 기술 기업 임원의 AI 활용에 대한 인지도가 일반인의 것보다 두 배 이상으로 나타났다.",
+      "easy": "‘자연어 처리’에선 <b>임원의 인지도가 일반인의 2배가 넘었다.</b>",
+      "role": "특정 항목의 큰 격차(2배 이상)를 제시한다."
+     },
+     {
+      "en": "⟦6⟧ The rate of awareness of AI use for Computer Vision and Drones was the same among tech executives, but for the general population, the awareness of Drones was 10 percentage points higher than that of Computer Vision.",
+      "lit": "‘컴퓨터 비전’과 ‘드론’의 AI 활용 인지도 비율은 기술 기업 임원 사이에서는 같았지만, 일반인에게 ‘드론’에 대한 인지도가 ‘컴퓨터 비전’에 대한 인지도보다 10% 포인트 더 높았다.",
+      "easy": "‘컴퓨터 비전’과 ‘드론’은 <b>임원에선 인지도가 같았지만, 일반인에선 드론이 컴퓨터 비전보다 10%p 높았다.</b>",
+      "role": "두 항목의 집단별 차이를 비교하며 도표 설명을 마무리한다.",
+      "point": "도표 불일치형은 본문 진술과 실제 그래프 수치를 대조해 틀린 문장을 찾는다. 숫자·비교 표현(‘2배 이상’, ‘10%p 높음’, ‘가장 낮음’, ‘예외’)이 도표와 맞는지가 정답의 열쇠다.",
+      "ptcls": ""
+     }
+    ],
+    "vocab": [
+     [
+      "executive",
+      "(기업의) 임원"
+     ],
+     [
+      "be aware of",
+      "~을 인지하다"
+     ],
+     [
+      "ride-hailing",
+      "차량 호출"
+     ],
+     [
+      "domain",
+      "분야, 영역"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "28",
+  "title": "28강 — 심리, 대인 관계",
+  "sub": "심리·대인관계 7지문 · 내용 완벽 이해",
+  "passages": [
+   {
+    "num": "모평",
+    "type": "2026 9월 모평 22번 · 요지",
+    "diff": "",
+    "title": "소셜 미디어와 사회적 자본: ‘누구를 아는가’",
+    "src": "출처 — Everyday Media Literacy (2023), Sue Ellen Christian",
+    "flowLead": "지문 한눈에 보기: “소셜 미디어는 관계를 쌓아 ‘사회적 자본’을 늘린다 — 핵심은 ‘무엇을 아는가’만큼이나 ‘누구를 아는가’”",
+    "flow": [
+     "<b>주제 (1~3):</b> 사람들이 소셜 미디어를 하는 한 이유는 사회적 관계를 쌓기 때문. 잘 활용하면 ‘사회적 자본’이 늘며, 이는 상호성·정체성 공유로 쌓인 관계망이다.",
+     "<b>구체적 이득 (4~5):</b> 일자리 정보·추천서 같은 보상이 따르는 유대를 만들고, 온라인 표현으로 정체성을 강화한다.",
+     "<b>학자 인용 (6~7):</b> Nan Lin은 사회적 자본을 ‘기대 수익이 있는 사회적 관계 투자’로 정의하며, ‘무엇을 아는가’만큼 ‘누구를 아는가’가 경험을 좌우한다고 강조한다.",
+     "<b>결론 (8):</b> 새 미디어로 연결 범위가 커져, ‘누구를 아는가’가 점점 더 넓어진다."
+    ],
+    "sents": [
+     {
+      "en": "⟦1⟧ One reason that people participate in social media is because it builds social relations.",
+      "lit": "사람들이 소셜 미디어에 참여하는 한 가지 이유는 그것이 사회적 관계를 형성하기 때문이다.",
+      "easy": "사람들이 소셜 미디어를 하는 한 가지 이유는 <b>그것이 ‘사회적 관계’를 만들어 주기 때문</b>이다.",
+      "role": "글의 출발점(소셜 미디어 → 관계 형성)을 제시한다."
+     },
+     {
+      "en": "⟦2⟧ We increase our social capital when we successfully engage in social media.",
+      "lit": "우리가 소셜 미디어에 성공적으로 참여할 때, 우리는 사회적 자본을 증가시킨다.",
+      "easy": "소셜 미디어를 잘 활용하면 <b>우리의 ‘사회적 자본’이 늘어난다.</b> (핵심어 ‘사회적 자본’ 등장.)",
+      "role": "핵심 개념 ‘사회적 자본’을 도입한다."
+     },
+     {
+      "en": "⟦3⟧ Social capital describes the networks of relationships we have that are built on mutuality and sharing of identity, understanding, norms and values.",
+      "lit": "사회적 자본은 상호성과 정체성, 이해, 규범 및 가치 공유를 바탕으로 구축된 관계망을 설명한다.",
+      "easy": "‘사회적 자본’이란 <b>상호성과 정체성·이해·규범·가치의 공유로 쌓아 올린 ‘관계망’</b>을 말한다.",
+      "role": "‘사회적 자본’의 정의를 제시한다."
+     },
+     {
+      "en": "⟦4⟧ We build ties that may pay off with a job lead or a letter of recommendation.",
+      "lit": "우리는 일자리 정보나 추천서와 같은 보상이 따를 수 있는 유대를 형성한다.",
+      "easy": "우리는 <b>일자리 정보나 추천서 같은 보상으로 돌아올 수 있는 ‘유대’</b>를 만든다.",
+      "role": "사회적 자본의 실질적 이득(유대의 보상)을 제시한다."
+     },
+     {
+      "en": "⟦5⟧ We reinforce our identities through our online presentation in a personal blog or our profile.",
+      "lit": "우리는 개인 블로그나 프로필에서의 온라인 표현을 통해 우리의 정체성을 강화한다.",
+      "easy": "또 우리는 <b>블로그·프로필 같은 온라인 표현으로 자신의 정체성을 강화</b>한다.",
+      "role": "소셜 미디어의 또 다른 기능(정체성 강화)을 제시한다."
+     },
+     {
+      "en": "⟦6⟧ “The premise behind the notion of social capital is rather simple and straightforward: investment in social relations with expected returns,” noted sociologist Nan Lin.",
+      "lit": "“사회적 자본 개념 뒤에 있는 전제는 상당히 단순하고 직접적인데, 그것은 기대 수익이 있는 사회적 관계에 대한 투자”라고 사회학자 Nan Lin은 언급했다.",
+      "easy": "사회학자 Nan Lin은 말한다 — <b>‘사회적 자본’의 전제는 단순하다, 곧 ‘수익을 기대하고 관계에 투자하는 것’</b>이라고.",
+      "role": "학자 인용으로 ‘사회적 자본=관계 투자’ 개념을 뒷받침한다."
+     },
+     {
+      "en": "⟦7⟧ Lin’s work stresses that it is who you know as much as what you know that shapes our experience in society.",
+      "lit": "Lin의 연구는 사회에서 우리의 경험을 형성하는 것은 우리가 무엇을 아는가만큼이나 우리가 누구를 아는가라는 점을 강조한다.",
+      "easy": "Lin은 강조한다 — 사회에서의 경험을 결정하는 건 <b>‘무엇을 아는가’만큼이나 ‘누구를 아는가’</b>라고. 글의 핵심 메시지.",
+      "role": "글의 요지(‘누구를 아는가’의 중요성)를 명시한다."
+     },
+     {
+      "en": "⟦8⟧ With new media, our reach of connecting is all the greater, expanding our “who you know” to greater and greater lengths.",
+      "lit": "새로운 미디어와 함께 우리의 연결 범위는 훨씬 더 커지고, 우리의 ‘누구를 아는가’를 점점 더 넓게 확장한다.",
+      "easy": "새 미디어 덕에 <b>연결 범위가 훨씬 넓어져, ‘누구를 아는가’의 폭이 점점 더 커진다.</b> 소셜 미디어가 사회적 자본을 키운다는 결론.",
+      "role": "새 미디어가 ‘누구를 아는가’를 확장한다며 글을 맺는다.",
+      "point": "요지 추론이라면 정답은 ‘소셜 미디어는 사회적 자본(관계망)을 키운다 / 사회적 성공엔 누구를 아는가가 중요하다’ 계열. 7번이 요지 문장이다.",
+      "ptcls": "answer"
+     }
+    ],
+    "vocab": [
+     [
+      "social capital",
+      "사회적 자본"
+     ],
+     [
+      "mutuality",
+      "상호성"
+     ],
+     [
+      "identity",
+      "정체성"
+     ],
+     [
+      "norms",
+      "규범"
+     ],
+     [
+      "tie",
+      "유대"
+     ],
+     [
+      "job lead",
+      "일자리 정보"
+     ],
+     [
+      "letter of recommendation",
+      "추천서"
+     ],
+     [
+      "reinforce",
+      "강화하다"
+     ],
+     [
+      "premise",
+      "전제"
+     ],
+     [
+      "notion",
+      "개념"
+     ],
+     [
+      "straightforward",
+      "직접적인, 확실한"
+     ],
+     [
+      "stress",
+      "강조하다"
+     ],
+     [
+      "expand",
+      "확장하다"
+     ]
+    ]
+   },
+   {
+    "num": "01",
+    "type": "주제 추론",
+    "diff": "",
+    "title": "사바나 가설: 가보지도 않은 풍경을 좋아하는 이유",
+    "src": "출처 — The Aesthetic Brain (2014), Anjan Chatterjee, p.49",
+    "flowLead": "지문 한눈에 보기: “아이들은 가본 적 없는 사바나를 좋아한다 — 이 선호는 뇌에 프로그램된 것이며, 나이가 들며 경험에 따라 수정된다”",
+    "flow": [
+     "<b>현상 (1~4):</b> 사람들은 가본 적 없어도 사바나 사진을 좋아한다. 한 연구에서 8세 아이들은 어떤 환경보다 사바나를 선호했고, 15세 이후엔 낙엽수림·침엽수림도 좋아했다.",
+     "<b>가설 (5~7):</b> 아무도 사바나에 가본 적 없으므로, 이 선호는 ‘뇌에 프로그램된 것’ = 사바나 가설. 나이가 들며 살아온 장소에 따라 수정된다.",
+     "<b>추가 연구 (8~10):</b> Synek·Grammer는 오스트리아 아이들이 사바나 닮은 풍경을 선호하다가, 사춘기 후엔 빽빽한 나무·높은 산 지역으로 선호가 바뀜을 확인했다."
+    ],
+    "sents": [
+     {
+      "en": "⟦1⟧ People like pictures of the savanna, even if they have never been there.",
+      "lit": "사람들은 사바나에 가본 적이 없더라도 사바나 사진들을 좋아한다.",
+      "easy": "사람들은 <b>한 번도 가본 적 없어도 ‘사바나(나무 드문 대평원)’ 사진을 좋아한다.</b> 이게 글이 설명할 신기한 현상이다.",
+      "role": "글이 설명할 현상(가본 적 없는 사바나 선호)을 제시한다."
+     },
+     {
+      "en": "⟦2⟧ In one study, people of different ages (8, 11, 15, 18, 35, and over 70 years) looked at images of tropical forests, deciduous forests, coniferous forests, deserts, and the East African savanna.",
+      "lit": "한 연구에서, 서로 다른 연령대(8세, 11세, 15세, 18세, 35세, 그리고 70세 이상)의 사람들이 열대림, 낙엽수림, 침엽수림, 사막, 동아프리카 사바나의 이미지를 보았다.",
+      "easy": "한 연구에서 <b>다양한 나이대 사람들에게 열대림·낙엽수림·침엽수림·사막·사바나 사진</b>을 보여 줬다.",
+      "role": "현상을 검증할 실험 설계를 제시한다."
+     },
+     {
+      "en": "⟦3⟧ Eight-year-old children said that they would like to live in or visit the savanna more than any other environment.",
+      "lit": "8세 어린이들은 다른 어떤 환경보다 사바나에서 살고 싶거나 방문하고 싶다고 말했다.",
+      "easy": "<b>8세 아이들은 다른 어떤 곳보다 사바나에서 살거나 가보고 싶다</b>고 답했다.",
+      "role": "어린아이의 강한 사바나 선호라는 핵심 결과를 제시한다."
+     },
+     {
+      "en": "⟦4⟧ After the age of 15, people also liked deciduous and coniferous forests.",
+      "lit": "15세 이후에 사람들은 낙엽수림과 침엽수림 또한 좋아했다.",
+      "easy": "<b>15세가 지나면 낙엽수림·침엽수림도 좋아하게</b> 됐다. (나이에 따라 선호가 넓어짐.)",
+      "role": "나이에 따른 선호 변화의 단서를 제시한다."
+     },
+     {
+      "en": "⟦5⟧ Since none of these people had visited savannas, the implication is that this preference was programmed into their brains.",
+      "lit": "이들 중 누구도 사바나를 방문한 적이 없었기 때문에, 그것은 이러한 선호도가 그들의 뇌에 프로그램되어 있음을 시사한다.",
+      "easy": "아무도 사바나에 가본 적 없으니, 이 선호는 <b>경험이 아니라 ‘뇌에 미리 새겨진 것’임을 시사</b>한다. 글의 핵심 해석.",
+      "role": "결과의 의미(선호는 타고난 것)를 해석한다."
+     },
+     {
+      "en": "⟦6⟧ This programmed preference is called “the savanna hypothesis.”",
+      "lit": "이러한 프로그램화된 선호도를 ‘사바나 가설’이라고 한다.",
+      "easy": "이렇게 <b>‘뇌에 새겨진 선호’를 ‘사바나 가설’이라 부른다.</b>",
+      "role": "현상에 ‘사바나 가설’이라는 이름을 부여한다."
+     },
+     {
+      "en": "⟦7⟧ As people get older, this preference gets modified by where they have lived.",
+      "lit": "사람들이 나이가 들어감에 따라, 이러한 선호도는 살아온 장소에 의해 수정된다.",
+      "easy": "다만 <b>나이가 들면 이 선호가 ‘살아온 장소’에 따라 조금씩 바뀐다.</b> (타고난 선호 + 후천적 경험.)",
+      "role": "타고난 선호가 경험으로 수정됨을 제시한다."
+     },
+     {
+      "en": "⟦8⟧ Synek and Grammer, researchers in evolutionary psychology, confirmed these findings in a different study.",
+      "lit": "진화 심리학의 연구자인 Synek과 Grammer는 다른 연구에서 이러한 결과들을 확인했다.",
+      "easy": "진화심리학자 Synek과 Grammer도 <b>다른 연구에서 이 결과를 다시 확인</b>했다.",
+      "role": "주장을 뒷받침할 추가 연구를 도입한다."
+     },
+     {
+      "en": "⟦9⟧ They showed that young children in Austria prefer landscapes thinly dotted with trees and with low mountains, scenes that resemble the savanna.",
+      "lit": "그들은 오스트리아의 어린아이들이 나무와 나지막한 산이 드문드문 흩어져 있는 경관, 즉 사바나와 유사한 풍경들을 선호한다는 것을 보여주었다.",
+      "easy": "<b>오스트리아 어린아이들은 나무가 드문드문하고 산이 낮은, ‘사바나 닮은 풍경’을 선호</b>했다. (타고난 선호 확인.)",
+      "role": "어린아이의 사바나형 풍경 선호를 재확인한다."
+     },
+     {
+      "en": "⟦10⟧ After puberty, their preferences shifted to areas with denser trees and higher mountains, again, presumably, because of more experience with these terrains.",
+      "lit": "사춘기 이후에, 그들의 선호는 더 빽빽한 나무들과 더 높은 산들이 있는 지역으로 바뀌었는데, 이는 역시 아마도 이러한 지형들에 대한 더 많은 경험 때문에 그러한 것으로 추정된다.",
+      "easy": "그런데 <b>사춘기 후엔 더 빽빽한 나무·높은 산 지역으로 선호가 바뀌었는데, 그 지형을 더 많이 경험했기 때문</b>으로 보인다. ‘타고난 선호 + 경험에 의한 수정’을 모두 보여 준다.",
+      "role": "7번의 ‘경험에 의한 수정’을 사례로 입증하며 글을 맺는다.",
+      "point": "주제 추론이라면 정답은 ‘사바나 풍경에 대한 선호는 (타고나며) 이후 경험으로 수정된다 / 환경 선호의 진화적 기원’ 계열. 5~7번이 주제축이고, 두 연구가 근거다.",
+      "ptcls": "answer"
+     }
+    ],
+    "vocab": [
+     [
+      "savanna",
+      "사바나(나무 없는 대평원)"
+     ],
+     [
+      "tropical",
+      "열대의"
+     ],
+     [
+      "deciduous",
+      "낙엽성의"
+     ],
+     [
+      "coniferous",
+      "침엽수의"
+     ],
+     [
+      "implication",
+      "의미, 함축"
+     ],
+     [
+      "preference",
+      "선호(도)"
+     ],
+     [
+      "modify",
+      "수정하다"
+     ],
+     [
+      "confirm",
+      "확인하다"
+     ],
+     [
+      "thinly",
+      "드문드문"
+     ],
+     [
+      "puberty",
+      "사춘기"
+     ],
+     [
+      "shift",
+      "바뀌다, 이동하다"
+     ],
+     [
+      "dense",
+      "빽빽한, 울창한"
+     ],
+     [
+      "presumably",
+      "아마도"
+     ],
+     [
+      "terrain",
+      "환경, 지형"
+     ]
+    ]
+   },
+   {
+    "num": "02",
+    "type": "어법 추론",
+    "diff": "",
+    "title": "꿈의 기억은 왜 출처를 헷갈리는가",
+    "src": "출처 — The Dreaming Mind (2024), Melanie G. Rosen, p.2",
+    "flowLead": "지문 한눈에 보기: “꿈은 만들어 낸 과정이 ‘투명’해서 기억의 출처를 가리기 어렵다 — 상상은 의도한 과정이 남지만, 꿈은 그게 없다”",
+    "flow": [
+     "<b>현상 (1~3):</b> 꿈을 꾼 사람은 시간이 지나면 그 기억이 꿈인지 다른 출처인지 판단하기 어렵다(출처 확인하기). 꿈 출처 확인은 다른 기억보다 덜 정확하다.",
+     "<b>이유 설명 (4~5):</b> 실제 꿈은 ‘깨어 있을 때 만든 자기 생성물을 식별하는 인지 작용 정보’가 부족하다. 상상은 더 생생하진 않아도, 상상을 만든 인지 작용이 함께 기억된다.",
+     "<b>대조와 결론 (6~7):</b> 이미지를 의도적으로 떠올렸다는 기억은 그것이 ‘내가 만든 것’임을 구별하게 해 준다. 반면 꿈은 생성 과정을 경험하지 않아 ‘투명’하므로 출처 확인이 더 어렵다."
+    ],
+    "sents": [
+     {
+      "en": "⟦1⟧ Dreamers find it difficult to determine whether a memory is from a dream or some other source after time has passed, known as “source monitoring.”",
+      "lit": "꿈을 꾼 사람들은 시간이 지난 후 어떤 기억이 꿈에서 온 것인지 아니면 다른 출처에서 온 것인지 판단하는 것, 즉 ‘출처 확인하기’로 알려진 것이 어렵다고 생각한다.",
+      "easy": "꿈을 꾼 사람은 시간이 지나면 <b>그 기억이 ‘꿈’인지 ‘딴 데서 온 것’인지 가려내기 어려워한다.</b> 이걸 ‘출처 확인하기(source monitoring)’라 한다.",
+      "role": "글의 소재(꿈 기억의 출처 혼동)와 용어를 제시한다."
+     },
+     {
+      "en": "⟦2⟧ It is difficult to distinguish between memories of real dreams and made-up ones, imagination or stories someone else told us.",
+      "lit": "실제 꿈의 기억과 지어낸 기억, 상상, 혹은 다른 누군가가 우리에게 들려준 이야기들을 구분하는 것은 어렵다.",
+      "easy": "<b>진짜 꾼 꿈인지, 지어낸 건지, 상상인지, 남이 해 준 이야기인지를 구별하기 어렵다</b>는 것이다.",
+      "role": "출처 혼동이 일어나는 여러 경우를 나열한다."
+     },
+     {
+      "en": "⟦3⟧ Dream source monitoring was found to be less accurate than other memory source monitoring.",
+      "lit": "꿈의 출처를 확인하는 것은 다른 기억의 출처를 확인하는 것보다 덜 정확한 것으로 밝혀졌다.",
+      "easy": "연구 결과, <b>‘꿈’의 출처 확인은 다른 기억의 출처 확인보다 덜 정확</b>했다.",
+      "role": "꿈 출처 확인이 특히 부정확하다는 핵심 사실을 제시한다."
+     },
+     {
+      "en": "⟦4⟧ A cognitive psychologist, Marcia K. Johnson and her colleagues’ explanation is that “real dreams are deficient in information about cognitive operations that help identify the self-generations we create when we are awake.”",
+      "lit": "인지심리학자 Marcia K. Johnson과 그녀의 동료들의 설명은 “실제 꿈은 우리가 깨어 있을 때 만들어 내는 자기 생성물을 식별하는 데 도움이 되는 인지 작용에 관한 정보가 부족하다”라는 것이다.",
+      "easy": "학자들의 설명은 이렇다 — <b>꿈에는 ‘깨어 있을 때 내가 뭔가를 만들었다는 인지 작용의 정보’가 부족</b>하다는 것. 즉 ‘내가 만들었다’는 표시가 없다.",
+      "role": "꿈 출처 확인이 부정확한 이유(인지 작용 정보 부족)를 제시한다."
+     },
+     {
+      "en": "⟦5⟧ Although dreams are usually more vivid than imagination, the cognitive operations that generate imagining are also remembered.",
+      "lit": "꿈은 보통 상상보다 더 생생하지만, 상상을 생성하는 인지 작용 또한 기억된다.",
+      "easy": "꿈이 상상보다 더 생생하긴 해도, <b>‘상상’은 그것을 만들어 낸 인지 작용까지 함께 기억</b>된다. (상상엔 ‘내가 만들었다’는 흔적이 남는다.)",
+      "role": "상상과 꿈의 차이(상상은 생성 과정이 기억됨)를 제시한다."
+     },
+     {
+      "en": "⟦6⟧ Remembering that you intentionally thought of an image helps distinguish it from a perception that you did not intentionally generate.",
+      "lit": "여러분이 어떤 이미지를 의도적으로 생각했다는 것을 기억하는 것은 그것을 여러분이 의도적으로 생성하지 않은 인식과 구분하는 데 도움이 된다.",
+      "easy": "<b>‘내가 일부러 그 이미지를 떠올렸다’는 기억이 있으면, 그것을 ‘내가 만든 게 아닌 것’과 구별할 수</b> 있다.",
+      "role": "의도적 생성의 기억이 출처 구별을 돕는다는 점을 설명한다."
+     },
+     {
+      "en": "⟦7⟧ Dream generation, in contrast, is “transparent” in that we don’t experience the generation process, making it more difficult to source monitor.",
+      "lit": "반면에, 우리가 생성 과정을 경험하지 않는다는 점에서 꿈의 생성은 ‘투명한’데, 이로 인해 출처를 확인하는 것을 더 어렵게 만든다.",
+      "easy": "반면 <b>꿈은 ‘만드는 과정’을 우리가 겪지 않아서 ‘투명’하다</b> — 그래서 ‘내가 만들었다’는 흔적이 없어 출처 확인이 더 어렵다. 글의 결론.",
+      "role": "꿈이 ‘투명’해 출처 확인이 어렵다는 결론으로 글을 맺는다.",
+      "point": "어법 추론형에서는 밑줄 친 부분의 문법성이 관건이다. 예: 4번의 콜론 안 인용절(주어+동사 구조), 6번의 동명사 주어(Remembering ~ helps)의 수일치, 7번의 분사구문(making) 등이 자주 출제 포인트가 된다.",
+      "ptcls": ""
+     }
+    ],
+    "vocab": [
+     [
+      "determine",
+      "판단하다, 알아내다"
+     ],
+     [
+      "source",
+      "출처"
+     ],
+     [
+      "distinguish",
+      "구분하다"
+     ],
+     [
+      "accurate",
+      "정확한"
+     ],
+     [
+      "cognitive",
+      "인지적인"
+     ],
+     [
+      "deficient",
+      "부족한"
+     ],
+     [
+      "identify",
+      "식별하다, 알아내다"
+     ],
+     [
+      "generate",
+      "생성하다"
+     ],
+     [
+      "transparent",
+      "투명한"
+     ]
+    ]
+   },
+   {
+    "num": "03",
+    "type": "문장 삽입",
+    "diff": "",
+    "title": "‘나는 잘한다’를 지키는 법: 실패는 깎고 성공은 부풀린다",
+    "src": "출처 — Start Making Sense (2025), Steven J. Heine",
+    "flowLead": "지문 한눈에 보기: “미적분 시험에 떨어지면 ‘미적분 따위 안 중요해’, 잘 보면 ‘미적분은 내 미래에 핵심이야’ — 중요도를 조절해 ‘나는 잘한다’는 이야기를 지킨다”",
+    "flow": [
+     "<b>전략 (1~3):</b> 사람들은 ‘나는 잘한다’는 믿음을 지키려 실패를 ‘대수롭지 않게’ 여긴다. 이 경시가 실패를 무력화해 인생 이야기를 덮어쓰지 못하게 막는다.",
+     "<b>실패 사례 (4~6):</b> 미적분 시험에 떨어지면 ‘이 시험은 나에게 안 중요해, 난 수학자 될 것도 아닌데’라고 한다.",
+     "<b>성공 사례 (7~8):</b> 반대로 성공은 엄청 중요하게 해석한다. 미적분을 잘 보면 ‘이게 내 미래·대학원·직업에 핵심이야’라고 생각한다.",
+     "<b>결론 (9):</b> 성공·실패의 중요도를 조절함으로써, ‘나는 잘한다’는 더 설득력 있는 이야기를 만든다."
+    ],
+    "sents": [
+     {
+      "en": "⟦1⟧ Much research in social psychology has documented some of the key strategies that people rely upon in defending the belief I am good.",
+      "lit": "사회 심리학의 많은 연구는 사람들이 ‘나는 잘한다’라는 믿음을 방어할 때 의존하는 주요 전략 중 일부를 기록해 왔다.",
+      "easy": "많은 심리학 연구가, 사람들이 <b>‘나는 괜찮은 사람이다’라는 믿음을 지키려고 쓰는 전략</b>들을 밝혀 왔다.",
+      "role": "글의 주제(‘나는 잘한다’를 지키는 전략)를 제시한다."
+     },
+     {
+      "en": "⟦2⟧ For example, when people perform poorly at something, they tend to trivialize their failures.",
+      "lit": "예를 들어, 사람들은 어떤 일을 잘하지 못하면 그들은 자신의 실패를 대수롭지 않게 여기는 경향이 있다.",
+      "easy": "예를 들어 <b>뭔가를 못하면, 사람들은 그 실패를 ‘별것 아니다’라고 여기는 경향</b>이 있다.",
+      "role": "첫 번째 전략(실패의 경시)을 제시한다."
+     },
+     {
+      "en": "⟦3⟧ This trivialization disarms those failures and prevents them from overwriting their life stories.",
+      "lit": "이러한 경시는 그 실패를 무력화시키고 그것이 그들의 인생 이야기를 다시 바꿔 쓰지 못하도록 막는다.",
+      "easy": "이렇게 ‘별것 아니다’ 하면 <b>실패의 힘이 빠져서, 그 실패가 ‘나는 잘한다’는 인생 이야기를 덮어쓰지 못하게</b> 막는다.",
+      "role": "경시가 어떻게 작동하는지(실패 무력화) 설명한다."
+     },
+     {
+      "en": "⟦4⟧ Imagine, say, that someone fails a calculus test.",
+      "lit": "예를 들어, 누군가가 미적분학 시험에 낙제하는 것을 상상해 보라.",
+      "easy": "예를 들어 <b>누군가 미적분 시험에 떨어졌다고</b> 해 보자.",
+      "role": "전략을 보여 줄 구체적 사례(미적분 낙제)를 도입한다."
+     },
+     {
+      "en": "⟦5⟧ A common defensive response is to conclude that this test was just not that important to them.",
+      "lit": "흔한 방어적 반응은 이 시험이 자신에게 그저 그다지 중요하지 않았다고 결론을 내리는 것이다.",
+      "easy": "그럴 때 흔한 반응은 <b>‘이 시험은 나에게 별로 안 중요했어’라고 결론짓는 것</b>이다.",
+      "role": "실패에 대한 전형적 방어(중요도 깎기)를 보여 준다."
+     },
+     {
+      "en": "⟦6⟧ They may say to themselves, “Who cares about calculus anyway. I’m not going to become a mathematician.”",
+      "lit": "그들은 자기 자신에게 “어쨌든 미적분학을 누가 신경 쓰겠어. 나는 수학자가 될 것도 아닌데.”라고 말할 수도 있다.",
+      "easy": "속으로 이렇게 말한다 — <b>“미적분 따위 누가 신경 써, 난 수학자 될 것도 아닌데.”</b>",
+      "role": "실패를 깎아내리는 속마음을 생생히 보여 준다."
+     },
+     {
+      "en": "⟦7⟧ In contrast, people will typically show the precise opposite pattern for their successes and will interpret those events as being of outsize importance.",
+      "lit": "대조적으로 사람들은 전형적으로 자신의 성공에 관해서 정확히 반대 양상을 보이고 그 사건들을 엄청나게 중요하다고 해석할 것이다.",
+      "easy": "반대로 <b>성공에 대해선 정확히 거꾸로 — 그 일을 ‘엄청나게 중요하다’고 해석</b>한다. (실패는 깎고, 성공은 부풀린다.)",
+      "role": "두 번째 패턴(성공의 중요도 부풀리기)을 제시한다."
+     },
+     {
+      "en": "⟦8⟧ So if someone aces a calculus test, they may think to themselves about how crucial calculus is for their future career success and how it’s key to getting into graduate school or getting a highly desired job as an engineer or a financial analyst.",
+      "lit": "따라서 만약 누군가가 미적분학 시험을 잘 친다면, 그들은 미적분학이 자신의 미래의 직업적 성공을 위해 얼마나 중요한지, 그리고 어떻게 그것이 대학원에 입학하거나 공학자나 금융 분석가와 같은 매우 선망받는 직업을 얻는 데 핵심적인지에 대해 혼자 생각할 수도 있다.",
+      "easy": "그래서 <b>미적분 시험을 잘 보면 ‘미적분은 내 미래 직업·대학원·선망 직업에 정말 중요해’라고 생각</b>한다. (똑같은 미적분인데 성공하면 중요해진다.)",
+      "role": "성공의 중요도 부풀리기를 같은 미적분 사례로 대비시킨다."
+     },
+     {
+      "en": "⟦9⟧ By titrating how importantly people view their successes and failures, they can shape their emotional reactions to these events in a way that enables them to tell a more convincing story that I am good.",
+      "lit": "자신의 성공과 실패를 중요하게 보는 정도를 조정함으로써, 사람들은 자신들이 ‘나는 잘한다’라는 더 설득력 있는 이야기를 할 수 있게 하는 방식으로 이러한 사건들에 대한 감정적 반응을 형성할 수 있다.",
+      "easy": "결국 <b>성공·실패의 ‘중요도’를 요리조리 조절함으로써, ‘나는 잘한다’는 더 그럴듯한 이야기를 만들어</b> 낸다. 글 전체를 압축한 결론.",
+      "role": "‘중요도 조절 → 자기 이야기 유지’라는 주제로 글을 맺는다.",
+      "point": "문장 삽입형에서는 ‘실패(2~6) → 성공(7~8)’의 전환점인 7번(In contrast ~)이 핵심 단서다. 대조 연결어와 ‘opposite pattern’이 앞뒤 내용을 가르므로 삽입 위치 판단의 기준이 된다.",
+      "ptcls": ""
+     }
+    ],
+    "vocab": [
+     [
+      "strategy",
+      "전략"
+     ],
+     [
+      "trivialize",
+      "대수롭지 않게 여기다"
+     ],
+     [
+      "disarm",
+      "무력화시키다"
+     ],
+     [
+      "overwrite",
+      "덮어 쓰다"
+     ],
+     [
+      "calculus",
+      "미적분학"
+     ],
+     [
+      "defensive",
+      "방어적인"
+     ],
+     [
+      "titrate",
+      "조정하다"
+     ],
+     [
+      "interpret",
+      "해석하다"
+     ],
+     [
+      "outsize",
+      "엄청나게 큰"
+     ],
+     [
+      "convincing",
+      "설득력 있는"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "29",
+  "title": "29강 — 정치, 경제, 사회, 법",
+  "sub": "정치·경제·법 7지문 · 내용 완벽 이해",
+  "passages": [
+   {
+    "num": "모평",
+    "type": "2026 9월 모평 34번 · 빈칸",
+    "diff": "",
+    "title": "공정한 집단 선택에는 ‘추첨’이 필요하다",
+    "src": "출처 — Trends in Computational Social Choice (2017), Ulle Endriss, p.3",
+    "flowLead": "지문 한눈에 보기: “두 사람이 정반대를 원하면, 익명성·중립성을 깨지 않고 하나를 고를 방법이 없다 — 그래서 ‘추첨’이 공정한 선택의 필수다”",
+    "flow": [
+     "<b>문제 제기 (1~2):</b> 여러 선호를 하나로 모을 때 동점을 가르는 방법이 필요하다. a·b를 각각 선호하는 두 사람이 있으면, 익명성·중립성을 깨지 않고는 하나를 못 고른다.",
+     "<b>개념 설명 (3~4):</b> 익명성=정체성과 무관, 중립성=대안에 공정. 그래서 추첨 허용이 공정한 선택에 필수처럼 보인다.",
+     "<b>근거 (5):</b> 다수결 같은 ‘결정적’ 방법도 동점만 없으면 결정적이고, 동점은 보통 제비뽑기로 푼다.",
+     "<b>역사 (6):</b> 관리 선발 추첨은 아테네 최초 민주주의로 거슬러 가며, 민주주의의 주요 특징으로 여겨졌고 최근 정치학의 관심을 끈다."
+    ],
+    "sents": [
+     {
+      "en": "⟦1⟧ When gathering the preferences of multiple agents into one collective choice, it is easily seen that certain cases call for randomization or other means of tiebreaking.",
+      "lit": "여러 행위자의 선호를 하나의 집단적 선택으로 모을 때, 특정 경우들은 무작위 추출이나 동점을 가르는 다른 방법들이 필요하다는 것을 쉽게 알 수 있다.",
+      "easy": "여러 사람의 선호를 모아 <b>하나의 집단 결정으로 만들 때, 어떤 경우엔 ‘무작위 추첨’ 같은 동점 가르기가 필요</b>하다.",
+      "role": "글의 문제(집단 선택엔 동점 가르기가 필요)를 제시한다."
+     },
+     {
+      "en": "⟦2⟧ For example, if there are two alternatives, a and b, and two agents such that one prefers a and the other one b, there is no deterministic way of selecting a single alternative without violating one of two basic fairness conditions known as anonymity and neutrality.",
+      "lit": "예를 들어, 두 개의 대안 ‘a’와 ‘b’가 있고, 두 명의 행위자가 있는데 한 사람은 ‘a’를 선호하고 나머지 사람은 ‘b’를 선호한다면, ‘익명성’과 ‘중립성’으로 알려진 두 가지 기본적인 공정성 조건 중 하나를 위반하지 않고 단일 대안을 선택할 결정적 방법은 없다.",
+      "easy": "예를 들어 <b>한 명은 a, 다른 한 명은 b를 원할 때, ‘익명성·중립성’이라는 공정성 조건을 깨지 않고 하나만 딱 고를 방법이 없다.</b> (완전한 교착 상태.)",
+      "role": "동점 가르기가 필요한 이유를 구체적 딜레마로 보여 준다."
+     },
+     {
+      "en": "⟦3⟧ Anonymity requires that the collective choice ought to be independent of the agents’ identities whereas neutrality requires impartiality towards the alternatives.",
+      "lit": "익명성은 집단적 선택이 행위자들의 정체성과는 무관해야 한다고 요구하고, 반면 중립성은 대안에 대한 공정성을 요구한다.",
+      "easy": "두 조건을 풀면 — <b>‘익명성’은 누가 골랐는지(정체성)와 무관해야 한다, ‘중립성’은 어느 대안에도 치우치면 안 된다</b>는 뜻이다.",
+      "role": "두 공정성 조건(익명성·중립성)을 정의한다."
+     },
+     {
+      "en": "⟦4⟧ Allowing lotteries as social outcomes hence seems like a necessity for impartial collective choice.",
+      "lit": "따라서 사회적 결과로 추첨을 허용하는 것은 공정한 집단적 선택을 위해 필수적인 것처럼 보인다.",
+      "easy": "그래서 <b>‘추첨’을 결과로 허용하는 것이, 공정한 집단 선택을 위해 ‘필수’처럼 보인다.</b> 글의 핵심 주장.",
+      "role": "글의 핵심 주장(공정한 선택엔 추첨이 필수)을 제시한다."
+     },
+     {
+      "en": "⟦5⟧ Indeed, most common “deterministic” social choice functions such as plurality rule are only deterministic as long as there is no tie, which is usually resolved by drawing a lot.",
+      "lit": "사실, 복수 규칙(다수결)과 같은 가장 일반적인 ‘결정적’ 사회적 선택 함수조차도, 동점이 없는 한에서만 결정적인데, 보통 그런 경우에는 제비뽑기로 해결된다.",
+      "easy": "실제로 <b>다수결 같은 ‘확실한’ 방법조차 동점만 없으면 확실할 뿐, 동점이 나면 결국 제비뽑기로 해결</b>한다. (추첨이 필요하다는 근거.)",
+      "role": "다수결조차 동점은 추첨으로 푼다는 근거를 댄다."
+     },
+     {
+      "en": "⟦6⟧ The use of lotteries for the selection of officials interestingly goes back to the world’s first democracy in Athens, where it was widely regarded as a principal characteristic of democracy, and has recently gained increasing attention in political science.",
+      "lit": "관리 선발을 위한 추첨의 사용은 흥미롭게도 아테네의 세계 최초의 민주주의로 거슬러 올라가는데, 거기서는 그것이 민주주의의 주요 특징으로 널리 여겨졌으며, 최근에는 정치학에서 점점 더 많은 관심을 끌어 왔다.",
+      "easy": "흥미롭게도 <b>관리를 ‘추첨’으로 뽑는 건 아테네 최초 민주주의까지 거슬러 가고, 민주주의의 핵심 특징으로 여겨졌으며, 요즘 정치학에서 다시 주목</b>받는다.",
+      "role": "추첨의 역사적 정당성(아테네 민주주의)을 더하며 글을 맺는다.",
+      "point": "빈칸은 보통 4번(공정한 집단 선택엔 ‘추첨/무작위’가 필요) 자리에 출제된다. 정답은 ‘lotteries/randomization(추첨)’ 계열 — 2번의 딜레마와 5번의 ‘동점은 제비뽑기로 해결’이 핵심 근거다.",
+      "ptcls": "answer"
+     }
+    ],
+    "vocab": [
+     [
+      "preference",
+      "선호(도)"
+     ],
+     [
+      "multiple",
+      "다수의"
+     ],
+     [
+      "agent",
+      "행위자"
+     ],
+     [
+      "collective",
+      "집단적인"
+     ],
+     [
+      "alternative",
+      "대안"
+     ],
+     [
+      "deterministic",
+      "결정론적인"
+     ],
+     [
+      "violate",
+      "위반하다"
+     ],
+     [
+      "anonymity",
+      "익명성"
+     ],
+     [
+      "neutrality",
+      "중립성"
+     ],
+     [
+      "impartiality",
+      "공정"
+     ],
+     [
+      "lottery",
+      "추첨, 복권"
+     ],
+     [
+      "plurality",
+      "복수(다수결)"
+     ],
+     [
+      "tie",
+      "동점"
+     ],
+     [
+      "resolve",
+      "해결하다"
+     ],
+     [
+      "lot",
+      "제비, 추첨"
+     ]
+    ]
+   },
+   {
+    "num": "01",
+    "type": "제목 추론",
+    "diff": "",
+    "title": "법은 책 속이 아니라 삶 속에 있다",
+    "src": "출처 — Law 101, 4th Ed. (2014), Jay Feinman, p.5",
+    "flowLead": "지문 한눈에 보기: “법은 비밀스럽고 책 속에만 있다는 건 오해 — 법은 삶을 반영하며, 우리는 이미 계약·약속에 대해 많이 생각하며 살아간다”",
+    "flow": [
+     "<b>오해 깨기 (1~2):</b> 법이 책 속에만 있고 비밀스럽다는 건 잘못. 변호사 수준의 전문 적용엔 전문 지식이 필요하지만, 법의 기본 본질 이해엔 필요 없다.",
+     "<b>주제 (3~4):</b> 법은 삶을 반영한다. 법에 담긴 원칙·쟁점은 우리가 삶에서 겪는 것과 다르지 않다.",
+     "<b>계약법 예시 (5~6):</b> 계약법은 사람들이 약속을 만들고·지키고·깨는 방식에 대한 해설이다. 변호사가 아니어도 계약·약속에 대해 많이 생각해 왔다.",
+     "<b>일상 질문 (7~9):</b> 손가락 꼬고 한 약속은 무효일까? 고장 난 TV는 반품 가능할까? 이런 질문이 곧 법이다."
+    ],
+    "sents": [
+     {
+      "en": "⟦1⟧ Along with the mistaken notion that the law resides in the books goes the equally mistaken idea that law is secret, or at least inaccessible to the ordinary person.",
+      "lit": "법은 책 속에 존재한다는 잘못된 생각과 더불어 법은 비밀스럽거나 적어도 보통 사람이 접근하기 힘들다는 똑같이 잘못된 생각도 존재한다.",
+      "easy": "<b>‘법은 책 속에만 있다’는 오해와 함께, ‘법은 비밀스럽고 보통 사람은 다가가기 어렵다’는 오해</b>도 있다. 이 글은 그 오해를 깨려 한다.",
+      "role": "깨뜨릴 통념(법은 책 속에·비밀스럽다)을 제시한다."
+     },
+     {
+      "en": "⟦2⟧ To understand and apply the law at the advanced, technical level that lawyers do requires professional knowledge, but to understand the basic substance of the law does not.",
+      "lit": "변호사들이 하는 고도의 전문적인 수준에서 법을 이해하고 적용하는 데에는 전문적인 지식이 필요하지만, 법의 기본적인 본질을 이해하는 것은 그렇지 않다.",
+      "easy": "<b>변호사처럼 고난도로 법을 다루려면 전문 지식이 필요하지만, 법의 ‘기본 본질’을 이해하는 데는 그런 게 필요 없다.</b>",
+      "role": "전문적 적용과 기본 이해를 구분하며 주장을 준비한다."
+     },
+     {
+      "en": "⟦3⟧ Law reflects life.",
+      "lit": "법은 삶을 반영한다.",
+      "easy": "핵심은 한 문장 — <b>‘법은 삶을 반영한다.’</b>",
+      "role": "글의 핵심 주제(법=삶의 반영)를 선언한다."
+     },
+     {
+      "en": "⟦4⟧ The principles and issues embodied in the law are not different from those that we experience in other aspects of our lives.",
+      "lit": "법에 구현된 원칙과 쟁점은 우리가 삶의 다른 측면에서 경험하는 것과 다르지 않다.",
+      "easy": "<b>법에 담긴 원칙·쟁점은, 우리가 일상에서 겪는 것과 다르지 않다.</b>",
+      "role": "주제(법은 삶과 같다)를 부연한다."
+     },
+     {
+      "en": "⟦5⟧ Contract law, for example, is a commentary on the way people make, interpret, keep, and break their promises in commercial and noncommercial settings.",
+      "lit": "예를 들어, 계약법은 사람들이 상업적, 비상업적 환경에서 약속을 만들고, 해석하고, 지키고, 파기하는 방식에 대한 해설이다.",
+      "easy": "예를 들어 <b>‘계약법’은 사람들이 약속을 만들고·해석하고·지키고·깨는 방식에 대한 해설</b>일 뿐이다. (법 = 일상의 약속 이야기.)",
+      "role": "주제를 ‘계약법=약속에 대한 해설’ 사례로 구체화한다."
+     },
+     {
+      "en": "⟦6⟧ Few nonlawyers can describe the objective theory of contract formation or the Statute of Frauds, but they have thought a lot about contracts and promises.",
+      "lit": "변호사가 아닌 사람 가운데 계약 성립의 객관적 이론이나 사기 방지법을 설명할 수 있는 사람은 거의 없지만, 그들은 계약과 약속에 대해 많은 생각을 해왔다.",
+      "easy": "<b>일반인은 ‘계약 성립 이론’ 같은 용어는 몰라도, 사실 계약과 약속에 대해선 이미 많이 생각하며</b> 살아왔다.",
+      "role": "전문 용어는 몰라도 누구나 법의 본질을 안다는 점을 강조한다."
+     },
+     {
+      "en": "⟦7⟧ If you cross your fingers when you make a promise, does it mean that the promise doesn’t count?",
+      "lit": "만약 여러분이 약속을 할 때 손가락을 꼬면 그 약속은 인정되지 않는다는 의미인가?",
+      "easy": "예를 들어 <b>‘약속할 때 손가락을 꼬면 그 약속은 무효일까?’</b> 같은 생각 말이다.",
+      "role": "일상 속 법적 질문 ①로 주제를 실감 나게 한다."
+     },
+     {
+      "en": "⟦8⟧ If your newly purchased television doesn’t work, can you return it to the store?",
+      "lit": "만약 여러분이 새로 구입한 텔레비전이 작동하지 않는다면 매장에 반품할 수 있는가?",
+      "easy": "또 <b>‘새로 산 TV가 고장 났으면 반품할 수 있을까?’</b> 같은 것도 마찬가지다.",
+      "role": "일상 속 법적 질문 ②를 더한다."
+     },
+     {
+      "en": "⟦9⟧ And so on.",
+      "lit": "이와 같은 경우는 계속 이어진다.",
+      "easy": "<b>이런 일상의 법적 질문은 끝없이 이어진다.</b> 결국 법은 우리 삶 곳곳에 있다는 결론.",
+      "role": "일상 속 법적 질문이 무수함을 암시하며 글을 맺는다.",
+      "point": "제목 추론이라면 정답은 ‘법은 삶을 반영한다 / 법은 멀리 있지 않다’ 계열. 3·4번이 주제이고, 계약법·일상 질문(5~9)이 근거다. ‘법은 전문가만의 것’ 같은 선택지는 2·6번과 모순돼 오답.",
+      "ptcls": "answer"
+     }
+    ],
+    "vocab": [
+     [
+      "notion",
+      "생각, 개념"
+     ],
+     [
+      "reside",
+      "존재하다, 거주하다"
+     ],
+     [
+      "inaccessible",
+      "접근하기 어려운"
+     ],
+     [
+      "professional",
+      "전문적인"
+     ],
+     [
+      "substance",
+      "본질, 내용"
+     ],
+     [
+      "reflect",
+      "반영하다"
+     ],
+     [
+      "principle",
+      "원칙, 원리"
+     ],
+     [
+      "embody",
+      "구현하다"
+     ],
+     [
+      "contract law",
+      "계약법"
+     ],
+     [
+      "commentary",
+      "해설"
+     ],
+     [
+      "commercial",
+      "상업의"
+     ],
+     [
+      "Statute of Frauds",
+      "사기 방지법"
+     ],
+     [
+      "count",
+      "(정식으로) 인정되다"
+     ]
+    ]
+   },
+   {
+    "num": "02",
+    "type": "빈칸 추론",
+    "diff": "",
+    "title": "인터넷이 바꾼 패션: 힘이 소비자에게로",
+    "src": "출처 — Costing for the Fashion Industry, Evans·Jeffrey·Craig, p.15",
+    "flowLead": "지문 한눈에 보기: “소비자가 즉시 정보를 비교하며 힘이 소매업자에서 고객으로 넘어갔다 — 이제 두 시즌으론 부족하고, 더 독특한 옷을 더 빠르게, 그러면서도 싸게 요구한다”",
+    "flow": [
+     "<b>주제 (1~2):</b> 인터넷이 패션 시장을 바꿔 수요 예측이 어려워졌다. 소비자가 즉시 정보를 비교해 더 많이 알게 되면서, 힘이 소매업자에서 고객으로 넘어갔다.",
+     "<b>심화 요인 (3~4):</b> 실시간 패션쇼·연예인 SNS 노출이 이를 심화. 소비자는 패션으로 개성을 표현하며 ‘자기 브랜드화’를 꾀한다.",
+     "<b>새 요구 (5~6):</b> 전통적 두 시즌으론 부족해 1년 내내 새 제품을 원한다. 더 독특한 옷을 더 빠르게, 그러면서도 합리적 가격을 요구한다."
+    ],
+    "sents": [
+     {
+      "en": "⟦1⟧ The internet has transformed the fashion marketplace, making it increasingly difficult to predict the demand for the selling season.",
+      "lit": "인터넷이 패션 시장을 변형시키면서 판매 시즌 수요를 예측하기가 점점 더 어려워지고 있다.",
+      "easy": "인터넷이 패션 시장을 바꿔 놓으면서 <b>판매 시즌의 수요를 예측하기가 점점 더 어려워졌다.</b>",
+      "role": "글의 주제(인터넷 → 수요 예측 어려움)를 제시한다."
+     },
+     {
+      "en": "⟦2⟧ Consumers can browse for product information and prices and gain comparative information almost instantaneously, making them more informed than ever before, transferring the balance of power from the retailer to the customer.",
+      "lit": "소비자들은 제품 정보와 가격을 검색하여 거의 즉시 비교 정보를 얻을 수 있어서, 그 어느 때보다 더 많은 정보를 알게 되고, 그 결과 힘의 균형이 소매업자에서 고객에게로 옮겨 간다.",
+      "easy": "소비자가 <b>제품·가격을 즉시 검색·비교할 수 있게 되어 그 어느 때보다 똑똑해졌고, 그 결과 ‘힘’이 소매업자에서 소비자에게로 넘어갔다.</b> 핵심 변화.",
+      "role": "핵심 변화(힘의 이동: 소매업자 → 소비자)를 제시한다."
+     },
+     {
+      "en": "⟦3⟧ This is exacerbated by open and real-time access to fashion shows, facilitated through livestreaming, coupled with social media access to celebrity looks and lifestyles and the sharing of all aspects of life on social media.",
+      "lit": "이러한 현상은 소셜 미디어를 통해 유명인의 외모와 생활 방식을 접하고 삶의 모든 측면을 소셜 미디어에서 공유하는 것과 결부되어, 인터넷 실시간 방송을 통해 용이해진 패션쇼에 대한 공개된 실시간 접근으로 심화된다.",
+      "easy": "이 현상은 <b>실시간 방송으로 패션쇼를 즉시 보고, SNS로 연예인 스타일·일상을 접하는 것</b>과 맞물려 더 심해진다.",
+      "role": "힘의 이동을 심화하는 요인(실시간 패션쇼·SNS)을 제시한다."
+     },
+     {
+      "en": "⟦4⟧ Consumers use fashion choices to express their individual style and personality, especially those promoting ‘brand me’ on social media.",
+      "lit": "소비자들은 자신의 개별 스타일과 개성을 표현하기 위해 패션 선택을 활용하는데, 특히 소셜 미디어에서 ‘자기 브랜드화’를 꾀하는 소비자들이 그러하다.",
+      "easy": "소비자는 <b>패션으로 자기 개성을 표현하고, 특히 SNS에서 ‘나라는 브랜드’를 내세우려</b> 한다.",
+      "role": "소비자가 패션을 ‘자기표현 수단’으로 쓴다는 점을 제시한다."
+     },
+     {
+      "en": "⟦5⟧ The traditional two-season offer is no longer seen as enough, with consumers demanding new products throughout the whole year.",
+      "lit": "전통적인 두 시즌(봄·여름, 가을·겨울) 상품 제공은 더 이상 충분한 것으로 인식되지 않으며, 소비자들은 일 년 내내 새로운 제품을 요구한다.",
+      "easy": "이제 <b>전통적인 ‘두 시즌’ 상품으론 부족하고, 소비자는 1년 내내 새 제품을 원한다.</b>",
+      "role": "소비자의 새 요구(연중 신제품)를 제시한다."
+     },
+     {
+      "en": "⟦6⟧ This creates a problem for fashion retailers as many consumers are looking for more exclusive pieces to differentiate themselves, forcing up the desire for trend-led ever more rapidly changing styles, while still demanding affordable prices.",
+      "lit": "이것은 패션 소매업자들에게 문제가 되는데, 많은 소비자들이 자신을 차별화하기 위해 더 독특한 제품을 찾고 있고, 트렌드 주도의 전례없이 더 빠르게 변화하는 스타일에 대한 욕구를 끌어 올리면서도, 여전히 합리적인 가격을 요구하기 때문이다.",
+      "easy": "이게 소매업자에겐 골칫거리다 — 소비자는 <b>남과 다른 ‘독특한 옷’을 ‘더 빠르게’ 바꿔 원하면서도, ‘싼 가격’까지 요구</b>하기 때문이다. (까다로운 삼중 요구.)",
+      "role": "소비자의 까다로운 요구(독특함+속도+저가)로 글을 맺는다.",
+      "point": "빈칸은 2번의 ‘힘이 소매업자→소비자로 이동(power from the retailer to the customer)’ 또는 6번의 소비자 요구 자리에 자주 출제된다. 정답은 ‘소비자에게 힘이 넘어감 / 더 독특하고 빠른 변화를 원함’ 계열 — 글 전체가 ‘소비자 주도’ 한 방향이다.",
+      "ptcls": "answer"
+     }
+    ],
+    "vocab": [
+     [
+      "transform",
+      "변형시키다, 바꾸다"
+     ],
+     [
+      "marketplace",
+      "시장"
+     ],
+     [
+      "browse",
+      "검색하다"
+     ],
+     [
+      "comparative",
+      "비교의"
+     ],
+     [
+      "instantaneously",
+      "즉시"
+     ],
+     [
+      "transfer",
+      "옮기다, 이동하다"
+     ],
+     [
+      "retailer",
+      "소매업자"
+     ],
+     [
+      "exacerbate",
+      "심화시키다"
+     ],
+     [
+      "facilitate",
+      "용이하게 하다"
+     ],
+     [
+      "livestreaming",
+      "실시간 방송"
+     ],
+     [
+      "celebrity",
+      "유명인"
+     ],
+     [
+      "exclusive",
+      "독특한, 유일한"
+     ],
+     [
+      "differentiate",
+      "차별화하다"
+     ],
+     [
+      "force up",
+      "끌어 올리다"
+     ],
+     [
+      "affordable",
+      "합리적인, 알맞은"
+     ]
+    ]
+   },
+   {
+    "num": "03",
+    "type": "무관한 문장 찾기",
+    "diff": "",
+    "title": "환경적 인종차별: 흑인 공동체는 ‘말 그대로’ 숨 쉬기 어렵다",
+    "src": "출처 — It’s Not That Radical (2023), Mikaela Loach",
+    "flowLead": "지문 한눈에 보기: “백인 우월주의로 비유적으로 숨 막혔을 뿐 아니라, ‘환경적 인종차별’로 문자 그대로 숨 쉬기 어렵다 — 유해 시설이 흑인 거주지에 의도적으로 들어선다”",
+    "flow": [
+     "<b>핵심 (1):</b> 흑인 공동체를 깊이 짓누른 것은, 백인 우월주의로 ‘비유적으로’ 숨 막혔을 뿐 아니라 ‘환경적 인종차별’로 ‘문자 그대로’ 숨 쉴 수 없다는 사실이다.",
+     "<b>실태 (2~3):</b> 미국 흑인들은 매립지·공장·화석연료 시설 근처에 살 가능성이 높다. 이렇게 유해 시설을 흑인 공동체 가까이 의도적으로 두는 과정을 ‘레드라이닝’이라 한다.",
+     "<b>결과 (4~5):</b> 발전소·유해폐기물 시설이 흑인·소수민족 지역에 불균형적·의도적으로 위치하며, 그 결과 흑인은 대기오염으로 사망할 가능성이 백인의 3배다."
+    ],
+    "sents": [
+     {
+      "en": "⟦1⟧ What deeply affected so many Black communities globally was not only that they could not metaphorically breathe because of the oppressive forms and limits of white supremacy, but also that so many Black communities literally cannot breathe because of environmental racism.",
+      "lit": "전 세계의 수많은 흑인 공동체에 깊은 영향을 미친 것은, 그들이 백인 우월주의의 억압적인 형태와 한계 때문에 비유적으로 숨을 쉴 수 없었을 뿐만 아니라, 수많은 흑인 공동체가 환경적 인종차별 때문에 ‘말 그대로’ 숨을 쉴 수 없다는 사실이었다.",
+      "easy": "흑인 공동체를 깊이 짓누른 건 두 가지다 — <b>백인 우월주의로 ‘비유적으로’ 숨 막혔을 뿐 아니라, ‘환경적 인종차별’ 때문에 ‘문자 그대로’ 숨 쉬기 어렵다</b>는 것. 이 글의 핵심.",
+      "role": "글의 핵심 주장(환경적 인종차별로 ‘문자 그대로’ 숨 막힘)을 제시한다."
+     },
+     {
+      "en": "⟦2⟧ Similarly to Black communities in the UK, Black Americans are also more likely to live near landfills, industrial plants and fossil-fuel infrastructure.",
+      "lit": "영국 흑인 공동체와 마찬가지로 미국 흑인들 역시 쓰레기 매립지, 산업 공장, 화석 연료 사회 기반 시설 인근에 거주할 가능성이 더 높다.",
+      "easy": "영국과 마찬가지로 <b>미국 흑인들도 매립지·공장·화석연료 시설 근처에 살 가능성이 더 높다.</b>",
+      "role": "환경적 인종차별의 실태(유해 시설 근처 거주)를 제시한다."
+     },
+     {
+      "en": "⟦3⟧ The process by which this hazardous infrastructure is deliberately situated close to African American communities is called redlining.",
+      "lit": "이러한 위험한 사회 기반 시설이 의도적으로 아프리카계 미국인 공동체 가까이에 위치하는 과정을 레드라이닝이라고 한다.",
+      "easy": "이렇게 <b>유해 시설을 흑인 공동체 가까이 ‘의도적으로’ 두는 과정을 ‘레드라이닝’</b>이라 부른다.",
+      "role": "현상에 ‘레드라이닝’이라는 이름을 부여한다."
+     },
+     {
+      "en": "⟦4⟧ This process means that fossil-fuelled power plants and hazardous-waste facilities are disproportionately and deliberately situated in Black or ethnic-minority neighbourhoods.",
+      "lit": "이 과정은 화석 연료 발전소와 유해 폐기물 시설이 흑인 또는 소수 민족 거주 지역에 불균형적으로 그리고 의도적으로 위치하는 것을 의미한다.",
+      "easy": "즉 <b>발전소·유해폐기물 시설이 흑인·소수민족 지역에 ‘불균형적이고 의도적으로’ 들어선다</b>는 뜻이다.",
+      "role": "레드라이닝의 구체적 의미(유해 시설의 의도적 편중)를 설명한다."
+     },
+     {
+      "en": "⟦5⟧ As a result of this, Black Americans are three times more likely to die from exposure to air pollutants than their white counterparts.",
+      "lit": "이로 인해 미국 흑인들은 미국 백인들보다 대기 오염 물질에 노출되어 사망할 가능성이 세 배나 더 높다.",
+      "easy": "그 결과 <b>흑인은 대기오염으로 사망할 확률이 백인의 3배</b>나 된다. 1번의 ‘문자 그대로 숨 쉴 수 없다’가 통계로 증명된다.",
+      "role": "환경적 인종차별의 치명적 결과(사망률 3배)로 글을 맺는다.",
+      "point": "무관한 문장 찾기형에서는 ‘환경적 인종차별(유해 시설의 의도적 편중과 그 피해)’이라는 일관된 흐름과 동떨어진 문장이 정답이다. 예컨대 방치·황폐(neglected·run-down)된 동네의 일반적 모습처럼, 인종차별의 ‘의도성’과 무관한 진술이 함정으로 끼어들 수 있다.",
+      "ptcls": ""
+     }
+    ],
+    "vocab": [
+     [
+      "metaphorically",
+      "비유적으로"
+     ],
+     [
+      "oppressive",
+      "억압하는"
+     ],
+     [
+      "white supremacy",
+      "백인 우월주의"
+     ],
+     [
+      "literally",
+      "말 그대로"
+     ],
+     [
+      "environmental",
+      "환경의"
+     ],
+     [
+      "racism",
+      "인종 차별(주의)"
+     ],
+     [
+      "landfill",
+      "쓰레기 매립지"
+     ],
+     [
+      "infrastructure",
+      "사회 기반 시설"
+     ],
+     [
+      "hazardous",
+      "위험한"
+     ],
+     [
+      "disproportionately",
+      "불균형적으로"
+     ],
+     [
+      "deliberately",
+      "의도적으로, 고의로"
+     ],
+     [
+      "exposure",
+      "노출"
+     ],
+     [
+      "pollutant",
+      "오염 물질"
+     ],
+     [
+      "counterpart",
+      "상대, 대응 관계에 있는 사람"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "30",
+  "title": "30강 — 의학, 건강, 영양, 식품",
+  "sub": "의학·건강·영양 7지문 · 내용 완벽 이해",
+  "passages": [
+   {
+    "num": "모평",
+    "type": "2026 9월 모평 29번 · 어법",
+    "diff": "",
+    "title": "천연 꿀과 혼합 꿀: 왜 섞을까",
+    "src": "출처 — Honey: A Global History (2017), Lucy Long, p.76",
+    "flowLead": "지문 한눈에 보기: “천연 꿀은 첨가물이 없어 더 비싸다 — 그런데 여러 꿀을 섞으면 맛이 더 입에 맞고 균일해져, 생산자는 ‘예측 가능한 맛’을 보장할 수 있다”",
+    "flow": [
+     "<b>천연 꿀 (1~3):</b> 꿀은 그냥 먹거나 섞어 먹는다. 천연(순수) 꿀은 첨가물·방부제가 없어 ‘묽지 않은’ 꿀로 불리며 더 비싸다.",
+     "<b>혼합 꿀 (4~5):</b> 천연 꿀은 ‘혼합 꿀’이라고도 하는데, 벌이 아니라 인간 가공·유통업자가 여러 출처의 꿀을 섞은 것이다. 진한 꿀이 너무 강하다고 여겨져 맛·마케팅 이유로 자주 섞는다.",
+     "<b>혼합의 효과 (6~7):</b> 섞으면 더 입에 맞고 균일한 맛이 나, 생산자는 고객에게 예측 가능한(순한) 맛을 보장할 수 있다. 클로버 꿀이 그 순한 맛으로 미국에서 인기다."
+    ],
+    "sents": [
+     {
+      "en": "⟦1⟧ Honey can be eaten by itself or mixed with other ingredients.",
+      "lit": "꿀은 그 자체로 먹거나 다른 재료와 섞을 수 있다.",
+      "easy": "꿀은 <b>그냥 먹어도 되고, 다른 재료와 섞어 먹어도</b> 된다.",
+      "role": "꿀의 섭취 방식으로 글을 연다."
+     },
+     {
+      "en": "⟦2⟧ Natural or pure honey has had no additives, preservatives or synthetic ingredients added.",
+      "lit": "천연 또는 순수 꿀은 첨가물, 방부제, 또는 합성 성분이 전혀 더해져 있지 않다.",
+      "easy": "<b>천연(순수) 꿀은 첨가물·방부제·합성 성분이 전혀 들어 있지 않은</b> 꿀이다.",
+      "role": "천연 꿀의 정의(무첨가)를 제시한다."
+     },
+     {
+      "en": "⟦3⟧ Also referred to as ‘undiluted’, it is usually more expensive than diluted honeys.",
+      "lit": "또한 그것은 ‘묽게 되지 않은’이라고 불리며, 보통 묽어진 꿀보다 더 비싸다.",
+      "easy": "천연 꿀은 ‘묽지 않은(undiluted)’ 꿀로도 불리며, <b>묽은 꿀보다 보통 더 비싸다.</b>",
+      "role": "천연 꿀의 별칭과 가격(더 비쌈)을 제시한다."
+     },
+     {
+      "en": "⟦4⟧ Natural honey can also be called ‘blended honey’, in which honeys from various sources are blended together ― not by the bees, but by human processors and distributors in stages after the honey has been collected.",
+      "lit": "천연 꿀은 또한 ‘혼합 꿀’이라고도 불리는데, 그것에서는 여러 출처의 꿀들이 벌에 의해서가 아니라, 꿀이 채취된 후 단계적으로 인간 가공업자와 유통업자에 의해 한데 섞인다.",
+      "easy": "천연 꿀은 ‘혼합 꿀’이라고도 하는데, <b>여러 출처의 꿀을 ‘벌’이 아니라 ‘사람(가공·유통업자)’이 채취 후에 섞은</b> 것이다.",
+      "role": "‘혼합 꿀’ 개념과 섞는 주체(사람)를 설명한다."
+     },
+     {
+      "en": "⟦5⟧ Blending is frequently done for taste as well as marketing reasons, especially since some consumers find the darker honeys too strong.",
+      "lit": "혼합은 마케팅 상의 이유들 뿐 아니라 맛을 위해서도 자주 행해지는데, 특히 일부 소비자가 더 진한 색의 꿀이 너무 강하다고 여기기 때문이다.",
+      "easy": "섞는 이유는 맛과 마케팅 때문인데, 특히 <b>진한 꿀이 너무 강하다고 느끼는 소비자가 있어서</b>다.",
+      "role": "꿀을 섞는 이유(맛·마케팅)를 제시한다."
+     },
+     {
+      "en": "⟦6⟧ Mixing different types of honey together can make it more palatable, and also gives a more uniform flavour ― this is an important consideration for producers and retailers, who feel the need to guarantee reliable, unsurprising (typically mild) flavours to their customers.",
+      "lit": "여러 종류의 꿀을 함께 섞는 것은 그것을 더 입에 맞게 만들 수 있고 또한 더 균일한 맛을 제공하는데, 이것은 생산자와 소매상에게 중요한 고려 사항으로, 그들은 자신의 고객에게 신뢰할 수 있고, 놀랍지 않은(보통은 순한) 맛을 보장할 필요가 있다고 느낀다.",
+      "easy": "여러 꿀을 섞으면 <b>더 입에 맞고 ‘균일한’ 맛이 난다.</b> 이는 생산자·소매상에게 중요한데, <b>고객에게 ‘예측 가능한(순한) 맛’을 보장</b>해야 하기 때문이다.",
+      "role": "혼합의 효과(균일·예측 가능한 맛)와 그 중요성을 설명한다."
+     },
+     {
+      "en": "⟦7⟧ Clover is one of the most popular honeys in the U.S., and its mild flavour and taste have become familiar to many Americans.",
+      "lit": "클로버 꿀은 미국에서 가장 인기 있는 꿀 중 하나이고, 그 부드러운 맛과 풍미는 많은 미국인들에게 익숙해졌다.",
+      "easy": "<b>클로버 꿀은 그 ‘순한 맛’ 덕에 미국에서 가장 인기 있는 꿀 중 하나</b>가 됐다. 순한·균일한 맛이 통한다는 마무리.",
+      "role": "순한 맛이 인기를 끄는 사례(클로버 꿀)로 글을 맺는다.",
+      "point": "어법 추론형이므로 밑줄 부분의 문법성이 관건이다. 예: 2번의 현재완료+과거분사(has had ~ added)의 태, 3번 분사구문(referred to), 4·6번의 관계사 in which / who의 쓰임 등이 출제 포인트가 된다.",
+      "ptcls": ""
+     }
+    ],
+    "vocab": [
+     [
+      "ingredient",
+      "(요리) 재료"
+     ],
+     [
+      "additive",
+      "첨가물"
+     ],
+     [
+      "preservative",
+      "방부제"
+     ],
+     [
+      "synthetic",
+      "합성의"
+     ],
+     [
+      "refer to ~ as …",
+      "~을 …라고 부르다"
+     ],
+     [
+      "dilute",
+      "묽게 하다"
+     ],
+     [
+      "blended",
+      "혼합된"
+     ],
+     [
+      "processor",
+      "가공업자"
+     ],
+     [
+      "distributor",
+      "유통업자"
+     ],
+     [
+      "palatable",
+      "입에 맞는"
+     ],
+     [
+      "uniform",
+      "균일한"
+     ],
+     [
+      "consideration",
+      "고려 사항"
+     ],
+     [
+      "retailer",
+      "소매상"
+     ],
+     [
+      "guarantee",
+      "보장하다"
+     ]
+    ]
+   },
+   {
+    "num": "01",
+    "type": "순서 추론",
+    "diff": "",
+    "title": "‘적당함’이란 무엇인가: 너무 많지도 적지도 않게",
+    "src": "출처 — Discovering Nutrition (2018), Insel 외, p.36",
+    "flowLead": "지문 한눈에 보기: “적당함은 나쁜 음식을 ‘완전히 빼는 것’이 아니라 ‘극단으로 가지 않는 것’ — 좋은 것(비타민C, 아연)도 지나치면 해롭다”",
+    "flow": [
+     "<b>정의 (1~3):</b> 적당함은 너무 많지도 적지도 않은 것. 낮은 영양 음식을 완전히 배제하라는 게 아니라 가끔 포함할 수 있다는 뜻이며, 어떤 것도 극단으로 가지 않음을 수반한다.",
+     "<b>좋은 것도 과하면 (4~5):</b> 비타민C가 좋다고 엄청난 양이 적절한 건 아니다. 소량으론 이로운 물질도 다량이면 위험할 수 있다.",
+     "<b>아연 예시 (6~7):</b> 몸은 아연이 필요하지만, 과하면 구리 결핍을 일으켜 면역을 해친다.",
+     "<b>결론 (8):</b> 식단의 적당함이란 한 음식을 제한·제거하는 게 아니라, 모든 음식이 건강한 식단에 들어올 수 있다는 것이다."
+    ],
+    "sents": [
+     {
+      "en": "⟦1⟧ Not too much or too little — that’s what moderation means.",
+      "lit": "너무 많지도 적지도 않게, 그것이 바로 적당함이 의미하는 바이다.",
+      "easy": "<b>너무 많지도 적지도 않게 — 그게 바로 ‘적당함(moderation)’</b>이다.",
+      "role": "핵심어 ‘적당함’을 정의하며 글을 연다."
+     },
+     {
+      "en": "⟦2⟧ Moderation does not mean that you have to eliminate low-nutrient-density foods from your diet, such as soft drinks and candy, but rather that you can include them occasionally.",
+      "lit": "적당함은 탄산음료와 사탕 같은, 낮은 영양 밀도 음식을 식단에서 완전히 배제해야 한다는 의미가 아니라, 오히려 그런 음식을 때때로 포함할 수 있다는 의미이다.",
+      "easy": "적당함은 <b>탄산음료·사탕 같은 ‘영양가 낮은 음식’을 완전히 빼라는 게 아니라, 가끔은 먹어도 된다</b>는 뜻이다.",
+      "role": "적당함의 오해를 바로잡는다(완전 배제 ≠ 적당함)."
+     },
+     {
+      "en": "⟦3⟧ Moderation entails not taking anything to extremes.",
+      "lit": "적당함이란 어떤 것이든 극단으로 섭취하지 않는 것을 수반한다.",
+      "easy": "적당함의 핵심은 <b>‘무엇이든 극단으로 가지 않는 것’</b>이다.",
+      "role": "적당함의 핵심(극단 회피)을 정의한다."
+     },
+     {
+      "en": "⟦4⟧ You probably have heard that vitamin C has positive effects, but that doesn’t mean huge doses of this essential nutrient are appropriate for you.",
+      "lit": "여러분은 아마 비타민 C가 긍정적인 효과를 지닌다고 들어봤겠지만, 그것이 이 필수 영양소의 엄청난 복용량이 여러분에게 적절하다는 의미는 아니다.",
+      "easy": "비타민C가 좋다고 들었겠지만, <b>그렇다고 엄청난 양을 먹는 게 적절한 건 아니다.</b>",
+      "role": "‘좋은 것도 과하면 안 됨’을 비타민C로 예시한다."
+     },
+     {
+      "en": "⟦5⟧ It’s also important to remember that substances that are healthful in small amounts can sometimes be dangerous in large quantities.",
+      "lit": "소량으로는 건강에 이로운 물질도 다량으로 섭취하면 때때로 위험할 수 있다는 점을 기억하는 것도 또한 중요하다.",
+      "easy": "<b>소량이면 이로운 물질도, 많이 먹으면 위험할 수 있다</b>는 점을 기억해야 한다.",
+      "role": "‘소량 이로움 → 다량 위험’ 원리를 일반화한다."
+     },
+     {
+      "en": "⟦6⟧ For example, the body needs zinc for hundreds of chemical reactions, including those that support normal growth, development, and immune function.",
+      "lit": "예를 들어, 신체는 수백 가지의 화학 반응을 위해 아연을 필요로 하는데, 이는 정상적인 성장, 발달, 그리고 면역 기능을 지원하는 화학 반응을 포함한다.",
+      "easy": "예를 들어 <b>몸은 성장·발달·면역을 포함한 수백 가지 반응에 ‘아연’이 필요</b>하다.",
+      "role": "‘좋은 물질’의 사례로 아연(필수 영양소)을 제시한다."
+     },
+     {
+      "en": "⟦7⟧ Too much zinc, however, can cause deficiency of copper, another essential mineral, which can lead to damaged immune function.",
+      "lit": "그러나 아연을 지나치게 많이 섭취하는 것은 또 다른 필수 미네랄인 구리의 결핍을 초래할 수 있으며, 이는 면역 기능 손상으로 이어질 수 있다.",
+      "easy": "그러나 <b>아연이 너무 많으면 ‘구리’ 결핍을 일으켜 오히려 면역을 해칠 수</b> 있다. (좋은 아연도 과하면 해롭다.)",
+      "role": "아연조차 과하면 해롭다는 점으로 5번 원리를 입증한다."
+     },
+     {
+      "en": "⟦8⟧ Being moderate in your diet means that you do not restrict or completely eliminate any one type of food, but rather that all types of food can fit into a healthful diet.",
+      "lit": "여러분의 식단에서 적당하다는 것은 어떤 한 종류의 음식을 제한하거나 완전히 제거하는 것이 아니라, 오히려 모든 종류의 음식이 건강한 식단에 포함될 수 있다는 것을 의미한다.",
+      "easy": "결국 식단의 적당함이란 <b>어떤 음식을 막거나 완전히 빼는 게 아니라, ‘모든 음식이 건강한 식단에 들어올 수 있다’</b>는 뜻이다. 글 전체의 결론.",
+      "role": "‘적당함=배제가 아닌 균형’이라는 결론으로 글을 맺는다.",
+      "point": "순서 배열의 흐름축은 ‘정의(1~3) → 좋은 것도 과하면 위험(4~5) → 아연 사례(6~7) → 결론(8)’이다. for example, however, also 같은 연결어가 단락 간 순서를 가르는 단서가 된다.",
+      "ptcls": ""
+     }
+    ],
+    "vocab": [
+     [
+      "moderation",
+      "적당함, 절제"
+     ],
+     [
+      "eliminate",
+      "배제하다"
+     ],
+     [
+      "occasionally",
+      "가끔"
+     ],
+     [
+      "entail",
+      "수반하다"
+     ],
+     [
+      "dose",
+      "복용량"
+     ],
+     [
+      "appropriate",
+      "적절한"
+     ],
+     [
+      "substance",
+      "물질"
+     ],
+     [
+      "zinc",
+      "아연"
+     ],
+     [
+      "immune",
+      "면역의"
+     ],
+     [
+      "deficiency",
+      "결핍"
+     ],
+     [
+      "restrict",
+      "제한하다"
+     ]
+    ]
+   },
+   {
+    "num": "02",
+    "type": "빈칸 추론",
+    "diff": "",
+    "title": "우리는 배고파서가 아니라 ‘환경’ 때문에 먹는다",
+    "src": "출처 — Nutrition (2016), Insel 외, p.370",
+    "flowLead": "지문 한눈에 보기: “영화관의 팝콘, 카드 게임의 감자칩 — 우리는 배고픔이 아니라 ‘상황적 단서’에 떠밀려 먹는다. 식료품점도 이를 이용한다”",
+    "flow": [
+     "<b>주제 (1~2):</b> 식이 행동은 대개 특정 상황에 대한 자동 반응의 결과이며, 사람들은 먹기를 유도하는 ‘상황적 단서’를 저항할 능력이 부족하다.",
+     "<b>예시들 (3~7):</b> 영화관=팝콘, 카드 게임=감자칩처럼, 배가 고파서가 아니라 ‘사회적 환경’에 자극받아 먹는다.",
+     "<b>상업적 이용 (8~9):</b> 식료품점·음식점은 1+1·할인 같은 ‘제안 판매’로 이익을 얻고, 상품 ‘배치’로 충동구매를 유도한다."
+    ],
+    "sents": [
+     {
+      "en": "⟦1⟧ Dietary behaviors are, in large part, the consequence of automatic responses to a particular situation with food, many of which lead to increased caloric consumption and poor dietary choices.",
+      "lit": "식이 행동은 대개 음식과 관련된 특정 상황에 대한 자동적인 반응의 결과이며, 그중 많은 것이 칼로리 섭취 증가와 좋지 않은 식품 선택으로 이어진다.",
+      "easy": "먹는 행동은 대부분 <b>특정 상황에 대한 ‘자동 반응’의 결과</b>이고, 그 많은 경우가 과식과 나쁜 선택으로 이어진다.",
+      "role": "글의 주제(식이 행동=상황에 대한 자동 반응)를 제시한다."
+     },
+     {
+      "en": "⟦2⟧ Individuals are subject to inherent cognitive limitations and mostly lack the capacity to consistently recognize, ignore, or resist contextual cues that encourage eating.",
+      "lit": "사람들은 선천적인 인지적 한계에 영향받으며, 대부분 먹는 것을 유도하는 상황적 단서를 일관되게 인식하거나 무시하거나 저항할 능력이 부족하다.",
+      "easy": "사람은 타고난 인지적 한계 탓에, <b>먹기를 부추기는 ‘상황적 단서’를 알아채거나 무시·저항할 능력이 대체로 부족</b>하다.",
+      "role": "왜 상황에 휘둘리는지(인지적 한계) 근거를 댄다."
+     },
+     {
+      "en": "⟦3⟧ Take, for example, going to the movies.",
+      "lit": "예를 들어 영화 보러 가는 것을 생각해 보라.",
+      "easy": "예를 들어 <b>영화 보러 가는 상황</b>을 떠올려 보자.",
+      "role": "상황적 단서의 첫 사례(영화관)를 도입한다."
+     },
+     {
+      "en": "⟦4⟧ For many, a night at the movies also means sharing popcorn, candy, and soda.",
+      "lit": "많은 사람에게 영화관에서 보내는 저녁은 팝콘, 사탕, 그리고 탄산음료를 함께 나눠 먹는 것을 의미하기도 한다.",
+      "easy": "많은 이에게 <b>영화관의 밤 = 팝콘·사탕·탄산음료</b>를 뜻한다.",
+      "role": "영화관과 군것질의 연결을 보여 준다."
+     },
+     {
+      "en": "⟦5⟧ People often cannot resist this learned indulgence and are encouraged by the environment to eat a particular food.",
+      "lit": "사람들은 흔히 이러한 학습된 탐닉을 거부하지 못하고 특정 음식을 먹도록 환경의 부추김을 받는다.",
+      "easy": "사람들은 <b>이 ‘학습된 탐닉’을 못 이기고, 환경에 떠밀려 특정 음식을 먹는다.</b>",
+      "role": "환경이 특정 음식 섭취를 부추김을 제시한다."
+     },
+     {
+      "en": "⟦6⟧ Another example is eating potato chips or peanuts that have been set out during a friendly card game or conversation with others.",
+      "lit": "또 다른 예는 친목 차원의 카드 게임이나 다른 사람들과 대화 중에 내어져 있는 감자칩이나 땅콩을 먹는 것이다.",
+      "easy": "또 다른 예는 <b>카드 게임이나 수다 중에 놓여 있는 감자칩·땅콩을 집어 먹는 것</b>이다.",
+      "role": "상황적 단서의 두 번째 사례(사교 모임)를 더한다."
+     },
+     {
+      "en": "⟦7⟧ Individuals often consume snacks not because they are hungry, but because they are prompted by the social environment, which encourages them to eat.",
+      "lit": "사람들은 흔히 배가 고파서가 아니라, 먹도록 유도하는 사회적 환경에 의해 자극을 받기 때문에 간식을 섭취하게 된다.",
+      "easy": "즉 사람들은 <b>배가 고파서가 아니라 ‘사회적 환경’에 자극받아 간식을 먹는다.</b> 글의 핵심.",
+      "role": "글의 핵심(배고픔이 아닌 환경이 먹게 함)을 명시한다."
+     },
+     {
+      "en": "⟦8⟧ Similarly, grocery stores and restaurants have discovered the profits in suggestive selling, a sales technique where the customer is encouraged to make an additional purchase by taking advantage of a two-for-one sale or special discount.",
+      "lit": "마찬가지로, 식료품점과 음식점은 (구매를 유도하는) 제안 판매, 즉 고객이 1+1 행사나 특별 할인을 이용하여 추가 구매하도록 조장하는 판매 기술에서 이익을 얻어 왔다.",
+      "easy": "마찬가지로 <b>가게·음식점은 1+1·할인 같은 ‘제안 판매’로 추가 구매를 유도</b>해 이익을 얻어 왔다. (환경이 소비를 부추기는 상업적 버전.)",
+      "role": "같은 원리가 상업적으로 이용됨(제안 판매)을 제시한다."
+     },
+     {
+      "en": "⟦9⟧ Grocery stores often use placement of items to encourage impulse buying.",
+      "lit": "식료품점은 흔히 충동 구매를 장려하기 위해 상품의 배치를 활용한다.",
+      "easy": "식료품점은 <b>상품 ‘배치’를 이용해 충동구매를 부추긴다.</b> 환경이 우리 선택을 조종한다는 결론.",
+      "role": "환경(상품 배치)이 충동구매를 유도함을 제시하며 글을 맺는다.",
+      "point": "빈칸은 1~2번(식이 행동은 ‘상황·환경에 대한 자동 반응’) 또는 7번(배고픔이 아니라 ‘환경’ 때문) 자리에 자주 출제된다. 정답은 ‘상황적/환경적 단서가 먹기를 유도한다’ 계열 — 영화관·카드 게임·상품 배치가 모두 같은 근거다.",
+      "ptcls": "answer"
+     }
+    ],
+    "vocab": [
+     [
+      "dietary",
+      "식이의, 음식의"
+     ],
+     [
+      "consequence",
+      "결과"
+     ],
+     [
+      "consumption",
+      "섭취"
+     ],
+     [
+      "inherent",
+      "선천적인"
+     ],
+     [
+      "capacity",
+      "능력"
+     ],
+     [
+      "consistently",
+      "일관되게"
+     ],
+     [
+      "contextual",
+      "상황적인"
+     ],
+     [
+      "indulgence",
+      "탐닉"
+     ],
+     [
+      "set out",
+      "(음식을) 차리다, 내놓다"
+     ],
+     [
+      "suggestive",
+      "제안하는"
+     ],
+     [
+      "placement",
+      "배치"
+     ],
+     [
+      "impulse",
+      "충동"
+     ]
+    ]
+   },
+   {
+    "num": "03",
+    "type": "어휘 추론",
+    "diff": "",
+    "title": "입맛은 자궁에서부터: 엄마가 먹는 것이 아이 입맛을 만든다",
+    "src": "출처 — Discovering Nutrition (2018), Insel 외, p.4",
+    "flowLead": "지문 한눈에 보기: “아이는 단맛·짠맛을 좋아하고 쓴맛을 싫어한다 — 그런데 엄마가 먹는 음식의 맛이 양수·모유로 전해져, 아이 입맛은 태어나기 전부터 만들어진다”",
+    "flow": [
+     "<b>현상 (1~2):</b> 아이는 어른보다 단맛·짠맛을 선호하고 쓴맛을 거부한다. 이것이 고염·고당 환경에서 아이가 해로운 음식에 끌리는 이유다.",
+     "<b>핵심 (3~4):</b> 어릴 때부터의 감각 경험이 선호를 형성한다. 엄마가 건강식을 먹으면 그 풍미가 양수·모유로 전해져, 모유 수유 아기가 그 맛을 더 잘 받아들인다.",
+     "<b>대조와 결론 (5~6):</b> 반면 분유 먹는 아기는 분유 맛을 선호해 과일·채소 맛을 처음에 받아들이기 어렵다. 생애 초기의 건강한 음식 경험이 평생 건강한 식습관에 큰 도움이 된다."
+    ],
+    "sents": [
+     {
+      "en": "⟦1⟧ Science shows that, when compared to adults, children naturally prefer higher levels of sweet and salty tastes and reject bitter tastes.",
+      "lit": "과학 연구는 아이들이, 성인과 비교했을 때, 선천적으로 더 강한 정도의 단맛과 짠맛을 선호하고 쓴맛은 거부한다는 것을 보여준다.",
+      "easy": "연구에 따르면 <b>아이들은 어른보다 단맛·짠맛을 더 좋아하고 쓴맛은 싫어한다.</b> (타고난 입맛.)",
+      "role": "아이의 타고난 맛 선호라는 현상을 제시한다."
+     },
+     {
+      "en": "⟦2⟧ This might help explain why children are drawn to more unhealthy food choices within our current food environment — an environment composed of high-salt, high-refined-sugar foods.",
+      "lit": "이것은 아이들이 고염분과 고정제당 식품으로 구성된 현재의 식품 환경에서 건강에 더 해로운 음식 선택지에 끌리는 이유를 설명하는 데 도움이 될 수 있다.",
+      "easy": "이는 <b>고염·고당 식품이 가득한 요즘 환경에서, 아이가 해로운 음식에 끌리는 이유</b>를 설명해 준다.",
+      "role": "타고난 선호가 부른 문제(해로운 음식 선호)를 제시한다."
+     },
+     {
+      "en": "⟦3⟧ In support of this idea, studies have found that sensory experiences, beginning early in life, can shape preferences in both a positive and a negative way.",
+      "lit": "이 생각을 뒷받침하여, 여러 연구에서는 어릴 때부터 시작되는 감각 경험이 긍정적인 방식과 부정적인 방식 모두로 선호도를 형성할 수 있다고 밝혀냈다.",
+      "easy": "이를 뒷받침해, <b>‘어릴 때부터의 감각 경험’이 입맛을 좋은 쪽으로도 나쁜 쪽으로도 만든다</b>는 연구가 있다. (경험이 입맛을 형성.)",
+      "role": "핵심 주장(초기 감각 경험이 입맛을 형성)을 제시한다."
+     },
+     {
+      "en": "⟦4⟧ For example, expecting mothers who consume diets rich in healthy foods can help develop their child’s taste preferences in a positive way because flavors from foods that the mother eats are transmitted to amniotic fluid and to mother’s milk, creating an environment in which breastfed infants are more accepting of these flavors.",
+      "lit": "예를 들어, 건강한 음식이 풍부한 식단을 섭취하는 임산부는, 어머니가 먹는 음식으로부터의 풍미가 양수와 모유로 전달되기 때문에, 아이의 미각 선호도를 긍정적인 방식으로 발달시키는 것을 도와, 모유 수유를 받는 영아가 이러한 맛을 더 잘 받아들이는 환경을 조성할 수 있다.",
+      "easy": "예를 들어 <b>건강식을 먹는 임산부는 그 음식의 맛이 ‘양수·모유’로 전해져, 아이 입맛을 좋은 쪽으로 발달</b>시킨다. 그래서 모유 먹는 아기는 그 맛을 잘 받아들인다.",
+      "role": "긍정적 사례(엄마의 건강식 → 아이 입맛)를 제시한다."
+     },
+     {
+      "en": "⟦5⟧ In contrast, infants fed formula learn to prefer its unique flavor profile and may have more difficulty initially accepting flavors not found in formula, such as those of fruit and vegetables.",
+      "lit": "반면에, 분유를 먹는 유아는 그것의 고유한 맛 구성을 선호하게 되어 과일과 채소의 맛과 같은 분유에서 발견되지 않는 맛을 처음에 받아들이는 데 더 많은 어려움을 겪을 수 있다.",
+      "easy": "반면 <b>분유 먹는 아기는 분유 맛에 길들어, 과일·채소처럼 분유에 없는 맛을 처음엔 받아들이기 더 어려워</b> 한다. (부정적 대조.)",
+      "role": "대조 사례(분유 → 새 맛 거부)를 제시한다."
+     },
+     {
+      "en": "⟦6⟧ Having healthy food experiences early in life may go a long way toward promoting healthy eating throughout a person’s life span.",
+      "lit": "생애 초기에 건강한 음식 경험을 갖는 것은 평생에 걸쳐 건강한 식습관을 촉진하는 데 큰 도움이 될 수 있다.",
+      "easy": "결국 <b>생애 초기의 건강한 음식 경험이, 평생의 건강한 식습관에 큰 도움</b>이 된다. 글의 결론.",
+      "role": "‘초기 경험 → 평생 식습관’이라는 결론으로 글을 맺는다.",
+      "point": "어휘 추론형에서는 ‘초기 경험이 입맛을 형성한다’는 흐름과 어긋나는 단어가 함정이다. 예: 5번에서 분유 아기가 새 맛을 받아들이기 ‘어렵다(difficulty)’를 ‘쉽다(ease)’로 바꾸면 대조 구조가 깨지므로 오답 어휘가 된다.",
+      "ptcls": ""
+     }
+    ],
+    "vocab": [
+     [
+      "reject",
+      "거부하다"
+     ],
+     [
+      "current",
+      "현재의"
+     ],
+     [
+      "sensory",
+      "감각의"
+     ],
+     [
+      "preference",
+      "선호도"
+     ],
+     [
+      "transmit",
+      "전달하다"
+     ],
+     [
+      "amniotic fluid",
+      "양수"
+     ],
+     [
+      "breastfed",
+      "모유를 먹는"
+     ],
+     [
+      "formula",
+      "분유, 유아용 유동식"
+     ],
+     [
+      "flavor profile",
+      "맛의 구성, 맛의 특징"
+     ],
+     [
+      "initially",
+      "처음에는"
+     ],
+     [
+      "go a long way",
+      "크게 도움이 되다"
+     ]
+    ]
+   }
+  ]
+ }
+];
+const app=document.getElementById('app'), bar=document.getElementById('bar'), crumb=document.getElementById('crumb');
+document.getElementById('backBtn').onclick=()=>{ if(view.level==='passage') showGang(view.gi); else showHome(); };
+let view={level:'home'};
+function showHome(){
+  view={level:'home'}; bar.style.display='none'; window.scrollTo(0,0);
+  let cards=DATA.map((g,i)=>`<button class="card" onclick="showGang(${i})"><span class="badge">${g.id}</span><span class="c-body"><span class="c-title">${g.title.replace(/^\d+강\s*—\s*/,'')}</span><span class="c-sub">${g.sub}</span></span><span class="c-tag">${g.passages.length}지문</span><span class="arrow">→</span></button>`).join('');
+  app.innerHTML=`<header class="top"><p class="eyebrow">2027학년도 수능특강 영어 · 내신 완벽 이해</p><h1>지문 완벽 이해 노트</h1><p class="sub">강을 고르고, 지문을 골라, 문장별 정밀 해설로 내용을 끝까지 이해하세요.</p></header><p class="sec-label" style="margin-top:30px;">강 선택</p><div class="grid">${cards}</div><footer class="foot">강은 계속 추가됩니다. 각 지문은 직역·쉬운 의미·역할로 한 문장씩 풀이됩니다.</footer>`;
+}
+function showGang(gi){
+  view={level:'gang',gi}; const g=DATA[gi]; bar.style.display=''; window.scrollTo(0,0);
+  crumb.innerHTML=`<a onclick="showHome()">강 목록</a><span class="sep">›</span><span class="cur">${g.id}강</span>`;
+  let cards=g.passages.map((p,i)=>`<button class="card" onclick="showPassage(${gi},${i})"><span class="badge sm">${p.num}</span><span class="c-body"><span class="c-title">${p.title}</span><span class="c-sub">${p.type}${p.diff?' · 난이도 '+p.diff:''}</span></span><span class="arrow">→</span></button>`).join('');
+  app.innerHTML=`<header class="top"><p class="eyebrow">2027 수능특강 영어</p><h1>${g.title.replace(/^\d+강\s*—\s*/,g.id+'강 · ')}</h1><p class="sub">${g.sub}</p></header><p class="sec-label" style="margin-top:30px;">지문 선택</p><div class="grid">${cards}</div>`;
+}
+function showPassage(gi,pi){
+  view={level:'passage',gi,pi}; const g=DATA[gi],p=g.passages[pi]; bar.style.display=''; window.scrollTo(0,0);
+  crumb.innerHTML=`<a onclick="showHome()">강 목록</a><span class="sep">›</span><a onclick="showGang(${gi})">${g.id}강</a><span class="sep">›</span><span class="cur">${p.num}번</span>`;
+  let flow=`<div class="flow"><p class="flow-lead">${p.flowLead}</p><ul>${p.flow.map(x=>`<li>${x}</li>`).join('')}</ul></div>`;
+  let sents=p.sents.map(s=>{
+    let en=s.en.replace(/⟦(.*?)⟧/g,'<span class="bul">$1</span>');
+    let pt=s.point?`<div class="point ${s.ptcls||''}"><span class="ptag">${s.ptcls==='answer'?'빈칸 포인트':'짚고 가기'}</span> ${s.point}</div>`:'';
+    return `<div class="s"><p class="s-en">${en}</p><div class="row literal"><div class="lab">직역</div><div class="val">${s.lit}</div></div><div class="row easy"><div class="lab">쉬운 의미</div><div class="val">${s.easy}</div></div><div class="row role"><div class="lab">역할</div><div class="val">${s.role}</div></div>${pt}</div>`;
+  }).join('');
+  let vocab=p.vocab.length?`<details class="vocab"><summary>Vocabulary</summary><div class="vlist">${p.vocab.map(v=>`<div><span class="w">${v[0]}</span><span class="m">${v[1]}</span></div>`).join('')}</div></details>`:'';
+  const prev=pi>0?g.passages[pi-1]:null, next=pi<g.passages.length-1?g.passages[pi+1]:null;
+  let nav=`<div class="pn"><button ${prev?'':'disabled'} ${prev?`onclick="showPassage(${gi},${pi-1})"`:''}><div class="dir">← 이전</div><div class="pt">${prev?prev.num+'. '+prev.title:'처음'}</div></button><button class="nx" ${next?'':'disabled'} ${next?`onclick="showPassage(${gi},${pi+1})"`:''}><div class="dir">다음 →</div><div class="pt">${next?next.num+'. '+next.title:'마지막'}</div></button></div>`;
+  app.innerHTML=`<div class="p-head"><span class="p-num">${p.num}</span><span class="p-type">${p.type}</span>${p.diff?`<span class="p-diff">난이도 <b>${p.diff}</b></span>`:''}</div><h2 class="p-title">${p.title}</h2>${p.src?`<p class="p-src">${p.src}</p>`:''}${flow}<h3 class="sec">문장별 완벽 풀이</h3>${sents}${vocab}${nav}`;
+}
+showHome();
+</script>
+</body>
+</html>
