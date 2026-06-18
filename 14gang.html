@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2027 수능특강 영어 14강 — 빈칸 내용 추론 (2) 완벽 해부</title>
+<style>
+  :root{
+    --ink:#13233b;
+    --ink-soft:#3a4a63;
+    --paper:#f7f4ec;
+    --paper-2:#fffdf8;
+    --line:#d8d0bf;
+    --accent:#b5462f;      /* 벽돌빛 — 출제포인트 */
+    --accent-2:#1f5d5b;    /* 짙은 청록 — 직역 */
+    --gold:#9a7b2e;        /* 어법/어휘 */
+    --chip:#ece4d4;
+    --shadow:0 1px 0 rgba(0,0,0,.04), 0 8px 28px rgba(20,35,59,.08);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:860px;margin:0 auto;padding:0 18px 120px;}
+
+  /* ===== Header ===== */
+  header.top{
+    padding:46px 0 30px;
+    border-bottom:2px solid var(--ink);
+    margin-bottom:8px;
+  }
+  .eyebrow{
+    font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;
+    color:var(--accent);font-weight:700;margin:0 0 12px;
+  }
+  header.top h1{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:clamp(1.9rem,5vw,2.9rem);
+    line-height:1.12;margin:0 0 6px;font-weight:700;letter-spacing:-.01em;
+  }
+  header.top .sub{font-size:1.02rem;color:var(--ink-soft);margin:10px 0 0;}
+  header.top .meta{
+    margin-top:18px;font-size:.84rem;color:var(--ink-soft);
+    display:flex;flex-wrap:wrap;gap:8px 18px;
+  }
+  header.top .meta b{color:var(--ink);font-weight:700;}
+
+  /* ===== Table of contents ===== */
+  nav.toc{
+    background:var(--paper-2);border:1px solid var(--line);border-radius:14px;
+    padding:18px 20px;margin:26px 0 40px;box-shadow:var(--shadow);
+  }
+  nav.toc h2{font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);margin:0 0 12px;}
+  nav.toc ol{margin:0;padding:0;list-style:none;display:grid;gap:2px;}
+  nav.toc a{
+    display:flex;gap:12px;align-items:baseline;text-decoration:none;color:var(--ink);
+    padding:7px 8px;border-radius:8px;font-size:.95rem;
+  }
+  nav.toc a:hover{background:var(--chip);}
+  nav.toc .n{font-family:Georgia,serif;color:var(--accent);font-weight:700;min-width:34px;}
+  nav.toc .tag{margin-left:auto;font-size:.72rem;color:var(--ink-soft);white-space:nowrap;}
+
+  /* ===== Passage block ===== */
+  .passage{margin:0 0 18px;padding:34px 0 8px;border-top:1px solid var(--line);}
+  .passage:first-of-type{border-top:none;}
+  .p-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px;}
+  .p-num{
+    font-family:Georgia,serif;font-size:1.05rem;font-weight:700;color:#fff;
+    background:var(--accent);border-radius:7px;padding:3px 11px;letter-spacing:.02em;
+  }
+  .p-type{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700;}
+  .p-diff{margin-left:auto;font-size:.8rem;color:var(--ink-soft);}
+  .p-diff b{color:var(--ink);}
+  .p-title{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:clamp(1.3rem,3.4vw,1.7rem);line-height:1.22;margin:6px 0 0;font-weight:700;
+  }
+  .p-src{font-size:.82rem;color:var(--ink-soft);margin:8px 0 0;font-style:italic;}
+
+  /* flow summary card */
+  .flow{
+    background:linear-gradient(180deg,var(--paper-2),#fbf8f1);
+    border:1px solid var(--line);border-left:4px solid var(--accent-2);
+    border-radius:12px;padding:18px 20px;margin:22px 0 8px;box-shadow:var(--shadow);
+  }
+  .flow .flow-lead{font-weight:700;color:var(--accent-2);font-size:1.05rem;margin:0 0 10px;}
+  .flow ul{margin:0;padding-left:2px;list-style:none;display:grid;gap:9px;}
+  .flow li{padding-left:20px;position:relative;font-size:.96rem;color:var(--ink-soft);}
+  .flow li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;border-radius:50%;background:var(--accent-2);}
+  .flow li b{color:var(--ink);}
+
+  h3.sec{
+    font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);
+    margin:34px 0 4px;padding-bottom:8px;border-bottom:1px dashed var(--line);font-weight:700;
+  }
+
+  /* sentence cards */
+  .s{padding:20px 0;border-bottom:1px solid var(--line);}
+  .s:last-child{border-bottom:none;}
+  .s-en{
+    font-family:Georgia,"Times New Roman",serif;font-size:1.06rem;line-height:1.55;
+    color:var(--ink);margin:0 0 14px;font-weight:600;
+  }
+  .s-en .bul{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:1.5em;height:1.5em;border-radius:50%;background:var(--ink);color:#fff;
+    font-size:.72rem;font-weight:700;margin-right:8px;vertical-align:1px;font-family:system-ui;
+  }
+  .row{display:grid;grid-template-columns:64px 1fr;gap:6px 14px;margin:0 0 9px;align-items:start;}
+  .row .lab{
+    font-size:.74rem;font-weight:700;padding-top:2px;letter-spacing:.02em;
+  }
+  .row .val{font-size:.97rem;color:var(--ink-soft);line-height:1.62;}
+  .row.literal .lab{color:var(--accent-2);}
+  .row.easy .lab{color:var(--ink);}
+  .row.role .lab{color:#6a5aa6;}
+  .row .val b{color:var(--ink);font-weight:700;}
+
+  .point{
+    margin:12px 0 2px;background:#fbf4e8;border:1px solid #e7d4a8;border-radius:10px;
+    padding:12px 14px;font-size:.93rem;color:#5d4a1e;
+  }
+  .point .ptag{display:inline-block;font-weight:700;color:var(--gold);margin-right:6px;}
+  .point.answer{background:#fbe9e3;border-color:#e8b6a6;color:#7a2e1a;}
+  .point.answer .ptag{color:var(--accent);}
+
+  /* vocab */
+  details.vocab{margin:18px 0 0;border:1px solid var(--line);border-radius:12px;background:var(--paper-2);overflow:hidden;}
+  details.vocab summary{
+    cursor:pointer;padding:13px 18px;font-weight:700;font-size:.92rem;color:var(--ink);
+    letter-spacing:.04em;list-style:none;display:flex;align-items:center;gap:8px;
+  }
+  details.vocab summary::-webkit-details-marker{display:none;}
+  details.vocab summary::before{content:"▸";color:var(--accent);transition:transform .2s;}
+  details.vocab[open] summary::before{transform:rotate(90deg);}
+  .vlist{padding:4px 18px 18px;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:6px 22px;}
+  .vlist div{font-size:.9rem;display:flex;gap:10px;border-bottom:1px dotted var(--line);padding:5px 0;}
+  .vlist .w{font-family:Georgia,serif;color:var(--ink);font-weight:600;min-width:96px;}
+  .vlist .m{color:var(--ink-soft);}
+
+  /* takeaway table */
+  .tk{margin:22px 0 0;border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:var(--shadow);}
+  .tk .tk-h{background:var(--ink);color:#fff;padding:12px 16px;font-weight:700;font-size:.95rem;}
+  table{width:100%;border-collapse:collapse;font-size:.92rem;background:var(--paper-2);}
+  th,td{padding:11px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;}
+  th{background:var(--chip);color:var(--ink);font-weight:700;}
+  td.k{font-weight:700;color:var(--ink);white-space:nowrap;}
+
+  .totop{display:inline-block;margin-top:18px;font-size:.8rem;color:var(--accent);text-decoration:none;}
+  .totop:hover{text-decoration:underline;}
+
+  footer.foot{margin-top:60px;padding-top:24px;border-top:2px solid var(--ink);font-size:.82rem;color:var(--ink-soft);}
+
+  @media (max-width:560px){
+    .row{grid-template-columns:54px 1fr;}
+    .p-diff{margin-left:0;width:100%;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <p class="eyebrow">2027학년도 수능특강 영어 · Deep Reading</p>
+    <h1>14강 — 빈칸 내용 추론 (2)</h1>
+    <p class="sub">문장 하나하나를 직역 → 쉬운 의미 → 글 속 역할로 분해하고, 빈칸·어법의 결정적 단서를 짚어 주는 완벽 해부 노트.</p>
+    <div class="meta">
+      <span><b>지문 수</b> 5개 (수능 33번 + 01–04)</span>
+      <span><b>유형</b> 빈칸 추론</span>
+      <span><b>방식</b> 문장별 정밀 분석</span>
+    </div>
+  </header>
+
+  <nav class="toc">
+    <h2>이 강에서 다루는 지문</h2>
+    <ol>
+      <li><a href="#p0"><span class="n">수능</span><span>건축 설계와 사용자 참여의 가치</span><span class="tag">33번 · 빈칸</span></a></li>
+      <li><a href="#p1"><span class="n">01</span><span>경험은 공유해도 의미는 공유되지 않는다</span><span class="tag">빈칸</span></a></li>
+      <li><a href="#p2"><span class="n">02</span><span>과학적 발견의 공로와 시점은 흐릿하다</span><span class="tag">빈칸</span></a></li>
+      <li><a href="#p3"><span class="n">03</span><span>관객이 음악 지휘자를 인식하지 못하는 이유</span><span class="tag">빈칸</span></a></li>
+      <li><a href="#p4"><span class="n">04</span><span>독해력보다 배경지식: 야구 실험</span><span class="tag">빈칸</span></a></li>
+    </ol>
+  </nav>
+
+  <!-- ===================== 수능 33 ===================== -->
+  <section class="passage" id="p0">
+    <div class="p-head">
+      <span class="p-num">수능</span>
+      <span class="p-type">2026 수능 33번 · 빈칸 추론</span>
+      <span class="p-diff">난이도 <b>1.7</b></span>
+    </div>
+    <h2 class="p-title">설계는 고객이 아니라 ‘건물을 쓸 사람들’과 함께 짓는 것</h2>
+    <p class="p-src">출처 — Architectural Design Portable Handbook (2001), Andy Pressman, p.441</p>
+
+    <div class="flow">
+      <p class="flow-lead">지문 전체 흐름 요약: “도면을 보여 줄 상대는 돈을 낸 고객이 아니라, 그 공간에서 살아갈 모든 사람이다”</p>
+      <ul>
+        <li><b>핵심 주장 (1~2):</b> 진행 중인 설계에 고객이 반응할 기회를 주는 것이 성공의 핵심이며, 고객뿐 아니라 ‘예상 사용자’까지 참여시키면 장기적으로 훨씬 더 가치 있다.</li>
+        <li><b>병원 사례 (3~5):</b> 고객이 병원 행정 부서라 해도, 의사·간호사 등 ‘매일 쓰는 사람’과 응급 상황으로 ‘가끔 찾는 환자·방문객’의 관점은 행정 부서와 완전히 다르다.</li>
+        <li><b>결론 및 빈칸 (6~8):</b> 각 사용자 유형의 경험과 반응을 이해하면 필연적으로 더 나은 건물이 나오며, 설계 과정에서 의견을 들려준 사람일수록 만족도가 높아 생산성·이직률·비용까지 개선된다.</li>
+      </ul>
+    </div>
+
+    <h3 class="sec">문장별 완벽 해부</h3>
+
+    <div class="s">
+      <p class="s-en"><span class="bul">1</span>Giving clients sufficient opportunity to react to your designs while in progress is a key to professional success.</p>
+      <div class="row literal"><div class="lab">직역</div><div class="val">진행 중인 여러분의 설계에 고객이 반응할 충분한 기회를 주는 것은 전문적 성공의 핵심이다.</div></div>
+      <div class="row easy"><div class="lab">쉬운 의미</div><div class="val">설계를 다 끝낸 다음 “짜잔!” 하고 보여 주지 말고, <b>만드는 도중에 고객이 계속 피드백을 줄 수 있게</b> 해야 일을 잘하는 사람이 된다는 뜻이다.</div></div>
+      <div class="row role"><div class="lab">역할</div><div class="val">글 전체의 대전제 — ‘사용자(고객)의 참여’가 좋은 설계의 열쇠라는 주제를 던진다.</div></div>
+    </div>
+
+    <div class="s">
+      <p class="s-en"><span class="bul">2</span>Similarly, involving prospective building users as well as clients is even more valuable in the long run.</p>
+      <div class="row literal"><div class="lab">직역</div><div class="val">마찬가지로, 고객뿐 아니라 예상되는 건물 사용자들을 참여시키는 것은 장기적으로 훨씬 더 가치가 있다.</div></div>
+      <div class="row easy"><div class="lab">쉬운 의미</div><div class="val">한 걸음 더 나아가서, 돈을 낸 고객만이 아니라 <b>앞으로 그 건물을 실제로 쓸 사람들</b>까지 끌어들이면 길게 봤을 때 이득이 훨씬 크다.</div></div>
+      <div class="row role"><div class="lab">역할</div><div class="val">‘고객 → 예상 사용자’로 참여 범위를 확장하며, 이 글의 진짜 초점(사용자)을 예고한다.</div></div>
+    </div>
+
+    <div class="s">
+      <p class="s-en"><span class="bul">3</span>Say your client is a large corporation, such as a health care provider.</p>
+      <div class="row literal"><div class="lab">직역</div><div class="val">이를테면, 여러분의 고객이 의료 서비스 제공 기관과 같은 대규모 기업이라고 하자.</div></div>
+      <div class="row easy"><div class="lab">쉬운 의미</div><div class="val">예를 들어 보자. 여러분에게 설계를 맡긴 고객이 ‘병원 같은 큰 조직’이라고 가정해 보는 것이다.</div></div>
+      <div class="row role"><div class="lab">역할</div><div class="val">추상적 주장을 ‘병원’이라는 구체적 사례로 끌어내려 독자의 이해를 돕는다.</div></div>
+    </div>
+
+    <div class="s">
+      <p class="s-en"><span class="bul">4</span>While the hospital administration may serve as your client, no doubt the perspectives of administration personnel will differ significantly from those of doctors, interns, residents, nurses, and other medical staff who use the building regularly.</p>
+      <div class="row literal"><div class="lab">직역</div><div class="val">병원 행정 부서가 여러분의 고객 역할을 할 수는 있더라도, 행정 부서 직원들의 관점은 그 건물을 정기적으로 사용하는 의사, 인턴, 레지던트, 간호사, 그리고 다른 의료 직원들의 관점과 분명 크게 다를 것이다.</div></div>
+      <div class="row easy"><div class="lab">쉬운 의미</div><div class="val">계약서에 도장 찍는 사람은 ‘행정실’이지만, 정작 건물에서 <b>매일 일하는 의사·간호사들이 원하는 것</b>은 행정실 생각과 완전히 다를 수밖에 없다.</div></div>
+      <div class="row role"><div class="lab">역할</div><div class="val">‘고객 ≠ 실사용자’라는 핵심 간극을 드러내며, 사용자 참여가 왜 필요한지 근거를 댄다.</div></div>
+    </div>
+
+    <div class="s">
+      <p class="s-en"><span class="bul">5</span>In addition, the experiences of patients and visitors who use the building irregularly, often as a result of life-threatening emergencies, are altogether different as well.</p>
+      <div class="row literal"><div class="lab">직역</div><div class="val">게다가 그 건물을 비정기적으로 사용하는 환자와 방문객들의 경험은, 종종 생명을 위협하는 응급 상황의 결과로 찾아오게 되는 만큼, 또한 완전히 다르다.</div></div>
+      <div class="row easy"><div class="lab">쉬운 의미</div><div class="val">거기에 더해, 응급실에 실려 오듯 <b>가끔, 그것도 절박한 상황에 오는 환자·방문객</b>의 경험은 또 완전히 딴판이다.</div></div>
+      <div class="row role"><div class="lab">역할</div><div class="val">사용자 유형을 ‘행정/의료진/환자·방문객’ 세 층으로 늘려, 관점의 다양성을 극대화한다.</div></div>
+    </div>
+
+    <div class="s">
+      <p class="s-en"><span class="bul">6</span>Understanding how each type of user experiences the current medical environment as well as how each reacts to your prospective designs inevitably produces a better building.</p>
+      <div class="row literal"><div class="lab">직역</div><div class="val">각 사용자 유형이 여러분의 예상되는 설계안에 어떻게 반응하는지는 물론 현재의 의료 환경을 어떻게 경험하는지를 이해하는 것은 필연적으로 더 나은 건물을 만들어 낸다.</div></div>
+      <div class="row easy"><div class="lab">쉬운 의미</div><div class="val">이 세 부류가 지금 공간을 어떻게 느끼는지, 또 새 설계안에 어떻게 반응하는지를 다 파악하면 <b>당연히(필연적으로) 더 좋은 건물</b>이 나온다.</div></div>
+      <div class="row role"><div class="lab">역할</div><div class="val">앞선 사례를 일반 원리로 끌어올려 글의 주제(사용자 이해 → 더 나은 건물)를 명시한다.</div></div>
+    </div>
+
+    <div class="s">
+      <p class="s-en"><span class="bul">7</span>People are likely to be more satisfied with a new building or addition if they have been consulted in the design process.</p>
+      <div class="row literal"><div class="lab">직역</div><div class="val">새로운 건물이나 증축에 대해 사람들은 자신들이 설계 과정에서 의견을 들려줄 경우 더 만족할 가능성이 높다.</div></div>
+      <div class="row easy"><div class="lab">쉬운 의미</div><div class="val">사람은 자기가 <b>설계 과정에 의견을 보탰던 건물</b>일수록 그 결과물에 더 만족하게 마련이다.</div></div>
+      <div class="row role"><div class="lab">역할</div><div class="val">빈칸 추론의 핵심 단서 — 만족도는 ‘설계 과정 참여(being consulted)’에서 나온다는 인과를 못 박는다.</div></div>
+      <div class="point answer"><span class="ptag">빈칸 포인트</span> 이 글의 빈칸은 “더 나은 건물을 만들려면 ___가 필요하다” 형태로, 정답은 <b>‘예상 사용자들을 설계 과정에 참여시키는 것(consulting/involving the people who will use the building)’</b> 계열의 선택지다. 7번 문장의 <i>if they have been consulted in the design process</i>가 결정적 근거.</div>
+    </div>
+
+    <div class="s">
+      <p class="s-en"><span class="bul">8</span>For a large institution, this can translate into increased productivity on the job, reduced absenteeism, less turnover, and lower costs.</p>
+      <div class="row literal"><div class="lab">직역</div><div class="val">대규모 기관의 경우, 이것은 업무 생산성 향상, 장기 결근 감소, 이직률 감소, 비용 절감으로 이어질 수 있다.</div></div>
+      <div class="row easy"><div class="lab">쉬운 의미</div><div class="val">큰 기관이라면 이 만족이 곧 <b>생산성↑·결근↓·이직↓·비용↓</b>이라는 실질적 이득으로 돌아온다.</div></div>
+      <div class="row role"><div class="lab">역할</div><div class="val">사용자 참여의 효용을 ‘조직의 숫자(생산성·비용)’로 환산하며 글을 설득력 있게 맺는다.</div></div>
+    </div>
+
+    <details class="vocab">
+      <summary>Vocabulary</summary>
+      <div class="vlist">
+        <div><span class="w">sufficient</span><span class="m">충분한</span></div>
+        <div><span class="w">in progress</span><span class="m">진행 중인</span></div>
+        <div><span class="w">prospective</span><span class="m">예상되는, 장래의</span></div>
+        <div><span class="w">corporation</span><span class="m">기업</span></div>
+        <div><span class="w">administration</span><span class="m">행정 부서</span></div>
+        <div><span class="w">perspective</span><span class="m">관점, 시각</span></div>
+        <div><span class="w">personnel</span><span class="m">직원들, (총)인원</span></div>
+        <div><span class="w">life-threatening</span><span class="m">생명을 위협하는</span></div>
+        <div><span class="w">inevitably</span><span class="m">필연적으로</span></div>
+        <div><span class="w">absenteeism</span><span class="m">장기 결근</span></div>
+        <div><span class="w">turnover</span><span class="m">이직률</span></div>
+      </div>
+    </details>
+    <a class="totop" href="#p0">▲ 목차로</a>
+  </section>
+
+  <!-- ===================== 01 ===================== -->
+  <section class="passage" id="p1">
+    <div class="p-head">
+      <span class="p-num">01</span>
+      <span class="p-type">빈칸 추론</span>
+      <span class="p-diff">난이도 <b>2.0</b></span>
+    </div>
+    <h2 class="p-title">같은 욕조 안에서도: 경험은 함께해도 ‘의미’는 함께하지 못한다</h2>
+    <p class="p-src">출처 — Young Minds in Social Worlds (2010), Katherine Nelson, p.16</p>
+
+    <div class="flow">
+      <p class="flow-lead">지문 전체 흐름 요약: “어른에겐 즐거운 목욕이 아기에겐 공포다 — 같은 사건, 다른 의미”</p>
+      <ul>
+        <li><b>대전제 (1):</b> 의미와 경험의 공유는 자동으로 되는 게 아니다. 둘 이상이 같은 사건을 겪어도 서로 다른 관점·이력·배경지식으로 경험한다.</li>
+        <li><b>가장 큰 간극 (2):</b> 이 차이는 ‘아기 vs 성인’일 때 가장 두드러지는데, 정작 아기를 챙기는 어른은 그 차이를 잘 의식하지 못한다.</li>
+        <li><b>목욕 예시 (3~4):</b> 물놀이가 즐거웠고 자신감·신체조절 능력까지 갖춘 부모는 아기도 물장난을 즐길 거라 기대하지만, 아기는 겁에 질려 울며 정반대 관점을 드러낸다.</li>
+        <li><b>결론·빈칸 (5):</b> 그 둘은 <b>경험은 공유하지만 의미는 공유하지 않는다.</b></li>
+      </ul>
+    </div>
+
+    <h3 class="sec">문장별 완벽 해부</h3>
+
+    <div class="s">
+      <p class="s-en"><span class="bul">1</span>Sharing meanings and experiences is not a simple, automatic process: whenever two or more people observe or participate in the same ongoing event they experience it from different perspectives, with different histories, with different background knowledge.</p>
+      <div class="row literal"><div class="lab">직역</div><div class="val">의미와 경험을 공유하는 것은 간단한, 자동적인 과정이 아닌데, 두 사람 이상이 진행 중인 같은 사건을 관찰하거나 참여할 때마다, 그들은 서로 다른 관점, 서로 다른 이력, 서로 다른 배경지식을 지닌 채 그것을 경험한다.</div></div>
+      <div class="row easy"><div class="lab">쉬운 의미</div><div class="val">같은 일을 겪는다고 해서 서로 똑같이 받아들이는 게 아니다. 사람마다 <b>관점·살아온 내력·아는 것이 달라서</b> 같은 장면도 제각기 다르게 경험한다.</div></div>
+      <div class="row role"><div class="lab">역할</div><div class="val">글 전체의 대전제 — ‘경험 공유 ≠ 의미 공유’라는 핵심 명제를 세운다.</div></div>
+    </div>
+
+    <div class="s">
+      <p class="s-en"><span class="bul">2</span>These differences are most glaring when the individuals involved include an infant or very young child and an adult, although an adult arranging an event for an infant may find it difficult to keep these differences in mind.</p>
+      <div class="row literal"><div class="lab">직역</div><div class="val">관련된 사람에 아기 또는 아주 어린 아이와 성인이 포함될 때 이러한 차이가 가장 두드러지지만, 아기를 위해 어떤 일을 준비하는 성인은 이러한 차이를 마음에 담아두고 있는 것이 어려울 수도 있다.</div></div>
+      <div class="row easy"><div class="lab">쉬운 의미</div><div class="val">이 차이는 <b>아기와 어른 사이에서 가장 극심</b>한데, 정작 아기를 위해 뭔가를 준비하는 어른은 그 차이를 깜빡 잊기 쉽다.</div></div>
+      <div class="row role"><div class="lab">역할</div><div class="val">차이가 가장 극단적으로 나타나는 조건(아기 vs 성인)을 제시하며 곧 나올 예시를 준비한다.</div></div>
+    </div>
+
+    <div class="s">
+      <p class="s-en"><span class="bul">3</span>When giving a bath, for example, a parent whose experience with water play has been fun, whose knowledge about the source of the water and its disposition provides confidence, and whose body control ensures that the baby is safely held and not in danger, expects the infant to enjoy splashing water.</p>
+      <div class="row literal"><div class="lab">직역</div><div class="val">예를 들어, 목욕을 시킬 때, 물놀이 경험이 즐거웠고, 물의 원천과 성질에 대한 지식이 자신감을 제공하며, 자신의 신체 조절 능력으로 아기가 안전하게 안겨 있어 위험하지 않도록 하는 부모는 아기가 물을 튀기는 것을 즐길 것이라고 기대한다.</div></div>
+      <div class="row easy"><div class="lab">쉬운 의미</div><div class="val">부모는 ①물놀이가 즐거웠던 기억, ②물에 대한 지식에서 오는 자신감, ③아기를 안전하게 받칠 수 있는 신체 능력을 갖췄기에 <b>“아기도 당연히 물장난을 좋아하겠지”</b>라고 기대한다.</div></div>
+      <div class="row role"><div class="lab">역할</div><div class="val">‘성인 쪽 관점’을 세 가지 근거로 구체화해, 곧 뒤집힐 기대를 정교하게 깔아 둔다.</div></div>
+    </div>
+
+    <div class="s">
+      <p class="s-en"><span class="bul">4</span>Yet the baby may make it clear (perhaps by terrified crying) that her perspective is quite different from that of the adult.</p>
+      <div class="row literal"><div class="lab">직역</div><div class="val">그러나 아기는 (아마도 겁에 질린 울음을 통해) 자신의 관점이 성인의 관점과 상당히 상이하다는 것을 분명히 드러낼 수도 있다.</div></div>
+      <div class="row easy"><div class="lab">쉬운 의미</div><div class="val">그런데 정작 아기는 <b>자지러지게 울면서</b> “난 어른 너랑 생각이 전혀 달라!”라고 온몸으로 표현해 버린다.</div></div>
+      <div class="row role"><div class="lab">역할</div><div class="val">‘Yet’으로 성인의 기대를 뒤집어, 같은 사건 속 두 관점의 충돌을 극적으로 보여 준다.</div></div>
+    </div>
+
+    <div class="s">
+      <p class="s-en"><span class="bul">5</span>The two share an experience, but not a meaning.</p>
+      <div class="row literal"><div class="lab">직역</div><div class="val">그 둘은 경험은 공유하지만, 의미는 공유하지 않는다.</div></div>
+      <div class="row easy"><div class="lab">쉬운 의미</div><div class="val">결국 부모와 아기는 ‘목욕’이라는 <b>똑같은 경험은 함께했지만, 그것이 무슨 의미인지는 전혀 공유하지 못한</b> 것이다.</div></div>
+      <div class="row role"><div class="lab">역할</div><div class="val">빈칸 출제 문장. 1번의 대전제를 한 문장으로 압축해 글을 강렬하게 닫는다.</div></div>
+      <div class="point answer"><span class="ptag">빈칸 포인트</span> 빈칸이 마지막 문장에 있다면 정답은 <b>“share an experience, but not a meaning(경험은 공유하나 의미는 공유하지 않는다)”</b> 계열. 전체 글이 ‘같은 사건, 다른 의미’ 한 줄로 수렴하므로 “경험은 같아도 의미는 다르다”는 대비 구조를 고른다.</div>
+    </div>
+
+    <details class="vocab">
+      <summary>Vocabulary</summary>
+      <div class="vlist">
+        <div><span class="w">perspective</span><span class="m">관점</span></div>
+        <div><span class="w">glaring</span><span class="m">두드러진</span></div>
+        <div><span class="w">infant</span><span class="m">아기</span></div>
+        <div><span class="w">arrange</span><span class="m">준비하다, 마련하다</span></div>
+        <div><span class="w">disposition</span><span class="m">성질</span></div>
+        <div><span class="w">confidence</span><span class="m">자신감</span></div>
+      </div>
+    </details>
+    <a class="totop" href="#p0">▲ 목차로</a>
+  </section>
+
+  <!-- ===================== 02 ===================== -->
+  <section class="passage" id="p2">
+    <div class="p-head">
+      <span class="p-num">02</span>
+      <span class="p-type">빈칸 추론</span>
+      <span class="p-diff">난이도 <b>2.4</b></span>
+    </div>
+    <h2 class="p-title">실험실의 민낯: 과학적 ‘사실’은 무질서 속에서 빚어진다</h2>
+    <p class="p-src">출처 — The Great Paradox of Science (2020), Mano Singham, p.26</p>
+
+    <div class="flow">
+      <p class="flow-lead">지문 전체 흐름 요약: “깔끔해 보이는 과학, 실상은 어수선한 관찰 더미 — 공로도 시점도 흐릿하다”</p>
+      <ul>
+        <li><b>주제 제시 (1):</b> Salk 연구소의 일상을 관찰한 인류학적 연구는, 과학에서 ‘누구의 공로인지·언제인지’를 정하는 일이 얼마나 어려운지를 보여 준다.</li>
+        <li><b>라투르의 관찰 (2~3):</b> 외부인은 과학 활동을 잘 조직되고 논리적인 것으로 보지만, 실제로는 과학자들이 질서를 만들어 내려 고군분투하는 ‘무질서한 관찰 더미’다.</li>
+        <li><b>시점의 모호함 (4):</b> TRF가 ‘사실’로 합의된 시점조차 1968~1970년 ‘어느 사이’로만 말할 수 있다.</li>
+        <li><b>공로 다툼 (5):</b> 노벨상을 나눠 받은 두 경쟁 그룹은 서로 ‘우리만이 단독 수상감’이라 여겼다 — 공로 배분의 어려움을 실증.</li>
+      </ul>
+    </div>
+
+    <h3 class="sec">문장별 완벽 해부</h3>
+
+    <div class="s">
+      <p class="s-en"><span class="bul">1</span>A detailed anthropological study of daily scientific practice in the Salk Institute laboratory in La Jolla, California shows how difficult it is to assign credit and dates.</p>
+      <div class="row literal"><div class="lab">직역</div><div class="val">캘리포니아 La Jolla에 있는 Salk Institute 실험실에서의 일상적인 과학 활동에 대한 상세한 인류학적 연구는, 공로를 인정하고 시점을 특정하는 것이 얼마나 어려운지를 보여 준다.</div></div>
+      <div class="row easy"><div class="lab">쉬운 의미</div><div class="val">한 연구소의 ‘과학자들이 매일 뭘 하나’를 인류학자처럼 들여다봤더니, <b>“이 발견은 누구 공이고, 정확히 언제 된 거냐”를 정하는 게 엄청 어렵다</b>는 사실이 드러났다.</div></div>
+      <div class="row role"><div class="lab">역할</div><div class="val">글의 주제 제시 — 과학적 공로(credit)와 시점(date)을 특정하기 어렵다는 화두를 던진다.</div></div>
+    </div>
+
+    <div class="s">
+      <p class="s-en"><span class="bul">2</span>Bruno Latour describes how scientists arrived at the elucidation of TRF (thyrotropin-releasing factor), a hormone that is secreted by the brain.</p>
+      <div class="row literal"><div class="lab">직역</div><div class="val">Bruno Latour는 과학자들이 TRF(갑상선 자극 호르몬 방출 인자)라는, 뇌에서 분비되는 호르몬을 어떻게 규명했는지를 설명한다.</div></div>
+      <div class="row easy"><div class="lab">쉬운 의미</div><div class="val">학자 Latour는 과학자들이 ‘TRF’라는 뇌 호르몬의 정체를 <b>어떻게 밝혀냈는지 그 실제 과정</b>을 따라간다.</div></div>
+      <div class="row role"><div class="lab">역할</div><div class="val">주제를 입증할 구체적 사례(TRF 연구)와 관찰자(Latour)를 도입한다.</div></div>
+    </div>
+
+    <div class="s">
+      <p class="s-en"><span class="bul">3</span>He says that his observations led him to “the conviction that a body of practices widely regarded by outsiders as well organized, logical, and coherent, in fact consists of a disordered array of observations with which scientists struggle to produce order.”</p>
+      <div class="row literal"><div class="lab">직역</div><div class="val">그는 자신의 관찰이, ‘외부인에 의해 잘 조직되고, 논리적이며, 일관된 것으로 널리 간주되는 일군의 행위가 실제로는 과학자가 질서를 만들어 내기 위해 고군분투하는 무질서하게 배열된 관찰 결과로 구성되어 있다는 확신’으로 자신을 이끌었다고 말한다.</div></div>
+      <div class="row easy"><div class="lab">쉬운 의미</div><div class="val">바깥에서 보면 과학은 깔끔하고 논리적이지만, 실제 속을 보니 <b>과학자들이 어수선한 관찰 더미를 붙잡고 억지로 질서를 만들어 내는 작업</b>이더라는 확신이 들었다는 것.</div></div>
+      <div class="row role"><div class="lab">역할</div><div class="val">‘겉(질서) vs 속(무질서)’의 대비로 글의 핵심 통찰을 제시한다.</div></div>
+    </div>
+
+    <div class="s">
+      <p class="s-en"><span class="bul">4</span>The final consensus formulation of TRF (i.e., when it became a scientific “fact”) emerged some time between January 1968 and January 1970.</p>
+      <div class="row literal"><div class="lab">직역</div><div class="val">TRF의 최종적인 합의 공식화(즉, 그것이 과학적 ‘사실’이 되었을 때)는 1968년 1월과 1970년 1월 사이의 어느 시점에 나타났다.</div></div>
+      <div class="row easy"><div class="lab">쉬운 의미</div><div class="val">TRF가 ‘과학적 사실’로 굳어진 시점조차 콕 집을 수 없고, <b>“1968~1970년 어디쯤”</b>이라고밖에 말 못 한다.</div></div>
+      <div class="row role"><div class="lab">역할</div><div class="val">1번의 ‘시점 특정의 어려움(dates)’을 구체적 사례로 입증한다.</div></div>
+    </div>
+
+    <div class="s">
+      <p class="s-en"><span class="bul">5</span>Half of the Nobel Prize in Medicine for 1977 for this discovery was shared between the Salk group and another competing group in New Orleans (the other half went to Rosalind Yalow for the techniques she developed that were used in these studies), but each of these two competing groups strongly felt that they deserved sole credit and that the other did not deserve even a share of the award.</p>
+      <div class="row literal"><div class="lab">직역</div><div class="val">이 발견에 대해 1977년 노벨 의학상의 절반은 Salk 그룹과 뉴올리언스에 있는 또 다른 경쟁 집단 간에 분배되었지만(나머지 절반은 이 연구들에서 사용된 기술을 개발한 Rosalind Yalow에게 수여됨), 이 두 경쟁 집단은 각자 자신만이 단독으로 공로를 인정받을 자격이 있고, 상대방은 그 상의 일부조차 받을 자격이 없다고 강하게 느꼈다.</div></div>
+      <div class="row easy"><div class="lab">쉬운 의미</div><div class="val">노벨상 절반을 두 경쟁팀이 나눠 가졌는데, <b>두 팀 모두 “이 상은 원래 우리 단독 것이고 저쪽은 한 조각도 받을 자격 없다”</b>고 우겼다.</div></div>
+      <div class="row role"><div class="lab">역할</div><div class="val">‘공로 배분(credit)의 어려움’을 노벨상 분쟁이라는 강력한 실례로 입증하며 글을 맺는다.</div></div>
+      <div class="point answer"><span class="ptag">빈칸 포인트</span> 이 지문의 빈칸은 보통 1번(주제문) 자리에 와서 “과학에서는 ___가 어렵다” 형태로 출제된다. 정답은 <b>“to assign credit and dates(공로를 인정하고 시점을 특정하는 것)”</b> 계열 — 본문 전체가 ‘누구 공인지’와 ‘언제인지’ 두 축의 모호함을 증명한다.</div>
+    </div>
+
+    <details class="vocab">
+      <summary>Vocabulary</summary>
+      <div class="vlist">
+        <div><span class="w">anthropological</span><span class="m">인류학적인</span></div>
+        <div><span class="w">elucidation</span><span class="m">규명, 설명</span></div>
+        <div><span class="w">secrete</span><span class="m">분비하다</span></div>
+        <div><span class="w">conviction</span><span class="m">확신</span></div>
+        <div><span class="w">coherent</span><span class="m">일관된</span></div>
+        <div><span class="w">disordered</span><span class="m">무질서한</span></div>
+        <div><span class="w">array</span><span class="m">배열</span></div>
+        <div><span class="w">consensus</span><span class="m">합의, 일치</span></div>
+        <div><span class="w">formulation</span><span class="m">공식화</span></div>
+        <div><span class="w">emerge</span><span class="m">나타나다</span></div>
+        <div><span class="w">credit</span><span class="m">공로, 공적</span></div>
+      </div>
+    </details>
+    <a class="totop" href="#p0">▲ 목차로</a>
+  </section>
+
+  <!-- ===================== 03 ===================== -->
+  <section class="passage" id="p3">
+    <div class="p-head">
+      <span class="p-num">03</span>
+      <span class="p-type">빈칸 추론</span>
+      <span class="p-diff">난이도 <b>2.1</b></span>
+    </div>
+    <h2 class="p-title">보이지 않는 지휘자: 관객의 시선이 무대로 향하는 이유</h2>
+    <p class="p-src">출처 — Music Direction for the Stage (2015), Joseph Church, p.16</p>
+
+    <div class="flow">
+      <p class="flow-lead">지문 전체 흐름 요약: “지휘는 음악만큼 오래됐지만, 좋은 공연일수록 지휘자는 보이지 않는다”</p>
+      <ul>
+        <li><b>역사 (1~2):</b> 음악 지휘의 개념은 음악의 기원만큼 오래됐다. 고대 인도네시아 가믈란에도 박자·전환을 알려 주는 리더가 있었다.</li>
+        <li><b>미학적 이유 (3~5):</b> 그러나 관객은 음악적 리더십을 거의 인식하지 못하며, 거기엔 충분한 미학적 이유가 있다 — 굳이 눈에 띄는 리더는 오히려 경험을 ‘손상’시킨다. 관객은 기법에 관여하기보다 작품 전체를 받아들이는 편이 낫다.</li>
+        <li><b>대조·빈칸 (6~7):</b> 오케스트라 단독 연주 땐 시선이 지휘자에게 가지만, 무대 위 무언가를 ‘반주’할 땐 <b>모든 시선과 귀가(지휘자 본인까지 포함해) 무대로 향한다.</b></li>
+      </ul>
+    </div>
+
+    <h3 class="sec">문장별 완벽 해부</h3>
+
+    <div class="s">
+      <p class="s-en"><span class="bul">1</span>The idea of music direction, in the sense of someone shaping and leading a musical performance, goes back to the beginnings of music.</p>
+      <div class="row literal"><div class="lab">직역</div><div class="val">누군가가 음악 공연을 형성하고 이끈다는 의미에서의 음악 지휘의 개념은 음악의 기원까지 거슬러 올라간다.</div></div>
+      <div class="row easy"><div class="lab">쉬운 의미</div><div class="val">‘누군가가 공연을 빚고 이끈다’는 지휘의 개념은 <b>음악이 처음 생겼을 때부터 있었던</b> 아주 오래된 것이다.</div></div>
+      <div class="row role"><div class="lab">역할</div><div class="val">지휘의 유구한 역사를 제시하며 글을 연다.</div></div>
+    </div>
+
+    <div class="s">
+      <p class="s-en"><span class="bul">2</span>Even the gamelans of ancient Indonesia had leaders who would signal to the group changes of meter and tempo, beginnings and endings, and transitions from piece to piece.</p>
+      <div class="row literal"><div class="lab">직역</div><div class="val">심지어 고대 인도네시아의 가믈란에도 박자와 템포의 변화, 시작과 끝, 곡에서 곡으로의 전환을 연주단에 알려 주던 리더가 있었다.</div></div>
+      <div class="row easy"><div class="lab">쉬운 의미</div><div class="val">고대 인도네시아 악단(가믈란)에도 <b>박자·시작과 끝·곡 전환을 신호로 알려 주는 리더</b>가 분명히 있었다.</div></div>
+      <div class="row role"><div class="lab">역할</div><div class="val">‘지휘는 보편적’이라는 1번을 구체적 사례로 뒷받침한다.</div></div>
+    </div>
+
+    <div class="s">
+      <p class="s-en"><span class="bul">3</span>Yet listening audiences are rarely aware of any musical leadership, and for good aesthetic reason.</p>
+      <div class="row literal"><div class="lab">직역</div><div class="val">그러나 듣는 관객은 어떠한 음악적 리더십도 거의 인식하지 못하며, 그것에는 충분한 미학적 이유가 있다.</div></div>
+      <div class="row easy"><div class="lab">쉬운 의미</div><div class="val">그런데 정작 관객은 그런 지휘(리더십)를 거의 못 알아채는데, <b>거기엔 그럴 만한 ‘미학적’ 이유</b>가 있다.</div></div>
+      <div class="row role"><div class="lab">역할</div><div class="val">‘Yet’으로 전환 — 지휘는 있지만 관객은 인식하지 못한다는 역설을 제기한다.</div></div>
+    </div>
+
+    <div class="s">
+      <p class="s-en"><span class="bul">4</span>They need not be aware to fulfill their experience; indeed, the unnecessarily conspicuous presence of a musical leader will detract from it.</p>
+      <div class="row literal"><div class="lab">직역</div><div class="val">그들이 자신의 경험을 충족시키기 위해 자각할 필요는 없으며, 실제로 불필요하게 눈에 띄는 음악 리더의 존재는 그것을 손상할 것이다.</div></div>
+      <div class="row easy"><div class="lab">쉬운 의미</div><div class="val">관객이 지휘자를 의식해야 공연을 제대로 즐기는 건 아니다. 오히려 <b>지휘자가 너무 눈에 띄면 감상을 망친다.</b></div></div>
+      <div class="row role"><div class="lab">역할</div><div class="val">‘미학적 이유’를 구체화 — 보이지 않는 지휘가 더 낫다는 핵심 논리.</div></div>
+    </div>
+
+    <div class="s">
+      <p class="s-en"><span class="bul">5</span>An audience is better off, for the most part, taking in the whole of a stage work rather than being party to the techniques that go into realizing it.</p>
+      <div class="row literal"><div class="lab">직역</div><div class="val">관객은 대부분의 경우 무대 작품을 실현하는 데 들어가는 기법에 관여하기보다는 무대 작품 전체를 받아들이는 쪽이 더 낫다.</div></div>
+      <div class="row easy"><div class="lab">쉬운 의미</div><div class="val">관객은 ‘무대 뒤의 기술’을 따지기보다 <b>완성된 작품 전체를 통째로 즐기는 편</b>이 더 좋다.</div></div>
+      <div class="row role"><div class="lab">역할</div><div class="val">‘기법(부분) vs 작품 전체’ 대비로 앞 논리를 정리한다.</div></div>
+    </div>
+
+    <div class="s">
+      <p class="s-en"><span class="bul">6</span>This is not to say that when an orchestra plays alone the audience members’ eyes are not fixed on the conductor for the majority of the time; they probably are.</p>
+      <div class="row literal"><div class="lab">직역</div><div class="val">이것은 오케스트라가 단독으로 연주할 때 관객 구성원들의 눈이 (연주가 진행되는) 대부분의 시간 동안 지휘자에게 고정되어 있지 않다는 뜻은 아니며, 아마도 그들의 눈은 그러할 것이다.</div></div>
+      <div class="row easy"><div class="lab">쉬운 의미</div><div class="val">물론 <b>오케스트라만 연주할 땐</b> 관객 눈이 거의 내내 지휘자에게 쏠린다 — 그 점은 인정한다.</div></div>
+      <div class="row role"><div class="lab">역할</div><div class="val">예외 상황(단독 연주)을 인정해, 곧 나올 대조(무대 반주 시)를 부각한다.</div></div>
+    </div>
+
+    <div class="s">
+      <p class="s-en"><span class="bul">7</span>When music is accompanying something happening on stage, however, all eyes turn to the stage, and so do everyone’s ears, too (including the music director’s).</p>
+      <div class="row literal"><div class="lab">직역</div><div class="val">그러나 음악이 무대 위에서 일어나고 있는 무언가의 반주를 할 때, 모든 시선이 무대로 향하며, (음악 지휘자의 귀를 포함하여) 모든 이의 귀도 마찬가지로 무대로 향한다.</div></div>
+      <div class="row easy"><div class="lab">쉬운 의미</div><div class="val">하지만 음악이 <b>무대 위 사건의 ‘반주’ 역할</b>을 할 땐, 모든 눈이 무대로 향하고, 심지어 지휘자의 귀조차 무대로 쏠린다.</div></div>
+      <div class="row role"><div class="lab">역할</div><div class="val">빈칸 출제 문장. ‘지휘자조차 무대로 향한다’는 반전으로, 지휘가 보이지 않아야 한다는 주제를 완성한다.</div></div>
+      <div class="point answer"><span class="ptag">빈칸 포인트</span> 빈칸은 7번의 <i>all eyes turn to the stage</i> 자리에 자주 출제된다. 정답은 <b>“모든 시선(과 귀)이 무대로 향한다(turn to the stage)”</b> 계열 — 4·5번이 ‘리더가 눈에 띄면 안 되고 관객은 작품 전체를 본다’고 했으므로, 반주 상황에선 주목이 지휘자가 아닌 무대로 이동한다.</div>
+    </div>
+
+    <details class="vocab">
+      <summary>Vocabulary</summary>
+      <div class="vlist">
+        <div><span class="w">direction</span><span class="m">지휘, 통솔</span></div>
+        <div><span class="w">gamelan</span><span class="m">가믈란(인니 전통 연주단)</span></div>
+        <div><span class="w">meter</span><span class="m">박자</span></div>
+        <div><span class="w">transition</span><span class="m">전환</span></div>
+        <div><span class="w">aesthetic</span><span class="m">미학적인</span></div>
+        <div><span class="w">conspicuous</span><span class="m">눈에 띄는</span></div>
+        <div><span class="w">detract from</span><span class="m">~을 손상하다</span></div>
+        <div><span class="w">be better off</span><span class="m">~하는 편이 더 낫다</span></div>
+        <div><span class="w">be party to</span><span class="m">~에 관여하다</span></div>
+        <div><span class="w">conductor</span><span class="m">지휘자</span></div>
+        <div><span class="w">accompany</span><span class="m">(~의) 반주를 하다</span></div>
+      </div>
+    </details>
+    <a class="totop" href="#p0">▲ 목차로</a>
+  </section>
+
+  <!-- ===================== 04 ===================== -->
+  <section class="passage" id="p4">
+    <div class="p-head">
+      <span class="p-num">04</span>
+      <span class="p-type">빈칸 추론</span>
+      <span class="p-diff">난이도 <b>1.9</b></span>
+    </div>
+    <h2 class="p-title">야구를 아는 부진아 vs 야구를 모르는 우등생: 승자는?</h2>
+    <p class="p-src">출처 — Readicide (2023), Kelly Gallagher</p>
+
+    <div class="flow">
+      <p class="flow-lead">지문 전체 흐름 요약: “읽기 실력보다 ‘배경지식’이 독해를 가른다 — 야구 실험이 증명한 x-요인”</p>
+      <ul>
+        <li><b>도입 (1~2):</b> Hirsch가 소개한 연구는 ‘독자가 페이지에 가져오는 것(배경지식)’의 중요성을 강조한다. 야구 지문을 읽는 두 집단으로 실험했다.</li>
+        <li><b>두 집단 (3~4):</b> ①야구를 모르는 ‘독해 우등생’ vs ②야구를 잘 아는 ‘독해 부진아’.</li>
+        <li><b>반전 결과 (5~7):</b> 이해도 시험에서 더 높은 점수를 받은 쪽은? <b>독해 부진아(야구를 아는 쪽)</b>였다.</li>
+        <li><b>결론·빈칸 (8~10):</b> 주제에 대한 지식이 없으면 뛰어난 읽기 능력만으로는 부족했다. 결국 <b>배경지식(의 유무)이 성패를 가른 x-요인</b>이었다.</li>
+      </ul>
+    </div>
+
+    <h3 class="sec">문장별 완벽 해부</h3>
+
+    <div class="s">
+      <p class="s-en"><span class="bul">1</span>The importance of what a reader brings to the page is highlighted in a study discussed by Hirsch in The Knowledge Deficit.</p>
+      <div class="row literal"><div class="lab">직역</div><div class="val">독자가 페이지에 가져오는 것(독자의 배경지식)의 중요성은 Hirsch가 ‘The Knowledge Deficit’에서 논한 연구에서 강조된다.</div></div>
+      <div class="row easy"><div class="lab">쉬운 의미</div><div class="val">독자가 글을 읽기 전에 <b>이미 머릿속에 갖고 오는 것(=배경지식)</b>이 얼마나 중요한지를 보여 주는 연구가 있다.</div></div>
+      <div class="row role"><div class="lab">역할</div><div class="val">글의 핵심 개념(배경지식의 중요성)을 제시하고 연구를 소개한다.</div></div>
+    </div>
+
+    <div class="s">
+      <p class="s-en"><span class="bul">2</span>This study consisted of two groups of students who were asked to read a passage about baseball.</p>
+      <div class="row literal"><div class="lab">직역</div><div class="val">이 연구는 야구에 관한 글을 읽도록 요구받은 두 집단의 학생으로 구성되었다.</div></div>
+      <div class="row easy"><div class="lab">쉬운 의미</div><div class="val">실험은 <b>‘야구 지문’을 읽는 두 그룹</b>의 학생으로 이뤄졌다.</div></div>
+      <div class="row role"><div class="lab">역할</div><div class="val">실험 설계를 제시하며 곧 나올 대비(두 집단)를 예고한다.</div></div>
+    </div>
+
+    <div class="s">
+      <p class="s-en"><span class="bul">3</span>The first group was made up of strong readers who knew little about baseball.</p>
+      <div class="row literal"><div class="lab">직역</div><div class="val">첫 번째 집단은 야구에 대해 거의 알지 못하는 독해력이 뛰어난 학생들로 구성되었다.</div></div>
+      <div class="row easy"><div class="lab">쉬운 의미</div><div class="val">1조 = <b>야구는 잘 모르지만 글은 잘 읽는</b> 우등생들.</div></div>
+      <div class="row role"><div class="lab">역할</div><div class="val">‘읽기 능력↑ / 배경지식↓’ 조건의 집단을 제시한다.</div></div>
+    </div>
+
+    <div class="s">
+      <p class="s-en"><span class="bul">4</span>The second group was composed of struggling readers who were knowledgeable about baseball.</p>
+      <div class="row literal"><div class="lab">직역</div><div class="val">두 번째 집단은 야구에 대해 잘 알고 있는 독해에 어려움을 겪는 학생들로 구성되었다.</div></div>
+      <div class="row easy"><div class="lab">쉬운 의미</div><div class="val">2조 = <b>글 읽기는 서툴지만 야구는 빠삭한</b> 학생들.</div></div>
+      <div class="row role"><div class="lab">역할</div><div class="val">‘읽기 능력↓ / 배경지식↑’ 조건의 집단으로 1조와 정반대 대비를 만든다.</div></div>
+    </div>
+
+    <div class="s">
+      <p class="s-en"><span class="bul">5</span>After reading the passage, students in each group had their comprehension tested.</p>
+      <div class="row literal"><div class="lab">직역</div><div class="val">글을 읽은 후 각 집단의 학생들은 자신들의 이해력 시험을 치렀다.</div></div>
+      <div class="row easy"><div class="lab">쉬운 의미</div><div class="val">지문을 다 읽은 뒤 두 그룹 모두 <b>이해도 테스트</b>를 봤다.</div></div>
+      <div class="row role"><div class="lab">역할</div><div class="val">결과를 도출할 측정 단계를 제시한다.</div></div>
+    </div>
+
+    <div class="s">
+      <p class="s-en"><span class="bul">6</span>Guess which group scored higher? <span class="bul">7</span>The struggling readers.</p>
+      <div class="row literal"><div class="lab">직역</div><div class="val">어느 집단의 점수가 더 높았을까? 독해에 어려움을 겪는 독자들이었다.</div></div>
+      <div class="row easy"><div class="lab">쉬운 의미</div><div class="val">누가 더 높았을까? 놀랍게도 <b>‘야구를 아는’ 독해 부진아 그룹</b>이었다.</div></div>
+      <div class="row role"><div class="lab">역할</div><div class="val">질문-답 형식으로 반전을 극적으로 제시 — 직관에 어긋나는 결과를 강조한다.</div></div>
+    </div>
+
+    <div class="s">
+      <p class="s-en"><span class="bul">8</span>Having strong reading skills was not enough for the students who came to the page with a knowledge deficit about the topic.</p>
+      <div class="row literal"><div class="lab">직역</div><div class="val">주제에 대한 지식이 부족한 상태로 그 페이지에 도달한 학생들에게는 뛰어난 읽기 능력만으로는 충분하지 않았다.</div></div>
+      <div class="row easy"><div class="lab">쉬운 의미</div><div class="val">아무리 읽기 실력이 좋아도, <b>그 주제(야구)를 모르고 덤비면</b> 그것만으로는 어림없었다.</div></div>
+      <div class="row role"><div class="lab">역할</div><div class="val">결과의 의미를 해석 — ‘읽기 능력’의 한계를 지적한다.</div></div>
+    </div>
+
+    <div class="s">
+      <p class="s-en"><span class="bul">9</span>Though the second group of readers were not strong readers, their prior knowledge enabled them to outscore readers with far better abilities.</p>
+      <div class="row literal"><div class="lab">직역</div><div class="val">두 번째 집단의 독자들은 독해력이 뛰어나지는 않았지만, 그들의 배경지식으로 인해 훨씬 더 뛰어난 능력을 가진 독자들보다 더 높은 점수를 받는 것을 가능하게 했다.</div></div>
+      <div class="row easy"><div class="lab">쉬운 의미</div><div class="val">2조는 읽기 실력은 별로였어도 <b>‘야구 배경지식’ 덕분에</b> 실력 좋은 1조를 점수로 눌렀다.</div></div>
+      <div class="row role"><div class="lab">역할</div><div class="val">배경지식이 읽기 능력의 격차를 뒤집었음을 명확히 한다.</div></div>
+    </div>
+
+    <div class="s">
+      <p class="s-en"><span class="bul">10</span>Prior knowledge, or, in the case of the good readers, the lack of prior knowledge, was the x-factor.</p>
+      <div class="row literal"><div class="lab">직역</div><div class="val">배경지식, 혹은 우수 독자의 경우 배경지식의 부족이, (성공을 좌우하는) 미지의 요인이었다.</div></div>
+      <div class="row easy"><div class="lab">쉬운 의미</div><div class="val">결국 승패를 가른 결정적 변수(x-요인)는 <b>‘배경지식이 있느냐 없느냐’</b>였다.</div></div>
+      <div class="row role"><div class="lab">역할</div><div class="val">빈칸 출제 문장. 실험의 결론을 ‘x-factor = 배경지식’으로 압축해 글을 닫는다.</div></div>
+      <div class="point answer"><span class="ptag">빈칸 포인트</span> 빈칸은 10번의 <i>Prior knowledge … was the x-factor</i> 자리. 정답은 <b>“prior knowledge(배경지식)”</b> 계열 — 8·9번이 ‘읽기 실력만으론 부족, 배경지식이 격차를 뒤집었다’고 했으므로, 성패를 가른 미지의 요인은 ‘읽기 능력’이 아니라 ‘배경지식의 유무’다.</div>
+    </div>
+
+    <details class="vocab">
+      <summary>Vocabulary</summary>
+      <div class="vlist">
+        <div><span class="w">highlight</span><span class="m">강조하다</span></div>
+        <div><span class="w">deficit</span><span class="m">부족, 결손</span></div>
+        <div><span class="w">consist of</span><span class="m">~으로 구성되다</span></div>
+        <div><span class="w">be made up of</span><span class="m">~으로 구성되다</span></div>
+        <div><span class="w">be composed of</span><span class="m">~으로 구성되다</span></div>
+        <div><span class="w">comprehension</span><span class="m">이해력</span></div>
+        <div><span class="w">prior knowledge</span><span class="m">배경지식</span></div>
+        <div><span class="w">enable ~ to do</span><span class="m">~이 …하게 하다</span></div>
+        <div><span class="w">outscore</span><span class="m">~보다 높은 점수를 받다</span></div>
+        <div><span class="w">x-factor</span><span class="m">(성공을 좌우하는) 미지의 요인</span></div>
+      </div>
+    </details>
+    <a class="totop" href="#p0">▲ 목차로</a>
+  </section>
+
+  <footer class="foot">
+    <p>2027학년도 수능특강 영어 · 14강 빈칸 내용 추론 (2) — 문장별 완벽 해부 노트.<br>
+    빈칸 포인트는 출제 가능성이 높은 위치를 기준으로 한 해설이며, 실제 교재 문항의 빈칸 위치와 다를 수 있습니다.</p>
+  </footer>
+
+</div>
+</body>
+</html>
